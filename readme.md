@@ -1,37 +1,23 @@
-# Bones
-A Lightweight Wordpress Development Theme
+Secretly Y'all Archive
+developed by: Jess Izen
 
-Bones is designed to make the life of developers easier. It's built
-using HTML5 & has a strong semantic foundation.
-It's constantly growing so be sure to check back often if you are a
-frequent user. I'm always open to contribution. :)
+Custom theme based on Bones
 
-Designed by Eddie Machado
-http://themble.com/bones
+Dependencies:
+- Advanced Custom Fields (advancedcustomfields.com/)
+- Posts Table Pro (https://barn2.co.uk/kb-categories/posts-table-pro-kb/)
+- Advanced Forms Pro (https://advancedforms.github.io/)
+- Howler.js (https://howlerjs.com/)
+- Fancybox v3 (http://fancyapps.com/fancybox/3/)
 
-License: WTFPL
-License URI: http://sam.zoy.org/wtfpl/
-Are You Serious? Yes.
+Theme provides infrastructure for organize and display data related to small storytelling event audio archives.
 
-#### Special Thanks to:
-Paul Irish & the HTML5 Boilerplate
-Yoast for some WP functions & optimization ideas
-Andrew Rogers for code optimization
-David Dellanave for speed & code optimization
-and several other developers. :)
-
-#### Submit Bugs & or Fixes:
-https://github.com/eddiemachado/bones/issues
-
-To view Release & Update Notes, read the CHANGELOG.md file in the main folder.
-
-For more news and to see why my parents constantly ask me what I'm
-doing with my life, follow me on twitter: @eddiemachado
-
-## Helpful Tools & Links
-
-Yeoman generator to quickly install Bones Wordpress starter theme into your Wordpress theme folder
-by 0dp
-https://github.com/0dp/generator-wp-bones
-
+Features:
+- two custom post types, 'story' and 'theme' (aka 'event'), and related custom taxonomies
+- bidirectional relationship between the two content types, to streamline content entry
+- data automatically pulled between post typed & prepared for front-end display using ACF update filters
+- front-end table structure based on Posts Table Pro, intendend to be easily searchable and sortable 
+- custom 'sticky' bottom-of-page audio player, dynamically populated with audio files/links and other story information using JS and Jquery
+- front-end submission of new tags by users, automatically appended to post terms w/ digest notifications for website admin
+- event-specific archive pages with full-event audio recordings, additional event information, and table of stories
 

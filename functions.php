@@ -410,6 +410,7 @@ function my_acf_save_post( $post_id ) {
     $audio_link = get_field("audio", $post_id);
     $post_url = get_permalink($post_id);
     $theme_page = get_term_link($story_term);
+    //need to convert tags into a string from the array in order to pass using the onclick function
     $story_tags_prep = wp_get_post_terms($post_id, 'story_tag', $args=array(
       'fields' => 'names' 
     ));

@@ -59,6 +59,7 @@
 										<div id="player-close" class="player-btn">Close</div>
 										<div id="player-tag-btn" class="player-btn">Add Tag</div>
 										<a id="player-theme-page" class="player-btn">Theme Page</a>
+										<div id="player-tags"></div>
 									</div>
 								</div>
 

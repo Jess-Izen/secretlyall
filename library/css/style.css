@@ -1263,39 +1263,46 @@ Stylesheet: Story Player Stylesheet
   margin-left: 100px;
 }
 
-/* line 55, ../scss/modules/_story-player.scss */
+/* line 53, ../scss/modules/_story-player.scss */
+#player-tags {
+  display: inline-block;
+  color: white;
+  margin-left: 100px;
+}
+
+/* line 61, ../scss/modules/_story-player.scss */
 body.single-story {
   min-height: 161px;
   overflow-y: hidden;
   background-color: #a7d9cd;
 }
-/* line 60, ../scss/modules/_story-player.scss */
+/* line 66, ../scss/modules/_story-player.scss */
 body.single-story .header {
   display: none;
 }
-/* line 63, ../scss/modules/_story-player.scss */
+/* line 69, ../scss/modules/_story-player.scss */
 body.single-story .article-header {
   display: none;
 }
-/* line 66, ../scss/modules/_story-player.scss */
+/* line 72, ../scss/modules/_story-player.scss */
 body.single-story .sidebar {
   display: none;
 }
-/* line 70, ../scss/modules/_story-player.scss */
+/* line 76, ../scss/modules/_story-player.scss */
 body.single-story .footer {
   display: none;
 }
-/* line 74, ../scss/modules/_story-player.scss */
+/* line 80, ../scss/modules/_story-player.scss */
 body.single-story #wpadminbar {
   display: none;
 }
-/* line 77, ../scss/modules/_story-player.scss */
+/* line 83, ../scss/modules/_story-player.scss */
 body.single-story #content {
   margin-top: 0px;
   background-color: #a7d9cd;
 }
 
-/* line 83, ../scss/modules/_story-player.scss */
+/* line 89, ../scss/modules/_story-player.scss */
 .fancybox-iframe {
   background-color: #a7d9cd;
   max-width: 500px;

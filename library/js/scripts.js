@@ -105,7 +105,7 @@ function loadGravatars() {
 } // end function
 
 
-function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL){
+function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL, storyTags){
   //un-hide
   var playerWrapper = document.getElementById('story-player');
   playerWrapper.style.display = "block";
@@ -138,7 +138,13 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL)
   //theme page button
   var playerTheme = document.getElementById('player-theme-page');
   playerTheme.setAttribute("href",themeURL);
-}
+
+  //tags
+  var playerTags = document.getElementById('player-tags');
+  playerTags.innerHTML = '<p>' + storyTags + '</p>';
+};
+
+
 
 
 /*

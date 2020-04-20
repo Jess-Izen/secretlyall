@@ -1179,6 +1179,22 @@ select {
 Site Name:
 Author:
 
+Stylesheet: Story Table  Stylesheet
+
+******************************************************************/
+/* line 12, ../scss/modules/_story-table.scss */
+.col-storyteller a,
+.col-story_event a {
+  pointer-events: none;
+  cursor: default;
+  color: black !important;
+  text-decoration: none;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
 Stylesheet: Story Player Stylesheet
 
 ******************************************************************/

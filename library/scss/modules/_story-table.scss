@@ -1,0 +1,17 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Story Table  Stylesheet
+
+******************************************************************/
+
+//targets content cells and restricts to terms that we want to remove hyperlinks from (by default PTP is all or nothing on term hyperlinks)
+.col-storyteller a,
+.col-story_event a
+ {
+    pointer-events: none;
+    cursor: default;
+    color: $text-color !important;
+    text-decoration: none;
+    }  

@@ -9,6 +9,7 @@ Dependencies:
 - Advanced Forms Pro (https://advancedforms.github.io/)
 - Howler.js (https://howlerjs.com/)
 - Fancybox v3 (http://fancyapps.com/fancybox/3/)
+- Bones Wordpress starter theme (SASS based) - (https://themble.com/bones/)
 
 Theme provides infrastructure for organize and display data related to small storytelling event audio archives.
 

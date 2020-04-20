@@ -394,11 +394,17 @@ function my_acf_save_post( $post_id ) {
     update_field('event_date',$event_date);
 
     //update taxonomies using title + event details
+    
+    //attaching theme title as taxonomy to story
     $storyteller = get_the_title ($post_id);
     wp_set_object_terms( $post_id, $storyteller, 'storyteller' );
     wp_set_object_terms($post_id, $event_title, 'story_event');
     wp_set_object_terms($post_id,$event_location_plain,'story_location');
     $story_term = get_term_by('name', $event_title, 'story_event');    
+
+    //attaching partner organization name as taxonomy to story
+    $partner_org = get_field('fundraisee_name');
+    wp_set_object_terms($post_id, $partner_org, 'story_org');
 
 
     //Prep listen and download buttons,send formatted post data to player on listen button click

@@ -63,7 +63,7 @@
         },
         {
             "key": "field_5e1f92174d1dd",
-            "label": "Fundraisee Org Name",
+            "label": "Partner Organization Name",
             "name": "fundraisee_name",
             "type": "text",
             "instructions": "",
@@ -74,6 +74,7 @@
                 "class": "",
                 "id": ""
             },
+            "hide_admin": 0,
             "default_value": "",
             "placeholder": "",
             "prepend": "",
@@ -82,7 +83,7 @@
         },
         {
             "key": "field_5e261c3e1df51",
-            "label": "Fundraisee URL",
+            "label": "Partner Organization URL",
             "name": "fundraisee_url",
             "type": "url",
             "instructions": "include http:\/\/ or https:\/\/",
@@ -93,6 +94,7 @@
                 "class": "",
                 "id": ""
             },
+            "hide_admin": 0,
             "default_value": "",
             "placeholder": ""
         },
@@ -161,5 +163,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1587345308
+    "modified": 1587347506
 }

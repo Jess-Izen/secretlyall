@@ -168,6 +168,29 @@ function custom_post_story() {
 					)
 				);
 
+				register_taxonomy( 'story_org', 
+				array('story'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+				array('hierarchical' => true,    /* if this is false, it acts like tags */
+					'labels' => array(
+						'name' => __( 'Partner Organizations', 'bonestheme' ), /* name of the custom taxonomy */
+						'singular_name' => __( 'Partner Organization', 'bonestheme' ), /* single taxonomy name */
+						'search_items' =>  __( 'Search Partner Organizations', 'bonestheme' ), /* search title for taxomony */
+						'all_items' => __( 'All Partner Organizations', 'bonestheme' ), /* all title for taxonomies */
+						'parent_item' => __( 'Parent Partner Organization', 'bonestheme' ), /* parent title for taxonomy */
+						'parent_item_colon' => __( 'Parent Partner Organization:', 'bonestheme' ), /* parent taxonomy title */
+						'edit_item' => __( 'Edit Partner Organization', 'bonestheme' ), /* edit custom taxonomy title */
+						'update_item' => __( 'Update Partner Organization', 'bonestheme' ), /* update title for taxonomy */
+						'add_new_item' => __( 'Add New Partner Organization', 'bonestheme' ), /* add new title for taxonomy */
+						'new_item_name' => __( 'New Partner Organization Name', 'bonestheme' ) /* name title for taxonomy */
+					),
+					'show_admin_column' => true,
+					'show_ui' => true,
+					'query_var' => true,
+					'show_in_menu' => false,
+
+				)
+			);			
+
 	// let's create the function for the custom type
 function custom_post_sy_event() { 
 	// creating (registering) the custom type 

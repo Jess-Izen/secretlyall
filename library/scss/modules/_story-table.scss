@@ -6,7 +6,8 @@ Stylesheet: Story Table  Stylesheet
 
 ******************************************************************/
 
-//targets content cells and restricts to terms that we want to remove hyperlinks from (by default PTP is all or nothing on term hyperlinks)
+/*targets content cells and restricts to terms that we want to remove hyperlinks from 
+(by default PTP is all or nothing on term hyperlinks, we want only tags)*/
 .col-storyteller a,
 .col-story_event a
  {
@@ -15,3 +16,16 @@ Stylesheet: Story Table  Stylesheet
     color: $text-color !important;
     text-decoration: none;
     }  
+
+//hide columns we want to be able to search by but not display
+.col-event_fundraisee,
+.col-story_location  {
+    display:none !important;
+}
+
+//hide date on mobile only
+@media only screen and (max-width: 480px){
+    .col-date{
+        display: none !important;
+    } 
+}

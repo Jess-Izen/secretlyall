@@ -109,12 +109,13 @@ function custom_post_story() {
 				'edit_item' => __( 'Edit Theme', 'bonestheme' ), /* edit custom taxonomy title */
 				'update_item' => __( 'Update Theme', 'bonestheme' ), /* update title for taxonomy */
 				'add_new_item' => __( 'Add New Theme', 'bonestheme' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Theme Name', 'bonestheme' ), /* name title for taxonomy */
+				'new_item_name' => __( 'New Theme Name', 'bonestheme' ) /* name title for taxonomy */
 				),
 			'show_admin_column' => true,
 			'show_ui' => true,
 			'query_var' => true,
-			'show_in_menu' => false,
+			'show_in_menu' => true,
+			'rewrite'	=> array( 'slug' => 'theme', 'with_front' => false ) /* you can specify its url slug */
 
 		)
 	);
@@ -219,7 +220,7 @@ function custom_post_sy_event() {
 			'query_var' => true,
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
 			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/custom-post-icon.png', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'theme', 'with_front' => false ), /* you can specify its url slug */
+			'rewrite'	=> array( 'slug' => 'sy_event', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'theme', /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,

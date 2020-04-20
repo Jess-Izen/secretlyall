@@ -362,7 +362,6 @@ function my_acf_save_post( $post_id ) {
 //make sure there is a relationship set before updating
   if ( 'sy_event' == get_post_type( $post_id ) ) {
     $theme_name = get_the_title($post_id);
-    $description = get_field('event_description');
     wp_insert_term($theme_name, 'story_event');
     $term = get_term_by('name', $theme_name, 'story_event');
     $new_term_id = $term->term_id;
@@ -370,7 +369,7 @@ function my_acf_save_post( $post_id ) {
       $new_term_id,  //term id
       'story_event', // term tax
       array(
-        'description' => $description,
+        'description' => $post_id,
       )
     );
     

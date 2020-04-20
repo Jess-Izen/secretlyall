@@ -1182,7 +1182,9 @@ Author:
 Stylesheet: Story Table  Stylesheet
 
 ******************************************************************/
-/* line 12, ../scss/modules/_story-table.scss */
+/*targets content cells and restricts to terms that we want to remove hyperlinks from 
+(by default PTP is all or nothing on term hyperlinks, we want only tags)*/
+/* line 13, ../scss/modules/_story-table.scss */
 .col-storyteller a,
 .col-story_event a {
   pointer-events: none;
@@ -1191,6 +1193,18 @@ Stylesheet: Story Table  Stylesheet
   text-decoration: none;
 }
 
+/* line 22, ../scss/modules/_story-table.scss */
+.col-event_fundraisee,
+.col-story_location {
+  display: none !important;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 28, ../scss/modules/_story-table.scss */
+  .col-date {
+    display: none !important;
+  }
+}
 /******************************************************************
 Site Name:
 Author:

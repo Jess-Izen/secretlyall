@@ -13,12 +13,18 @@
 ?>
 
 <?php get_header(); 
-//pull term variables for page
+//pull term variables for page - the term description is the post id for the theme CPT that stores all the data
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
 $term_slug = $term->slug;
-$description = get_term_field ('description', $term);
-
-
+$post_id = $term->description;
+$description = get_field('event_description',$post_id);
+$location_prep = get_field('event_location',$post_id);
+$location = esc_html( $location_prep->name );
+$partner_org = get_field('fundraisee_name', $post_id);
+$partner_org_link = '<a href="'.get_field('fundraisee_url',$post_id).'" target="_blank">'.$partner_org.'</a>';
+$main_photo = get_field('event_photo',$post_id);
+$photo_gallery = get_field('event_gallery',$post_id);
+$event_audio = get_field('event_audio',$post_id);
 
 ?>
 
@@ -37,6 +43,8 @@ $description = get_term_field ('description', $term);
 		<div id="theme-intro-text">
 			<h1 class="theme-title"><?php single_cat_title(); ?></h1>
 			<h3 class="theme-description"><?php echo $description ?></h3>
+			<h3 class="theme-location"><?php echo $location ?></h3>
+			<h3 class="theme-partner"><?php echo $partner_org_link ?></h3>
 		</div>
 		<a class="sy-btn" id="theme-back-btn" href="/">Back To All</a>
 	</div>	

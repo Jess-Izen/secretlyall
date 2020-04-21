@@ -116,6 +116,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
   var audioEmbed = document.getElementsByTagName("mediaelementwrapper")[0];
   var audioSRC = audioEmbed.firstChild;
   audioSRC.setAttribute("src",audioURL);
+  audioSRC.setAttribute("autoplay","");
 
   
   //Description
@@ -130,7 +131,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
   //close button
   var playerClose = document.getElementById('player-close');
   playerClose.onclick = function closePlayer (){
-    audioEmbed.innerHTML = '';
+    audioSRC.setAttribute("src","");
     playerWrapper.style.display = "none";
   };
 

@@ -60,11 +60,18 @@ $event_audio = get_field('event_audio',$post_id);
 		
 		<div id="under-player-audio">
 			<h2 id="player-description"></h2>
-			<a id="player-download" class="player-btn">Download</a>
+			<a id="player-download" class="player-btn download-btn" data-fancybox data-src="#download-modal" href="javascript:;">Download</a>
 			<div id="player-close" class="player-btn">Close</div>
 			<div id="player-tag-btn" class="player-btn">Add Tag</div>
 		</div>
-		</div>
+	</div>
+
+	<div style="display: none;" id="download-modal">
+		<h2>Consider donating!</h2>
+		<a id="donate-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true">Donate</a>
+		<a id="modal-download-btn" class="sy-btn" download>Download</a>
+	</div>
+
 
 </main>
 	</div>

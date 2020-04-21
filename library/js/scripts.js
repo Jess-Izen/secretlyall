@@ -118,10 +118,10 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
 
   //continue to next story in table when audio complete
   var clickedListen = event.target; 
-  var clickedRow = clickedListen.closest(".post-row"); 
-  var nextRow = clickedRow.nextSibling;
-  var nextListen = nextRow.getElementsByClassName("listen-btn")[0];
   audioSRC.onended = function() {
+    var clickedRow = clickedListen.closest(".post-row"); 
+    var nextRow = clickedRow.nextSibling;
+    var nextListen = nextRow.getElementsByClassName("listen-btn")[0];  
     nextListen.click();
 };
 
@@ -132,8 +132,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
   
   //download button
   var playerDownload = document.getElementById('player-download');
-  playerDownload.setAttribute("href",audioURL);
-  playerDownload.setAttribute("download","");
+  playerDownload.setAttribute("data",audioURL);
   
   //close button
   var playerClose = document.getElementById('player-close');
@@ -142,7 +141,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     playerWrapper.style.display = "none";
   };
 
-  //pass post ID & URL over to tag form modal button as custom attributes (click listener set lower down in jquery)
+  //pass post ID & URL over to tag form modal button as custom attributes (click listener set in jquery)
   var tagButton = document.getElementById("player-tag-btn");
   tagButton.setAttribute('post_id',id);
   tagButton.setAttribute('post_url',postURL);
@@ -151,7 +150,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
   var playerTheme = document.getElementById('player-theme-page');
   playerTheme.setAttribute("href",themeURL);
 
-  //tags
+  //display tags
   var playerTags = document.getElementById('player-tags');
   playerTags.innerHTML = '<p>' + storyTags + '</p>';
 
@@ -180,8 +179,12 @@ jQuery(document).ready(function($) {
       });
   });
 
+  //add click listener to download button, to open up fancybox w/ donation prompt
+  $('.download-btn').on('click',function(){
+  var audioURL = $(this).attr("data");
+  var downloadButton = $("#modal-download-btn");
+  downloadButton.attr("href",audioURL);
+  });
+
 });
-
-
-
 /* end of as page load scripts */

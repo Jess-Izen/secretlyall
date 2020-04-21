@@ -53,6 +53,7 @@
 											
 								<div id="story-player">
 									<div id="audio-embed"></div>
+									<p><?php echo do_shortcode('[audio src="/wp-content/uploads/2020/04/noisemp3_stimbox_liveinsantacruz.mp3"]')?></p>
 									<div id="under-player-audio">
 										<h2 id="player-description"></h2>
 										<a id="player-download" class="player-btn">Download</a>

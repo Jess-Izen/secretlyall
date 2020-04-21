@@ -35,6 +35,7 @@
                 "class": "",
                 "id": ""
             },
+            "hide_admin": 0,
             "post_type": [
                 "sy_event"
             ],
@@ -246,5 +247,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1587345319
+    "modified": 1587497329
 }

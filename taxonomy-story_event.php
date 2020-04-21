@@ -54,7 +54,9 @@ $event_audio = get_field('event_audio',$post_id);
 
 	<?php //player tab, hidden until onclick event ?>
 	<div id="story-player">
-		<div id="audio-embed"></div>
+		<div id="audio-embed">
+		<p><?php echo do_shortcode('[audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"]')?></p>
+		</div>
 		<div id="under-player-audio">
 			<h2 id="player-description"></h2>
 			<a id="player-download" class="player-btn">Download</a>

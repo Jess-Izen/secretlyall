@@ -426,6 +426,9 @@ function my_acf_save_post( $post_id ) {
 
 //process tag form submissions
 add_action( 'af/form/editing/post_updated/key=form_5e9209b487b14', 'tag_form_submit', 10, 3 );
+function handle_form_submission( $form, $fields, $args ) {
+  $email = af_get_field( 'email' );
+}
 
 function tag_form_submit($post, $form, $args){
 //append to post tag, wipe field  
@@ -478,7 +481,7 @@ add_filter( 'acf/prepare_field/key=field_5e6e6fca8ad9f', 'hide_acf_fields' ); //
 
 // Load Fancybox
 function install_fancybox() {
-  echo '<p><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script></p>';
+  echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>';
 }
 add_action('wp_footer', 'install_fancybox');
 
@@ -543,6 +546,33 @@ function loginRedirect( $redirect_to, $request, $user ){
   }
 }
 add_filter("login_redirect", "loginRedirect", 10, 3);
+
+
+/**
+ * Add an HTML class to MediaElement.js container elements to aid styling.
+ *
+ * Extends the core _wpmejsSettings object to add a new feature via the
+ * MediaElement.js plugin API.
+ */
+function example_mejs_add_container_class() {
+	if ( ! wp_script_is( 'mediaelement', 'done' ) ) {
+		return;
+	}
+	?>
+	<script>
+	(function() {
+		var settings = window._wpmejsSettings || {};
+		settings.features = settings.features || mejs.MepDefaults.features;
+		settings.features.push( 'exampleclass' );
+
+		MediaElementPlayer.prototype.buildexampleclass = function( player ) {
+			player.container.addClass( 'mytheme-mejs-container' );
+		};
+	})();
+	</script>
+	<?php
+}
+add_action( 'wp_print_footer_scripts', 'example_mejs_add_container_class' );
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

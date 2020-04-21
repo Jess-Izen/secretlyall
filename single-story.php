@@ -22,15 +22,16 @@
 	<div id="content" role="main">
 
 		<?php while ( have_posts() ) : the_post(); 
+			
+			//introductory info
 			$post_id = get_the_ID();
 			$storyteller = get_the_title();
 			$related_event = implode(get_field('event_story', $post_id));
 			$theme = get_the_title($related_event);
 			echo $storyteller . ' - ' . $theme;
+			echo '<div id="tag-form">' . do_shortcode('[advanced_form form="form_5e9209b487b14" post="current"]') . '</p>';
 		?>		
-			
-			<div id="tag-form"><?php echo do_shortcode('[advanced_form form="form_5e9209b487b14" post="current"]') ?></p>
-
+		
 		<?php endwhile; // end of the loop. ?>
 
 	</div><!-- #content -->

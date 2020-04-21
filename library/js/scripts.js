@@ -111,8 +111,12 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
   playerWrapper.style.display = "block";
    
   //embed audio
-  var audioEmbed = document.getElementById('audio-embed');
-  audioEmbed.innerHTML = '<audio id="audio-player" controls="" src='+ audioURL +' autoplay=1>';
+  //var audioEmbed = document.getElementById('audio-embed');
+  //audioEmbed.innerHTML = '<audio id="audio-player" controls="" src='+ audioURL +' autoplay=1>';
+  var audioEmbed = document.getElementsByTagName("mediaelementwrapper")[0];
+  var audioSRC = audioEmbed.firstChild;
+  audioSRC.setAttribute("src",audioURL);
+
   
   //Description
   var playerDescription = document.getElementById('player-description');
@@ -164,6 +168,7 @@ jQuery(document).ready(function($) {
       },
       });
   });
+
 });
 
 /* end of as page load scripts */

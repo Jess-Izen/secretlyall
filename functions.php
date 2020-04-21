@@ -416,7 +416,7 @@ function my_acf_save_post( $post_id ) {
     ));
     $story_tags = implode ('; ',$story_tags_prep);
     $download_button = '<a href="'.$audio_link.'" download class="sy-btn">Download</a>';
-    $listen_button = '<a href="#" class="sy-btn" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\');">Listen</a>';
+    $listen_button = '<a href="#" class="sy-btn listen-btn" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\');">Listen</a>';
     update_field('listen',$listen_button);
     update_field('download',$download_button);
 

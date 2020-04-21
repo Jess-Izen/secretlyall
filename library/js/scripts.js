@@ -111,12 +111,19 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
   playerWrapper.style.display = "block";
    
   //embed audio
-  //var audioEmbed = document.getElementById('audio-embed');
-  //audioEmbed.innerHTML = '<audio id="audio-player" controls="" src='+ audioURL +' autoplay=1>';
   var audioEmbed = document.getElementsByTagName("mediaelementwrapper")[0];
   var audioSRC = audioEmbed.firstChild;
   audioSRC.setAttribute("src",audioURL);
   audioSRC.setAttribute("autoplay","");
+
+  //continue to next story in table when audio complete
+  var clickedListen = event.target; 
+  var clickedRow = clickedListen.closest(".post-row"); 
+  var nextRow = clickedRow.nextSibling;
+  var nextListen = nextRow.getElementsByClassName("listen-btn")[0];
+  audioSRC.onended = function() {
+    nextListen.click();
+};
 
   
   //Description
@@ -147,6 +154,9 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
   //tags
   var playerTags = document.getElementById('player-tags');
   playerTags.innerHTML = '<p>' + storyTags + '</p>';
+
+
+
 };
 
 
@@ -171,5 +181,34 @@ jQuery(document).ready(function($) {
   });
 
 });
+
+
+//helper function to find next element of matching selector (ie next listen button)
+function nextInDOM(_selector, _subject) {
+  var next = getNext(_subject);
+  while(next.length != 0) {
+      var found = searchFor(_selector, next);
+      if(found != null) return found;
+      next = getNext(next);
+  }
+  return null;
+}
+function getNext(_subject) {
+  if(_subject.next().length > 0) return _subject.next();
+  return getNext(_subject.parent());
+}
+function searchFor(_selector, _subject) {
+  if(_subject.is(_selector)) return _subject;
+  else {
+      var found = null;
+      _subject.children().each(function() {
+          found = searchFor(_selector, $(this));
+          if(found != null) return false;
+      });
+      return found;
+  }
+  return null; // will/should never get here
+}
+
 
 /* end of as page load scripts */

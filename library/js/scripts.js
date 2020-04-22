@@ -110,7 +110,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
   var playerWrapper = document.getElementById('story-player');
   playerWrapper.style.display = "block";
    
-  //embed audio
+  //embed audio - swaps out the existing src URL in the mediaelements audio widget
   var audioEmbed = document.getElementsByTagName("mediaelementwrapper")[0];
   var audioSRC = audioEmbed.firstChild;
   audioSRC.setAttribute("src",audioURL);
@@ -179,10 +179,11 @@ jQuery(document).ready(function($) {
       });
   });
 
-  //add click listener to download button, to open up fancybox w/ donation prompt
+  //add click listener to download button (in table and player), to open up fancybox w/ donation prompt
   $('.download-btn').on('click',function(){
   var audioURL = $(this).attr("data");
   var downloadButton = $("#modal-download-btn");
+  //passes proper mp3 link based on download button's data attribute
   downloadButton.attr("href",audioURL);
   });
 

@@ -29,10 +29,9 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   position: relative;
   font-family: $sans-serif;
   text-decoration: none;
-  color: $white;
   font-size: 0.9em;
   line-height: 25px;
-  font-weight: normal;
+  font-weight: bold;
   padding: 0 24px;
   border-radius: 4px;
   border: 0;
@@ -43,7 +42,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
   // hovering on the btn
   &:hover, &:focus {
-    color: $white;
     text-decoration: none;
     outline: none;
   } // end hover
@@ -81,22 +79,21 @@ and it will create a button dependant on those variables.
 
 %sy-btn {
  @extend %btn; // here we load the btn defaults
-  background-color: $heading-color;
-  color: white;
+  background-color: $accent-color;
+  color: #002517;
+  font-weight: bold;
 
   &:visited {
-    background-color: darken($accent-color, 5%);
-    color: $heading-color;
+    background-color: darken($accent-color, 10%);
   }
    &:hover,
   &:focus {
-    background-color: darken($accent-color, 4%);
-    color: $heading-color;
+    background-color: darken($accent-color, 5%);
   } // end hover
 
   &:active {
-    background-color: darken($accent-color, 5%);
-    color: $heading-color;
+    background-color: darken($accent-color, 10%);
+    
   } // end active
  // end listen button  
 }
@@ -109,7 +106,7 @@ and it will create a button dependant on those variables.
 .player-btn {
   @extend %sy-btn;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 

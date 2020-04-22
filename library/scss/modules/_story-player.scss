@@ -20,7 +20,10 @@ Stylesheet: Story Player Stylesheet
 }
 
 #under-player-audio{
-    margin-top: 25px;
+    margin-top: 30px;
+    margin-bottom:15px;
+    position: relative;
+    bottom: 10px;
 }
 
 #player-description {
@@ -35,7 +38,6 @@ Stylesheet: Story Player Stylesheet
 #player-download {
 
     margin-left: 100px;
-    vertical-align: top;
 }
 
 #player-close {
@@ -52,8 +54,8 @@ Stylesheet: Story Player Stylesheet
 
 #player-tags {
     display: inline-block;
-    color: white;
     margin-left: 100px;
+    color: white;
 }
 
 //Modal page styles, iframed in
@@ -88,6 +90,4 @@ body.single-story  {
 
 .fancybox-iframe {
     background-color: $accent-color;
-    //max-width: 500px;
-   // max-height: 161px;
 }

@@ -795,10 +795,9 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   position: relative;
   font-family: "Nunito", Helvetica, Arial, sans-serif;
   text-decoration: none;
-  color: white;
   font-size: 0.9em;
   line-height: 25px;
-  font-weight: normal;
+  font-weight: bold;
   padding: 0 24px;
   border-radius: 4px;
   border: 0;
@@ -808,13 +807,12 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out;
 }
-/* line 45, ../scss/modules/_buttons.scss */
+/* line 44, ../scss/modules/_buttons.scss */
 .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .sy-btn:hover, .player-btn:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus, .sy-btn:focus, .player-btn:focus {
-  color: white;
   text-decoration: none;
   outline: none;
 }
-/* line 52, ../scss/modules/_buttons.scss */
+/* line 50, ../scss/modules/_buttons.scss */
 .blue-btn:active, .comment-reply-link:active, #submit:active, .sy-btn:active, .player-btn:active {
   top: 1px;
 }
@@ -824,48 +822,46 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-/* line 64, ../scss/modules/_buttons.scss */
+/* line 62, ../scss/modules/_buttons.scss */
 .blue-btn, .comment-reply-link, #submit {
   background-color: blue;
 }
-/* line 68, ../scss/modules/_buttons.scss */
+/* line 66, ../scss/modules/_buttons.scss */
 .blue-btn:visited, .comment-reply-link:visited, #submit:visited {
   background-color: #2472a4;
 }
-/* line 72, ../scss/modules/_buttons.scss */
+/* line 70, ../scss/modules/_buttons.scss */
 .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
   background-color: #2574a8;
 }
-/* line 76, ../scss/modules/_buttons.scss */
+/* line 74, ../scss/modules/_buttons.scss */
 .blue-btn:active, .comment-reply-link:active, #submit:active {
   background-color: #2472a4;
 }
 
-/* line 82, ../scss/modules/_buttons.scss */
+/* line 80, ../scss/modules/_buttons.scss */
 .sy-btn, .player-btn {
-  background-color: #016670;
-  color: white;
+  background-color: #a7d9cd;
+  color: #002517;
+  font-weight: bold;
 }
-/* line 87, ../scss/modules/_buttons.scss */
+/* line 86, ../scss/modules/_buttons.scss */
 .sy-btn:visited, .player-btn:visited {
-  background-color: #95d1c3;
-  color: #016670;
+  background-color: #83cab9;
 }
-/* line 92, ../scss/modules/_buttons.scss */
+/* line 90, ../scss/modules/_buttons.scss */
 .sy-btn:hover, .player-btn:hover, .sy-btn:focus, .player-btn:focus {
-  background-color: #99d3c5;
-  color: #016670;
-}
-/* line 97, ../scss/modules/_buttons.scss */
-.sy-btn:active, .player-btn:active {
   background-color: #95d1c3;
-  color: #016670;
+}
+/* line 94, ../scss/modules/_buttons.scss */
+.sy-btn:active, .player-btn:active {
+  background-color: #83cab9;
 }
 
-/* line 109, ../scss/modules/_buttons.scss */
+/* line 106, ../scss/modules/_buttons.scss */
 .player-btn {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 /******************************************************************
@@ -1229,10 +1225,13 @@ Stylesheet: Story Player Stylesheet
 
 /* line 22, ../scss/modules/_story-player.scss */
 #under-player-audio {
-  margin-top: 25px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  position: relative;
+  bottom: 10px;
 }
 
-/* line 26, ../scss/modules/_story-player.scss */
+/* line 29, ../scss/modules/_story-player.scss */
 #player-description {
   color: white;
   margin-left: 50px;
@@ -1242,67 +1241,66 @@ Stylesheet: Story Player Stylesheet
   vertical-align: top;
 }
 
-/* line 35, ../scss/modules/_story-player.scss */
+/* line 38, ../scss/modules/_story-player.scss */
 #player-download {
   margin-left: 100px;
-  vertical-align: top;
 }
 
-/* line 41, ../scss/modules/_story-player.scss */
+/* line 43, ../scss/modules/_story-player.scss */
 #player-close {
   margin-left: 100px;
 }
 
-/* line 45, ../scss/modules/_story-player.scss */
+/* line 47, ../scss/modules/_story-player.scss */
 #player-tag-btn {
   margin-left: 100px;
 }
 
-/* line 49, ../scss/modules/_story-player.scss */
+/* line 51, ../scss/modules/_story-player.scss */
 #player-theme-page {
   margin-left: 100px;
 }
 
-/* line 53, ../scss/modules/_story-player.scss */
+/* line 55, ../scss/modules/_story-player.scss */
 #player-tags {
   display: inline-block;
-  color: white;
   margin-left: 100px;
+  color: white;
 }
 
-/* line 61, ../scss/modules/_story-player.scss */
+/* line 63, ../scss/modules/_story-player.scss */
 body.single-story {
   min-height: 161px;
   overflow-y: hidden;
   background-color: #a7d9cd;
 }
-/* line 66, ../scss/modules/_story-player.scss */
+/* line 68, ../scss/modules/_story-player.scss */
 body.single-story .header {
   display: none;
 }
-/* line 69, ../scss/modules/_story-player.scss */
+/* line 71, ../scss/modules/_story-player.scss */
 body.single-story .article-header {
   display: none;
 }
-/* line 72, ../scss/modules/_story-player.scss */
+/* line 74, ../scss/modules/_story-player.scss */
 body.single-story .sidebar {
   display: none;
 }
-/* line 76, ../scss/modules/_story-player.scss */
+/* line 78, ../scss/modules/_story-player.scss */
 body.single-story .footer {
   display: none;
 }
-/* line 80, ../scss/modules/_story-player.scss */
+/* line 82, ../scss/modules/_story-player.scss */
 body.single-story #wpadminbar {
   display: none;
 }
-/* line 83, ../scss/modules/_story-player.scss */
+/* line 85, ../scss/modules/_story-player.scss */
 body.single-story #content {
   margin-top: 0px;
   background-color: #a7d9cd;
 }
 
-/* line 89, ../scss/modules/_story-player.scss */
+/* line 91, ../scss/modules/_story-player.scss */
 .fancybox-iframe {
   background-color: #a7d9cd;
 }
@@ -1314,77 +1312,120 @@ Author:
 Stylesheet: HTML5 Audio Playe   Stylesheet
 
 ******************************************************************/
-/* Player background */
-/* line 14, ../scss/modules/_audio-player.scss */
-.mytheme-mejs-container.mejs-container,
-.mytheme-mejs-container.mejs-controls,
-.mytheme-mejs-container.mejs-embed,
-.mytheme-mejs-container.mejs-embed body {
-  background-color: #efefef;
+/* line 13, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-container {
+  height: 80px !important;
+  background-color: #323944;
+  top: 15px;
 }
-
-/* Player controls */
 /* line 19, ../scss/modules/_audio-player.scss */
-.mytheme-mejs-container .mejs-button > button {
-  object-fit: scale;
+#audio-embed .mejs-controls {
+  height: 80px;
+  background-color: #323944;
 }
-
-/* line 24, ../scss/modules/_audio-player.scss */
-.mytheme-mejs-container .mejs-time {
-  color: #888888;
+/* line 25, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-playpause-button {
+  height: 64px;
+  width: 64px;
+  margin-right: 15px;
+  margin-left: 5px;
 }
-
-/* Progress and audio bars */
-/* Progress and audio bar background */
 /* line 32, ../scss/modules/_audio-player.scss */
-.mytheme-mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
-.mytheme-mejs-container .mejs-controls .mejs-time-rail .mejs-time-total {
-  background-color: #fff;
+#audio-embed .mejs-playpause-button button {
+  height: 64px;
+  width: 64px;
+  margin: 8px;
+  filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
 }
-
-/* Track progress bar background (amount of track fully loaded)
-  We prefer to style these with the main accent color of our theme */
-/* line 38, ../scss/modules/_audio-player.scss */
-.mytheme-mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded {
-  background-color: rgba(219, 78, 136, 0.075);
+/* line 37, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-playpause-button button:hover {
+  filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
 }
-
-/* Current track progress and active audio volume level bar */
 /* line 44, ../scss/modules/_audio-player.scss */
-.mytheme-mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
-.mytheme-mejs-container .mejs-controls .mejs-time-rail .mejs-time-current {
-  background: #db4e88;
+#audio-embed .mejs-play button {
+  background: transparent url(../images/play.svg);
 }
-
-/* Reduce height of the progress and audio bars */
-/* line 59, ../scss/modules/_audio-player.scss */
-.mytheme-mejs-container .mejs-time-buffering,
-.mytheme-mejs-container .mejs-time-current,
-.mytheme-mejs-container .mejs-time-float,
-.mytheme-mejs-container .mejs-time-float-corner,
-.mytheme-mejs-container .mejs-time-float-current,
-.mytheme-mejs-container .mejs-time-hovered,
-.mytheme-mejs-container .mejs-time-loaded,
-.mytheme-mejs-container .mejs-time-marker,
-.mytheme-mejs-container .mejs-time-total,
-.mytheme-mejs-container .mejs-horizontal-volume-total,
-.mytheme-mejs-container .mejs-time-handle-content {
-  height: 3px;
+/* line 49, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-pause button {
+  background: transparent url(../images/pause.svg);
 }
-
-/* line 63, ../scss/modules/_audio-player.scss */
-.mytheme-mejs-container .mejs-time-handle-content {
-  top: -6px;
+/* line 54, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-currenttime-container {
+  height: 18px;
+  padding-top: 0px;
+  margin-top: 31px;
+  font-size: 18px;
+  line-height: 18px;
 }
-
-/* line 67, ../scss/modules/_audio-player.scss */
-.mytheme-mejs-container .mejs-time-total {
-  margin-top: 8px;
+/* line 62, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-time-rail {
+  height: 30px;
+  padding-top: 0px;
+  margin-top: 25px;
 }
-
-/* line 71, ../scss/modules/_audio-player.scss */
-.mytheme-mejs-container .mejs-horizontal-volume-total {
-  top: 19px;
+/* line 73, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-time-total,
+#audio-embed .mejs-time-buffering,
+#audio-embed .mejs-time-loaded,
+#audio-embed .mejs-time-current,
+#audio-embed .mejs-time-hovered,
+#audio-embed .mejs-time-handle-content {
+  height: 30px;
+  margin-top: 0px;
+}
+/* line 78, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-time-current {
+  background: #a7d9cd;
+}
+/* line 83, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-time-loaded,
+#audio-embed .mejs-time-hovered {
+  background: rgba(255, 255, 255, 0.1);
+}
+/* line 89, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-time-rail .mejs-time-handle-content:active,
+#audio-embed .mejs-time-rail .mejs-time-handle-content:focus,
+#audio-embed .mejs-time-rail:hover .mejs-time-handle-content {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+/* line 95, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-duration-container {
+  height: 18px;
+  padding-top: 0px;
+  margin-top: 31px;
+  font-size: 18px;
+  line-height: 18px;
+}
+/* line 103, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-volume-button {
+  height: 18px;
+  margin-top: 20px;
+  filter: brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
+}
+/* line 107, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-volume-button:hover {
+  filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+}
+/* line 112, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-horizontal-volume-slider {
+  height: 18px;
+  margin-top: 15px;
+  width: 80px;
+}
+/* line 118, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-horizontal-volume-total {
+  height: 18px;
+  width: 75px;
+}
+/* line 123, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-horizontal-volume-current {
+  background: #a7d9cd;
+}
+/* line 125, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-horizontal-volume-current:hover {
+  filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
 }
 
 /******************************************************************

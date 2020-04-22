@@ -68,7 +68,7 @@ $event_audio = get_field('event_audio',$post_id);
 
 	<div style="display: none;" id="download-modal">
 		<h2>Consider donating!</h2>
-		<a id="donate-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true">Donate</a>
+		<a id="donate-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true" target="_blank">Donate</a>
 		<a id="modal-download-btn" class="sy-btn" download>Download</a>
 	</div>
 

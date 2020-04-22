@@ -410,11 +410,12 @@ function my_acf_save_post( $post_id ) {
     $audio_link = get_field("audio", $post_id);
     $post_url = get_permalink($post_id);
     $theme_page = get_term_link($story_term);
-    //need to convert tags into a string from the array in order to pass using the onclick function
+          //need to convert tags into a string from the array in order to pass using the onclick function
     $story_tags_prep = wp_get_post_terms($post_id, 'story_tag', $args=array(
       'fields' => 'names' 
     ));
     $story_tags = implode ('; ',$story_tags_prep);
+          //the download and listen buttons pass a fair amount of data to the corresponding click functions
     $download_button = '<a data="'.$audio_link.'" class="sy-btn download-btn" data-fancybox data-src="#download-modal" href="javascript:;">Download</a>';
     $listen_button = '<a class="sy-btn listen-btn" href="javascript:;" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\');">Listen</a>';
     update_field('listen',$listen_button);

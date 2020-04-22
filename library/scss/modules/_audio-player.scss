@@ -6,68 +6,127 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
 
 ******************************************************************/
 
+//changes default mediaelements.js-based audio player styles, only within the 'listen' audio player
+#audio-embed {
 
-/* Player background */
-.mytheme-mejs-container.mejs-container,
-.mytheme-mejs-container.mejs-controls,
-.mytheme-mejs-container.mejs-embed,
-.mytheme-mejs-container.mejs-embed body {
-  background-color: #efefef;
+
+  .mejs-container {
+  height:80px !important;
+  background-color: $black;
+  top: 15px;
+  }
+
+  .mejs-controls {
+  height: 80px;
+  background-color: $black;
+  }
+
+
+  .mejs-playpause-button {
+    height: 64px;
+    width: 64px;
+    margin-right: 15px;
+    margin-left: 5px;
+  }
+
+  .mejs-playpause-button button{
+    height: 64px;
+    width: 64px;
+    margin: 8px;
+    filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
+    &:hover{
+      filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+    }
+
+
+      }
+
+  .mejs-play button{
+    background:transparent url(../images/play.svg);
+  }
+
+
+  .mejs-pause button{
+    background:transparent url(../images/pause.svg);
+  }
+
+
+  .mejs-currenttime-container {
+    height: 18px;
+    padding-top: 0px;
+    margin-top: 31px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .mejs-time-rail {
+    height: 30px;
+    padding-top: 0px;
+    margin-top: 25px;
+  }
+
+  .mejs-time-total,
+  .mejs-time-buffering,
+  .mejs-time-loaded,
+  .mejs-time-current,
+  .mejs-time-hovered,
+  .mejs-time-handle-content {
+    height: 30px;
+    margin-top: 0px;
+  }
+  
+  .mejs-time-current {
+    background: $accent-color;
+  }
+
+  .mejs-time-loaded,
+  .mejs-time-hovered {
+    background:rgba(255,255,255,.1)
+  }
+
+.mejs-time-rail .mejs-time-handle-content:active,
+.mejs-time-rail .mejs-time-handle-content:focus,
+.mejs-time-rail:hover .mejs-time-handle-content {
+  -webkit-transform:scale(1);
+  -ms-transform:scale(0);
+  transform:scale(0)
 }
 
-/* Player controls */
-.mytheme-mejs-container .mejs-button > button {
-  //background-image: url("../images/play-pause.svg");
-  object-fit: scale;
-}
+  .mejs-duration-container{
+    height: 18px;
+    padding-top: 0px;
+    margin-top: 31px;
+    font-size: 18px;
+    line-height: 18px;
+  }
 
-.mytheme-mejs-container .mejs-time {
-  color: #888888;
-}
+  .mejs-volume-button {
+    height: 18px;
+    margin-top: 20px;
+    filter: brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
+    &:hover {
+      filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+    }
+  }
 
-/* Progress and audio bars */
+  .mejs-horizontal-volume-slider {
+    height: 18px;
+    margin-top: 15px;
+    width: 80px;
+  }
 
-/* Progress and audio bar background */
-.mytheme-mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
-.mytheme-mejs-container .mejs-controls .mejs-time-rail .mejs-time-total {
-  background-color: #fff;
-}
+  .mejs-horizontal-volume-total {
+    height: 18px;
+    width: 75px;
+  }
 
-/* Track progress bar background (amount of track fully loaded)
-  We prefer to style these with the main accent color of our theme */
-.mytheme-mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded {
-  background-color: rgba(219, 78, 136, 0.075);
-}
+  .mejs-horizontal-volume-current {
+    background: $accent-color;
+    &:hover {
+      filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+    }
 
-/* Current track progress and active audio volume level bar */
-.mytheme-mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
-.mytheme-mejs-container .mejs-controls .mejs-time-rail .mejs-time-current {
-  background: #db4e88;
-}
+  }
 
-/* Reduce height of the progress and audio bars */
-.mytheme-mejs-container .mejs-time-buffering,
-.mytheme-mejs-container .mejs-time-current,
-.mytheme-mejs-container .mejs-time-float,
-.mytheme-mejs-container .mejs-time-float-corner,
-.mytheme-mejs-container .mejs-time-float-current,
-.mytheme-mejs-container .mejs-time-hovered,
-.mytheme-mejs-container .mejs-time-loaded,
-.mytheme-mejs-container .mejs-time-marker,
-.mytheme-mejs-container .mejs-time-total,
-.mytheme-mejs-container .mejs-horizontal-volume-total,
-.mytheme-mejs-container .mejs-time-handle-content {
-  height: 3px;
-}
 
-.mytheme-mejs-container .mejs-time-handle-content {
-  top: -6px;
-}
-
-.mytheme-mejs-container .mejs-time-total {
-  margin-top: 8px;
-}
-
-.mytheme-mejs-container .mejs-horizontal-volume-total {
-  top: 19px;
 }

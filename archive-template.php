@@ -52,8 +52,9 @@
 								</section>
 											
 								<div id="story-player">
-									<div id="audio-embed"></div>
+									<div id="audio-embed">
 									<p><?php echo do_shortcode('[audio src="/wp-content/uploads/2020/04/noisemp3_stimbox_liveinsantacruz.mp3"]')?></p>
+									</div>
 									<div id="under-player-audio">
 										<h2 id="player-description"></h2>
 										<a id="player-download" class="player-btn download-btn" data-fancybox data-src="#download-modal" href="javascript:;">Download</a>
@@ -66,7 +67,7 @@
 								
 								<div style="display: none;" id="download-modal">
 									<h2>Consider donating!</h2>
-									<a id="donate-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true">Donate</a>
+									<a id="donate-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true" target="_blank">Donate</a>
 									<a id="modal-download-btn" class="sy-btn" download>Download</a>
 								</div>
 

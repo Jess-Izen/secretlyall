@@ -124,6 +124,15 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     var nextListen = nextRow.getElementsByClassName("listen-btn")[0];  
     nextListen.click();
 };
+  
+  //skip button
+  var skipButton = document.getElementById('player-skip');
+  skipButton.onclick = function skipStory() {
+    var clickedRow = clickedListen.closest(".post-row"); 
+    var nextRow = clickedRow.nextSibling;
+    var nextListen = nextRow.getElementsByClassName("listen-btn")[0];  
+    nextListen.click();
+  };
 
   
   //Description

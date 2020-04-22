@@ -1314,56 +1314,58 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
 ******************************************************************/
 /* line 13, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-container {
-  height: 80px !important;
+  height: 64px !important;
+  width: 90% !important;
   background-color: #323944;
-  top: 15px;
+  display: inline-block;
+  top: 20px;
 }
-/* line 19, ../scss/modules/_audio-player.scss */
+/* line 21, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-controls {
-  height: 80px;
+  height: 64px;
   background-color: #323944;
+  padding: 0 25px 0 50px;
 }
-/* line 25, ../scss/modules/_audio-player.scss */
+/* line 28, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-playpause-button {
   height: 64px;
   width: 64px;
   margin-right: 15px;
-  margin-left: 5px;
 }
-/* line 32, ../scss/modules/_audio-player.scss */
+/* line 34, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-playpause-button button {
   height: 64px;
   width: 64px;
-  margin: 8px;
+  margin: 0px;
   filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
 }
-/* line 37, ../scss/modules/_audio-player.scss */
+/* line 39, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-playpause-button button:hover {
   filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
 }
-/* line 44, ../scss/modules/_audio-player.scss */
+/* line 46, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-play button {
   background: transparent url(../images/play.svg);
 }
-/* line 49, ../scss/modules/_audio-player.scss */
+/* line 51, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-pause button {
   background: transparent url(../images/pause.svg);
 }
-/* line 54, ../scss/modules/_audio-player.scss */
+/* line 56, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-currenttime-container {
   height: 18px;
   padding-top: 0px;
-  margin-top: 31px;
+  margin-top: 23px;
   font-size: 18px;
   line-height: 18px;
 }
-/* line 62, ../scss/modules/_audio-player.scss */
+/* line 64, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-time-rail {
   height: 30px;
   padding-top: 0px;
-  margin-top: 25px;
+  margin-top: 17px;
 }
-/* line 73, ../scss/modules/_audio-player.scss */
+/* line 75, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-time-total,
 #audio-embed .mejs-time-buffering,
 #audio-embed .mejs-time-loaded,
@@ -1373,16 +1375,16 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
   height: 30px;
   margin-top: 0px;
 }
-/* line 78, ../scss/modules/_audio-player.scss */
+/* line 80, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-time-current {
   background: #a7d9cd;
 }
-/* line 83, ../scss/modules/_audio-player.scss */
+/* line 85, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-time-loaded,
 #audio-embed .mejs-time-hovered {
   background: rgba(255, 255, 255, 0.1);
 }
-/* line 89, ../scss/modules/_audio-player.scss */
+/* line 91, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-time-rail .mejs-time-handle-content:active,
 #audio-embed .mejs-time-rail .mejs-time-handle-content:focus,
 #audio-embed .mejs-time-rail:hover .mejs-time-handle-content {
@@ -1390,42 +1392,62 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
   -ms-transform: scale(0);
   transform: scale(0);
 }
-/* line 95, ../scss/modules/_audio-player.scss */
+/* line 97, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-duration-container {
   height: 18px;
   padding-top: 0px;
-  margin-top: 31px;
+  margin-top: 23px;
   font-size: 18px;
   line-height: 18px;
 }
-/* line 103, ../scss/modules/_audio-player.scss */
+/* line 105, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-volume-button {
   height: 18px;
-  margin-top: 20px;
+  margin-top: 23px;
   filter: brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
 }
-/* line 107, ../scss/modules/_audio-player.scss */
+/* line 109, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-volume-button:hover {
   filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
 }
-/* line 112, ../scss/modules/_audio-player.scss */
-#audio-embed .mejs-horizontal-volume-slider {
-  height: 18px;
-  margin-top: 15px;
-  width: 80px;
+/* line 113, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-volume-button button {
+  margin-top: 0px;
 }
 /* line 118, ../scss/modules/_audio-player.scss */
+#audio-embed .mejs-horizontal-volume-slider {
+  height: 18px;
+  margin-top: 8px;
+  width: 80px;
+}
+/* line 124, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-horizontal-volume-total {
   height: 18px;
   width: 75px;
 }
-/* line 123, ../scss/modules/_audio-player.scss */
+/* line 129, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-horizontal-volume-current {
   background: #a7d9cd;
 }
-/* line 125, ../scss/modules/_audio-player.scss */
+/* line 131, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-horizontal-volume-current:hover {
   filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+}
+/* line 137, ../scss/modules/_audio-player.scss */
+#audio-embed #player-skip {
+  display: inline-block;
+  position: relative;
+  background: transparent url(../images/skip.svg);
+  height: 64px;
+  width: 64px;
+  top: 20px;
+  right: 50px;
+  left: 0px;
+  filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
+}
+/* line 147, ../scss/modules/_audio-player.scss */
+#audio-embed #player-skip:hover {
+  filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
 }
 
 /******************************************************************
@@ -1625,7 +1647,7 @@ HEADER STYLES
 
 /* line 170, ../scss/breakpoints/_base.scss */
 #logo {
-  margin: 0.75em;
+  margin: 1.25em .75em .75em .75em;
 }
 /* line 173, ../scss/breakpoints/_base.scss */
 #logo a {

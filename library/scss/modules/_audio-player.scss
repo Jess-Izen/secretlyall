@@ -11,14 +11,17 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
 
 
   .mejs-container {
-  height:80px !important;
+  height:64px !important;
+  width: 90% !important;
   background-color: $black;
-  top: 15px;
+  display: inline-block;
+  top: 20px;
   }
 
   .mejs-controls {
-  height: 80px;
+  height: 64px;
   background-color: $black;
+  padding: 0 25px 0 50px;
   }
 
 
@@ -26,13 +29,12 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
     height: 64px;
     width: 64px;
     margin-right: 15px;
-    margin-left: 5px;
   }
 
   .mejs-playpause-button button{
     height: 64px;
     width: 64px;
-    margin: 8px;
+    margin: 0px;
     filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
     &:hover{
       filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
@@ -54,7 +56,7 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
   .mejs-currenttime-container {
     height: 18px;
     padding-top: 0px;
-    margin-top: 31px;
+    margin-top: 23px;
     font-size: 18px;
     line-height: 18px;
   }
@@ -62,7 +64,7 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
   .mejs-time-rail {
     height: 30px;
     padding-top: 0px;
-    margin-top: 25px;
+    margin-top: 17px;
   }
 
   .mejs-time-total,
@@ -95,23 +97,27 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
   .mejs-duration-container{
     height: 18px;
     padding-top: 0px;
-    margin-top: 31px;
+    margin-top: 23px;
     font-size: 18px;
     line-height: 18px;
   }
 
   .mejs-volume-button {
     height: 18px;
-    margin-top: 20px;
+    margin-top: 23px;
     filter: brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
     &:hover {
       filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+    }
+
+    button{
+      margin-top: 0px;
     }
   }
 
   .mejs-horizontal-volume-slider {
     height: 18px;
-    margin-top: 15px;
+    margin-top: 8px;
     width: 80px;
   }
 
@@ -128,5 +134,19 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
 
   }
 
+  #player-skip{
+    display: inline-block;
+    position: relative;
+    background:transparent url(../images/skip.svg);
+    height: 64px;
+    width: 64px;
+    top: 20px;
+    right: 50px;
+    left: 0px;
+    filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
+    &:hover{
+      filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+    }
+  }
 
 }

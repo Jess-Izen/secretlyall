@@ -1,7 +1,7 @@
 Secretly Y'all Archive
 developed by: Jess Izen
 
-Custom theme based on Bones
+Custom Wordpress theme based on Bones, for displaying and organizing audio archive of storytelling event.
 
 Dependencies:
 - Advanced Custom Fields (advancedcustomfields.com/)
@@ -9,8 +9,6 @@ Dependencies:
 - Advanced Forms Pro (https://advancedforms.github.io/)
 - Fancybox v3 (http://fancyapps.com/fancybox/3/)
 - Bones Wordpress starter theme - (https://themble.com/bones/)
-
-Theme provides infrastructure for organize and display data related to small storytelling event audio archives.
 
 Features:
 - two custom post types, 'story' and 'theme' (ie,'event'), and related custom taxonomies

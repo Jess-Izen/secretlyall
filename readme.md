@@ -1,7 +1,4 @@
 
-
-Secretly Y'all Archive developed by: Jess Izen
-
 Custom Wordpress theme based on Bones, for displaying and organizing audio archive of storytelling event.
 
 Dependencies:

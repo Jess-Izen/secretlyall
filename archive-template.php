@@ -54,15 +54,20 @@
 								<div id="story-player">
 									<div id="audio-embed">
 									<?php echo do_shortcode('[audio src="/wp-content/uploads/2020/04/noisemp3_stimbox_liveinsantacruz.mp3"]')?>
-									<div id="player-skip" title="Skip"></div>
+									<a id="player-previous" class="icon-btn" title="Previous"></a>
+									<a id="player-next" class="icon-btn" title="Next"></a>
 									</div>
 									<div id="under-player-audio">
 										<h2 id="player-description"></h2>
 										<a id="player-download" class="player-btn download-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download">Download</a>
-										<div id="player-close" class="player-btn" title="Close">Close</div>
 										<div id="player-tag-btn" class="player-btn" title="Add Tag">Add Tag</div>
 										<a id="player-theme-page" class="player-btn" title="Theme Page">Theme Page</a>
 										<div id="player-tags"></div>
+										<div id="player-close" class="icon-btn" title="Close">
+											<a id="label-close" class="player-label">Close</a>
+										</div>												
+											
+										</div>
 									</div>
 								</div>
 								

@@ -53,29 +53,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 } // end .button
 
-/*
-An example button.
-You can use this example if you want. Just replace all the variables
-and it will create a button dependant on those variables.
-*/
-
-.blue-btn {
-  @extend %btn; // here we load the btn defaults
-  background-color: blue;
-
-  &:visited {
-    background-color: darken($blue, 5%);
-  }
-   &:hover,
-  &:focus {
-    background-color: darken($blue, 4%);
-  } // end hover
-
-  &:active {
-    background-color: darken($blue, 5%);
-  } // end active
- // end listen button
-}
 
 %sy-btn {
  @extend %btn; // here we load the btn defaults
@@ -98,6 +75,10 @@ and it will create a button dependant on those variables.
  // end listen button  
 }
 
+.blue-btn {
+  @extend %sy-btn;
+}
+
 .sy-btn{
   @extend %sy-btn;
 }
@@ -109,4 +90,13 @@ and it will create a button dependant on those variables.
   vertical-align: middle;
 }
 
+.icon-btn {
+  cursor: pointer;
+  height: 64px;
+  width: 64px;
+  filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
+  &:hover{
+    filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+  }
+}
 

@@ -567,52 +567,8 @@ Author:
 
 Stylesheet: Typography
 
-Need to import a font or set of icons for your site? Drop them in
-here or just use this to establish your typographical grid. Or not.
-Do whatever you want to...GOSH!
-
-Helpful Articles:
-http://trentwalton.com/2012/06/19/fluid-type/
-http://ia.net/blog/responsive-typography-the-basics/
-http://alistapart.com/column/responsive-typography-is-a-physical-discipline
-
 ******************************************************************/
-/*********************
-FONT FACE (IN YOUR FACE)
-*********************/
-/*  To embed your own fonts, use this syntax
-  and place your fonts inside the
-  library/fonts folder. For more information
-  on embedding fonts, go to:
-  http://www.fontsquirrel.com/
-  Be sure to remove the comment brackets.
-*/
-/*
-@font-face {
-      font-family: 'Nunito Light';
-      src: url('library/fonts/font-name.eot');
-      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('library/fonts/font-name.woff') format('woff'),
-             url('library/fonts/font-name.ttf') format('truetype'),
-             url('library/fonts/font-name.svg#font-name') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-*/
-/*
-The following is based of Typebase:
-https://github.com/devinhunt/typebase.css
-I've edited it a bit, but it's a nice starting point.
-*/
-/*
- i imported this one in the functions file so bones would look sweet.
- don't forget to remove it for your site.
-*/
-/*
-some nice typographical defaults
-more here: http://www.newnet-soft.com/blog/csstypography
-*/
-/* line 64, ../scss/partials/_typography.scss */
+/* line 15, ../scss/partials/_typography.scss */
 p {
   -ms-word-wrap: break-word;
   word-break: break-word;
@@ -817,51 +773,41 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   top: 1px;
 }
 
-/*
-An example button.
-You can use this example if you want. Just replace all the variables
-and it will create a button dependant on those variables.
-*/
-/* line 62, ../scss/modules/_buttons.scss */
-.blue-btn, .comment-reply-link, #submit {
-  background-color: blue;
-}
-/* line 66, ../scss/modules/_buttons.scss */
-.blue-btn:visited, .comment-reply-link:visited, #submit:visited {
-  background-color: #2472a4;
-}
-/* line 70, ../scss/modules/_buttons.scss */
-.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
-  background-color: #2574a8;
-}
-/* line 74, ../scss/modules/_buttons.scss */
-.blue-btn:active, .comment-reply-link:active, #submit:active {
-  background-color: #2472a4;
-}
-
-/* line 80, ../scss/modules/_buttons.scss */
-.sy-btn, .player-btn {
+/* line 57, ../scss/modules/_buttons.scss */
+.blue-btn, .comment-reply-link, #submit, .sy-btn, .player-btn {
   background-color: #a7d9cd;
   color: #002517;
   font-weight: bold;
 }
-/* line 86, ../scss/modules/_buttons.scss */
-.sy-btn:visited, .player-btn:visited {
+/* line 63, ../scss/modules/_buttons.scss */
+.blue-btn:visited, .comment-reply-link:visited, #submit:visited, .sy-btn:visited, .player-btn:visited {
   background-color: #83cab9;
 }
-/* line 90, ../scss/modules/_buttons.scss */
-.sy-btn:hover, .player-btn:hover, .sy-btn:focus, .player-btn:focus {
+/* line 67, ../scss/modules/_buttons.scss */
+.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .sy-btn:hover, .player-btn:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus, .sy-btn:focus, .player-btn:focus {
   background-color: #95d1c3;
 }
-/* line 94, ../scss/modules/_buttons.scss */
-.sy-btn:active, .player-btn:active {
+/* line 71, ../scss/modules/_buttons.scss */
+.blue-btn:active, .comment-reply-link:active, #submit:active, .sy-btn:active, .player-btn:active {
   background-color: #83cab9;
 }
 
-/* line 106, ../scss/modules/_buttons.scss */
+/* line 87, ../scss/modules/_buttons.scss */
 .player-btn {
   display: inline-block;
   vertical-align: middle;
+}
+
+/* line 93, ../scss/modules/_buttons.scss */
+.icon-btn {
+  cursor: pointer;
+  height: 64px;
+  width: 64px;
+  filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
+}
+/* line 98, ../scss/modules/_buttons.scss */
+.icon-btn:hover {
+  filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
 }
 
 /******************************************************************
@@ -1211,7 +1157,7 @@ Stylesheet: Story Player Stylesheet
 /* line 9, ../scss/modules/_story-player.scss */
 #story-player {
   display: none;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #323944;
@@ -1234,73 +1180,93 @@ Stylesheet: Story Player Stylesheet
 /* line 29, ../scss/modules/_story-player.scss */
 #player-description {
   color: white;
-  margin-left: 50px;
+  margin-left: 60px;
   margin-top: 0px;
   width: 200px;
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 38, ../scss/modules/_story-player.scss */
-#player-download {
-  margin-left: 100px;
-}
-
-/* line 43, ../scss/modules/_story-player.scss */
-#player-close {
-  margin-left: 100px;
-}
-
-/* line 47, ../scss/modules/_story-player.scss */
+/* line 39, ../scss/modules/_story-player.scss */
 #player-tag-btn {
   margin-left: 100px;
 }
 
-/* line 51, ../scss/modules/_story-player.scss */
+/* line 43, ../scss/modules/_story-player.scss */
 #player-theme-page {
   margin-left: 100px;
 }
 
-/* line 55, ../scss/modules/_story-player.scss */
+/* line 47, ../scss/modules/_story-player.scss */
 #player-tags {
   display: inline-block;
   margin-left: 100px;
   color: white;
 }
 
-/* line 63, ../scss/modules/_story-player.scss */
+/* line 56, ../scss/modules/_story-player.scss */
+#player-close {
+  display: inline-block;
+  position: absolute;
+  background: transparent url(../images/close.svg);
+  height: 64px;
+  width: 64px;
+  right: 60px;
+  filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
+}
+/* line 64, ../scss/modules/_story-player.scss */
+#player-close:hover {
+  filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+}
+
+/* line 69, ../scss/modules/_story-player.scss */
+.player-label {
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  position: relative;
+  height: inherit;
+  line-height: 64px;
+  vertical-align: middle;
+}
+
+/* line 80, ../scss/modules/_story-player.scss */
+#label-close {
+  left: -90px;
+}
+
+/* line 86, ../scss/modules/_story-player.scss */
 body.single-story {
   min-height: 161px;
   overflow-y: hidden;
   background-color: #a7d9cd;
 }
-/* line 68, ../scss/modules/_story-player.scss */
+/* line 91, ../scss/modules/_story-player.scss */
 body.single-story .header {
   display: none;
 }
-/* line 71, ../scss/modules/_story-player.scss */
+/* line 94, ../scss/modules/_story-player.scss */
 body.single-story .article-header {
   display: none;
 }
-/* line 74, ../scss/modules/_story-player.scss */
+/* line 97, ../scss/modules/_story-player.scss */
 body.single-story .sidebar {
   display: none;
 }
-/* line 78, ../scss/modules/_story-player.scss */
+/* line 101, ../scss/modules/_story-player.scss */
 body.single-story .footer {
   display: none;
 }
-/* line 82, ../scss/modules/_story-player.scss */
+/* line 105, ../scss/modules/_story-player.scss */
 body.single-story #wpadminbar {
   display: none;
 }
-/* line 85, ../scss/modules/_story-player.scss */
+/* line 108, ../scss/modules/_story-player.scss */
 body.single-story #content {
   margin-top: 0px;
   background-color: #a7d9cd;
 }
 
-/* line 91, ../scss/modules/_story-player.scss */
+/* line 116, ../scss/modules/_story-player.scss */
 .fancybox-iframe {
   background-color: #a7d9cd;
 }
@@ -1309,13 +1275,13 @@ body.single-story #content {
 Site Name:
 Author:
 
-Stylesheet: HTML5 Audio Playe   Stylesheet
+Stylesheet: HTML5 Audio Player   Stylesheet
 
 ******************************************************************/
 /* line 13, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-container {
   height: 64px !important;
-  width: 90% !important;
+  width: 80% !important;
   background-color: #323944;
   display: inline-block;
   top: 20px;
@@ -1324,7 +1290,7 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
 #audio-embed .mejs-controls {
   height: 64px;
   background-color: #323944;
-  padding: 0 25px 0 50px;
+  padding: 0 15px 0 60px;
 }
 /* line 28, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-playpause-button {
@@ -1364,8 +1330,9 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
   height: 30px;
   padding-top: 0px;
   margin-top: 17px;
+  max-width: 850px;
 }
-/* line 75, ../scss/modules/_audio-player.scss */
+/* line 76, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-time-total,
 #audio-embed .mejs-time-buffering,
 #audio-embed .mejs-time-loaded,
@@ -1375,16 +1342,16 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
   height: 30px;
   margin-top: 0px;
 }
-/* line 80, ../scss/modules/_audio-player.scss */
+/* line 82, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-time-current {
   background: #a7d9cd;
 }
-/* line 85, ../scss/modules/_audio-player.scss */
+/* line 87, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-time-loaded,
 #audio-embed .mejs-time-hovered {
   background: rgba(255, 255, 255, 0.1);
 }
-/* line 91, ../scss/modules/_audio-player.scss */
+/* line 93, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-time-rail .mejs-time-handle-content:active,
 #audio-embed .mejs-time-rail .mejs-time-handle-content:focus,
 #audio-embed .mejs-time-rail:hover .mejs-time-handle-content {
@@ -1392,7 +1359,7 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
   -ms-transform: scale(0);
   transform: scale(0);
 }
-/* line 97, ../scss/modules/_audio-player.scss */
+/* line 99, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-duration-container {
   height: 18px;
   padding-top: 0px;
@@ -1400,54 +1367,49 @@ Stylesheet: HTML5 Audio Playe   Stylesheet
   font-size: 18px;
   line-height: 18px;
 }
-/* line 105, ../scss/modules/_audio-player.scss */
+/* line 107, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-volume-button {
   height: 18px;
   margin-top: 23px;
   filter: brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
 }
-/* line 109, ../scss/modules/_audio-player.scss */
+/* line 111, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-volume-button:hover {
   filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
 }
-/* line 113, ../scss/modules/_audio-player.scss */
+/* line 115, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-volume-button button {
   margin-top: 0px;
 }
-/* line 118, ../scss/modules/_audio-player.scss */
+/* line 120, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-horizontal-volume-slider {
   height: 18px;
   margin-top: 8px;
   width: 80px;
 }
-/* line 124, ../scss/modules/_audio-player.scss */
+/* line 126, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-horizontal-volume-total {
   height: 18px;
   width: 75px;
 }
-/* line 129, ../scss/modules/_audio-player.scss */
+/* line 131, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-horizontal-volume-current {
   background: #a7d9cd;
 }
-/* line 131, ../scss/modules/_audio-player.scss */
+/* line 133, ../scss/modules/_audio-player.scss */
 #audio-embed .mejs-horizontal-volume-current:hover {
   filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
 }
-/* line 137, ../scss/modules/_audio-player.scss */
-#audio-embed #player-skip {
+/* line 139, ../scss/modules/_audio-player.scss */
+#audio-embed #player-next {
   display: inline-block;
-  position: relative;
-  background: transparent url(../images/skip.svg);
-  height: 64px;
-  width: 64px;
-  top: 20px;
-  right: 50px;
-  left: 0px;
-  filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
+  background: transparent url(../images/next.svg);
 }
-/* line 147, ../scss/modules/_audio-player.scss */
-#audio-embed #player-skip:hover {
-  filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+/* line 144, ../scss/modules/_audio-player.scss */
+#audio-embed #player-previous {
+  display: inline-block;
+  background: transparent url(../images/previous.svg);
+  margin: 20px 25px 0 15px;
 }
 
 /******************************************************************
@@ -1563,14 +1525,9 @@ LINK STYLES
 *********************/
 /* line 88, ../scss/breakpoints/_base.scss */
 a, a:visited {
-  color: #016670;
   /* on hover */
   /* on click */
   /* mobile tap color */
-}
-/* line 92, ../scss/breakpoints/_base.scss */
-a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: #013d43;
 }
 /* line 102, ../scss/breakpoints/_base.scss */
 a:link, a:visited:link {

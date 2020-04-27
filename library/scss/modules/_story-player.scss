@@ -8,7 +8,7 @@ Stylesheet: Story Player Stylesheet
 
 #story-player{
     display:none;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: $black;
@@ -28,21 +28,13 @@ Stylesheet: Story Player Stylesheet
 
 #player-description {
     color: white;
-    margin-left: 50px;
+    margin-left: 60px;
     margin-top: 0px;
     width: 200px;
     display: inline-block;
     vertical-align: top;
 }
 
-#player-download {
-
-    margin-left: 100px;
-}
-
-#player-close {
-    margin-left: 100px;
-}
 
 #player-tag-btn {
   margin-left: 100px;
@@ -56,6 +48,37 @@ Stylesheet: Story Player Stylesheet
     display: inline-block;
     margin-left: 100px;
     color: white;
+}
+
+
+
+
+#player-close{
+    display: inline-block;
+    position: absolute;
+    background:transparent url(../images/close.svg);
+    height: 64px;
+    width: 64px;
+    right: 60px;
+    filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
+    &:hover{
+      filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+    }
+  }
+//icon label text
+.player-label {
+    font-family: $sans-serif;
+    font-size: 2rem;
+    position: relative;
+    height: inherit;
+    line-height: 64px;
+    vertical-align: middle;
+
+    
+}
+
+#label-close{
+    left: -90px;
 }
 
 //Modal page styles, iframed in
@@ -86,6 +109,8 @@ body.single-story  {
         margin-top: 0px;
         background-color: $accent-color;
     }
+
+
 }
 
 .fancybox-iframe {

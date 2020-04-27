@@ -41,10 +41,14 @@ $event_audio = get_field('event_audio',$post_id);
 	
 	<div id="theme-intro">
 		<div id="theme-intro-text">
-			<h1 class="theme-title"><?php single_cat_title(); ?></h1>
-			<h3 class="theme-description"><?php echo $description ?></h3>
-			<h3 class="theme-location"><?php echo $location ?></h3>
-			<h3 class="theme-partner"><?php echo $partner_org_link ?></h3>
+			<div class="d-1of3">
+				<h1 class="theme-title"><?php single_cat_title(); ?></h1>
+				<h3 class="theme-description"><?php echo $description ?></h3>
+			</div>
+			<div class="d-2of3">	
+				<h3 class="theme-location"><?php echo $location ?></h3>
+				<h3 class="theme-partner"><?php echo $partner_org_link ?></h3>
+			</div>	
 		</div>
 		<a class="sy-btn" id="theme-back-btn" href="/">Back To All</a>
 	</div>	
@@ -53,20 +57,24 @@ $event_audio = get_field('event_audio',$post_id);
 
 
 	<?php //player tab, hidden until onclick event ?>
-	<div id="story-player">
-		<div id="audio-embed">
-			<?php echo do_shortcode('[audio src="/wp-content/uploads/2020/04/noisemp3_stimbox_liveinsantacruz.mp3"]')?>
-			<div id="player-skip" title="Skip"></div>
+								<div id="story-player">
+									<div id="audio-embed">
+									<?php echo do_shortcode('[audio src="/wp-content/uploads/2020/04/noisemp3_stimbox_liveinsantacruz.mp3"]')?>
+									<a id="player-previous" class="icon-btn" title="Previous"></a>
+									<a id="player-next" class="icon-btn" title="Next"></a>
 									</div>
-		<div id="under-player-audio">
-			<h2 id="player-description"></h2>
-			<a id="player-download" class="player-btn download-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download">Download</a>
-			<div id="player-close" class="player-btn" title="Close">Close</div>
-			<div id="player-tag-btn" class="player-btn" title="Add Tag">Add Tag</div>
-			<div id="player-tags"></div>
-		</div>
-	</div>
-
+									<div id="under-player-audio">
+										<h2 id="player-description"></h2>
+										<a id="player-download" class="player-btn download-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download">Download</a>
+										<div id="player-tag-btn" class="player-btn" title="Add Tag">Add Tag</div>
+										<div id="player-tags"></div>
+										<div id="player-close" class= title="Close">
+											<a id="label-close" class="player-label">Close</a>
+										</div>												
+											
+										</div>
+									</div>
+								</div>
 	<div style="display: none;" id="download-modal">
 		<h2>Consider donating!</h2>
 		<a id="donate-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true" target="_blank">Donate</a>

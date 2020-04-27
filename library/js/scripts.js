@@ -118,20 +118,34 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
 
   //continue to next story in table when audio complete
   var clickedListen = event.target; 
+  var clickedRow = clickedListen.closest(".post-row"); 
   audioSRC.onended = function() {
-    var clickedRow = clickedListen.closest(".post-row"); 
     var nextRow = clickedRow.nextSibling;
     var nextListen = nextRow.getElementsByClassName("listen-btn")[0];  
     nextListen.click();
 };
   
-  //skip button
-  var skipButton = document.getElementById('player-skip');
+    //previous button
+    var prevButton = document.getElementById('player-previous');
+    prevButton.onclick = function skipStory() {
+      var previousRow = clickedRow.previousSibling;
+      var prevListen = previousRow.getElementsByClassName("listen-btn")[0];    
+      prevListen.click();
+    };
+
+
+  //next button
+  var skipButton = document.getElementById('player-next');
   skipButton.onclick = function skipStory() {
-    var clickedRow = clickedListen.closest(".post-row"); 
-    var nextRow = clickedRow.nextSibling;
-    var nextListen = nextRow.getElementsByClassName("listen-btn")[0];  
     nextListen.click();
+  };
+
+  //close button
+  var playerClose = document.getElementById('player-close');
+  playerClose.onclick = function closePlayer (){
+    audioSRC.setAttribute("src","");
+    playerWrapper.style.display = "none";
+    //let's make the listen button close too
   };
 
   
@@ -143,12 +157,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
   var playerDownload = document.getElementById('player-download');
   playerDownload.setAttribute("data",audioURL);
   
-  //close button
-  var playerClose = document.getElementById('player-close');
-  playerClose.onclick = function closePlayer (){
-    audioSRC.setAttribute("src","");
-    playerWrapper.style.display = "none";
-  };
+
 
   //pass post ID & URL over to tag form modal button as custom attributes (click listener set in jquery)
   var tagButton = document.getElementById("player-tag-btn");

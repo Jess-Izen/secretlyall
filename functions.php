@@ -425,23 +425,6 @@ function my_acf_save_post( $post_id ) {
 
 }
 
-//process tag form submissions
-add_action( 'af/form/editing/post_updated/key=form_5e9209b487b14', 'tag_form_submit', 10, 3 );
-function handle_form_submission( $form, $fields, $args ) {
-  $email = af_get_field( 'email' );
-}
-
-function tag_form_submit($post, $form, $args){
-//append to post tag, wipe field  
-  $new_tag = get_field('story_new_tag', $post);
-  $post_id = $post->ID;
-  wp_set_post_terms($post_id, $new_tag, 'story_tag', $append=true);
-  update_field('story_new_tag', '', $post_id);
-
-//insert notification here
-}
-
-
 //update post date to be event's date, uses hidden date formatted field for proper formatting
 
 add_action('acf/save_post', 'test_update_post_date_from_acf', 20);
@@ -472,8 +455,47 @@ add_filter( 'acf/prepare_field/key=field_5e262a4a186c4', 'hide_acf_fields' ); //
 add_filter( 'acf/prepare_field/key=field_5e27868af7ba7', 'hide_acf_fields' ); // story - date formatted
 add_filter( 'acf/prepare_field/key=field_5e8ce2342e7d7', 'hide_acf_fields' ); // story - listen
 add_filter( 'acf/prepare_field/key=field_5e8cfaf86fab0', 'hide_acf_fields' ); // story - download
+add_filter( 'acf/prepare_field/key=field_5ea61937faf17', 'hide_acf_fields' ); // story - new tag
 add_filter( 'acf/prepare_field/key=field_5e6e6fca8ad9f', 'hide_acf_fields' ); // event - date formatted
 add_filter( 'acf/prepare_field/key=field_5e6e6fca8ad9f', 'hide_acf_fields' ); // event - date formatted
+
+
+
+/***process tag form submissions***/
+
+add_action( 'af/form/editing/post_updated/key=form_5e9209b487b14', 'tag_form_submit', 10, 3 );
+function tag_form_submit($post, $form, $args){
+//append to post tag, wipe field  
+  $new_tag = get_field('story_new_tag', $post);
+  $post_id = $post->ID;
+  wp_set_post_terms($post_id, $new_tag, 'story_tag', $append=true);
+  update_field('story_new_tag', '', $post_id);
+
+//insert notification here
+}
+
+//prefill the tag form with hidden fields giving story&theme name&edit link, for use passing to zapier
+add_filter( 'af/field/prefill_value/key=field_5ea6158f84a6c', 'prefill_form_story_name', 10, 4 );
+add_filter( 'af/field/prefill_value/key=field_5ea6159f84a6d', 'prefill_form_theme_name', 10, 4 );
+add_filter( 'af/field/prefill_value/key=field_5ea6205c0399c', 'prefill_form_story_link', 10, 4 );
+
+function prefill_form_story_name( $value, $field, $form, $args ) {
+  $story_name = get_the_title(); //get title of page form is embedded on (ie the story)
+  return $story_name;
+}
+
+function prefill_form_theme_name( $value, $field, $form, $args ) {
+  $post_id = get_the_id();
+  $theme_id = implode(get_field('event_story', $post_id));  
+  $theme_name = get_the_title($theme_id);
+  return $theme_name;
+}
+
+function prefill_form_story_link( $value, $field, $form, $args ) {
+  $post_link = get_edit_post_link();
+  return $post_link;
+}
+
 
 
 

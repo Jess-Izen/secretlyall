@@ -92,6 +92,7 @@ function custom_post_story() {
 			'show_ui' => true,
 			'query_var' => true,
 			'show_in_menu' => false,
+			'rewrite'	=> array( 'slug' => 'tag', 'with_front' => false ) /* you can specify its url slug */
 		)
 	);
 
@@ -173,7 +174,7 @@ function custom_post_story() {
 				array('story'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 				array('hierarchical' => true,    /* if this is false, it acts like tags */
 					'labels' => array(
-						'name' => __( 'Partner Organizations', 'bonestheme' ), /* name of the custom taxonomy */
+						'name' => __( 'Partner Org', 'bonestheme' ), /* name of the custom taxonomy */
 						'singular_name' => __( 'Partner Organization', 'bonestheme' ), /* single taxonomy name */
 						'search_items' =>  __( 'Search Partner Organizations', 'bonestheme' ), /* search title for taxomony */
 						'all_items' => __( 'All Partner Organizations', 'bonestheme' ), /* all title for taxonomies */

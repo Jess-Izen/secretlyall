@@ -32,7 +32,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   font-size: 0.9em;
   line-height: 25px;
   font-weight: bold;
-  padding: 0 24px;
+  padding: 0 12px;
   border-radius: 4px;
   border: 0;
   padding-top: 4px;
@@ -87,8 +87,16 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 .player-btn {
   @extend %sy-btn;
   display: inline-block;
-  vertical-align: middle;
+  padding: 15px;
+  width: 115px;
+  height: 70px;
+  border-radius: 36px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  
 }
+
 
 .icon-btn {
   cursor: pointer;
@@ -99,4 +107,3 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
   }
 }
-

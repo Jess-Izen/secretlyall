@@ -137,7 +137,7 @@ h2, .h2 {
 	font-size: 1.75em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
-	color: $heading-color;
+	color: white;
 }
 
 h3, .h3 {
@@ -169,6 +169,8 @@ HEADER STYLES
 
 	#logo {
 		margin: 1.25em .75em .75em .75em;
+		display: flex;
+		justify-content: center;
 
 		a {
 			color: $white;
@@ -270,7 +272,6 @@ POSTS & CONTENT STYLES
 		.hentry {
 			background-color: $background-grey;
 			border-radius: 3px;
-			margin-bottom: 1.5em;
 			border: 1px solid $border-color;
 
 			header {
@@ -279,7 +280,7 @@ POSTS & CONTENT STYLES
 			}
 
 			footer {
-				padding: 1.5em;
+				padding: 0 1.5em 0 1.5em;
 				border-top: 1px solid $light-gray;
 
 				p {
@@ -324,7 +325,7 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 1.5em 0;
+			padding: 1em 1em 0;
 
 			p {
 				margin: 0 0 1.5em;

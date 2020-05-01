@@ -2,7 +2,7 @@
 Site Name:
 Author:
 
-Stylesheet: HTML5 Audio Player   Stylesheet
+Stylesheet: Modified Mediaelements.js Widget Stylesheet
 
 ******************************************************************/
 
@@ -12,23 +12,29 @@ Stylesheet: HTML5 Audio Player   Stylesheet
 
   .mejs-container {
   height:64px !important;
-  width: 80% !important;
   background-color: $black;
   display: inline-block;
-  top: 20px;
   }
 
   .mejs-controls {
   height: 64px;
   background-color: $black;
-  padding: 0 15px 0 60px;
+  padding: 0;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .mejs-controls{
+    padding: 0 25px 0 25px;
+    }
   }
 
 
   .mejs-playpause-button {
-    height: 64px;
-    width: 64px;
     margin-right: 15px;
+    width: 0px;
+    @media only screen and (max-width: 800px) {
+    margin: 0px;
+    }
   }
 
   .mejs-playpause-button button{
@@ -39,10 +45,11 @@ Stylesheet: HTML5 Audio Player   Stylesheet
     &:hover{
       filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
     }
-
+    @media only screen and (max-width: 800px) {
+    margin-top: 95px;
 
       }
-
+    }
   .mejs-play button{
     background:transparent url(../images/play.svg);
   }
@@ -59,6 +66,10 @@ Stylesheet: HTML5 Audio Player   Stylesheet
     margin-top: 23px;
     font-size: 18px;
     line-height: 18px;
+    @media only screen and (min-width: 801px) {
+      margin-left: 64px;
+    }
+
   }
 
   .mejs-time-rail {
@@ -134,17 +145,6 @@ Stylesheet: HTML5 Audio Player   Stylesheet
       filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
     }
 
-  }
-
-  #player-next{
-    display: inline-block;
-    background:transparent url(../images/next.svg);
-  }
-
-  #player-previous{
-    display: inline-block;
-    background:transparent url(../images/previous.svg);
-    margin: 20px 25px 0 15px;   
   }
 
 }

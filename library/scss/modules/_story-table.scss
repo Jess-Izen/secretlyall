@@ -24,8 +24,23 @@ Stylesheet: Story Table  Stylesheet
 }
 
 //hide date on mobile only
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 800px){
     .col-date{
         display: none !important;
     } 
+}
+
+td.col-listen {
+    @media only screen and (max-width: 800px){
+    min-width: 70px;
+    padding: 0px 10px;
+    }
+}
+
+.secretlyyall .posts-table-wrapper {
+    margin-bottom: 24px;
+}
+
+.archive-wrapper {
+    min-height: 100vh;
 }

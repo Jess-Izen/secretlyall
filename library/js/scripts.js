@@ -108,7 +108,9 @@ function loadGravatars() {
 function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL, storyTags){
   //un-hide
   var playerWrapper = document.getElementById('story-player');
-  playerWrapper.style.display = "block";
+  var contentWrapper = document.getElementById('player-content');
+  playerWrapper.style.display = "flex";
+  //contentWrapper.style.display = "block";
    
   //embed audio - swaps out the existing src URL in the mediaelements audio widget
   var audioEmbed = document.getElementsByTagName("mediaelementwrapper")[0];
@@ -145,28 +147,31 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
   playerClose.onclick = function closePlayer (){
     audioSRC.setAttribute("src","");
     playerWrapper.style.display = "none";
+    //contentWrapper.style.display = "none";
     //let's make the listen button close too
   };
 
   
   //Description
   var playerDescription = document.getElementById('player-description');
-  playerDescription.innerHTML =storyName +' <br> ' + eventName;
+  playerDescription.innerHTML =' <div id="player-name">' + storyName +'</div> <a id="player-theme">' + eventName + '</a';
+
+  //theme page link
+  var playerTitleTheme = document.getElementById('player-theme')
+  playerTitleTheme.setAttribute("href",themeURL);
   
   //download button
   var playerDownload = document.getElementById('player-download');
   playerDownload.setAttribute("data",audioURL);
   
 
-
   //pass post ID & URL over to tag form modal button as custom attributes (click listener set in jquery)
   var tagButton = document.getElementById("player-tag-btn");
   tagButton.setAttribute('post_id',id);
   tagButton.setAttribute('post_url',postURL);
 
-  //theme page button
-  var playerTheme = document.getElementById('player-theme-page');
-  playerTheme.setAttribute("href",themeURL);
+
+
 
   //display tags
   var playerTags = document.getElementById('player-tags');

@@ -12,8 +12,8 @@
  * For more info: http://codex.wordpress.org/Page_Templates
 */
 ?>
-
-<?php get_header(); ?>
+	<div id="archive-wrapper">
+			<?php get_header(); ?>
 
 			<div id="content">
 
@@ -22,63 +22,24 @@
 						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+								<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-
-								<section class="entry-content cf" itemprop="articleBody">
+								<section  class="entry-content cf id= itemprop="articleBody">
 									<?php
-										// the content (pretty self explanatory huh)
 										the_content();
-
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
 									?>
 								</section>
 											
-								<div id="story-player">
-									<div id="audio-embed">
-									<?php echo do_shortcode('[audio src="/wp-content/uploads/2020/04/noisemp3_stimbox_liveinsantacruz.mp3"]')?>
-									<a id="player-previous" class="icon-btn" title="Previous"></a>
-									<a id="player-next" class="icon-btn" title="Next"></a>
-									</div>
-									<div id="under-player-audio">
-										<h2 id="player-description"></h2>
-										<a id="player-download" class="player-btn download-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download">Download</a>
-										<div id="player-tag-btn" class="player-btn" title="Add Tag">Add Tag</div>
-										<a id="player-theme-page" class="player-btn" title="Theme Page">Theme Page</a>
-										<div id="player-tags"></div>
-										<div id="player-close" class="icon-btn" title="Close">
-											<a id="label-close" class="player-label">Close</a>
-										</div>												
-											
-										</div>
-									</div>
-								</div>
+
 								
 								<div style="display: none;" id="download-modal">
-									<h2>Consider donating!</h2>
+									<h3>Consider donating!</h3>
 									<a id="donate-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true" target="_blank">Donate</a>
 									<a id="modal-download-btn" class="sy-btn" download>Download</a>
 								</div>
 
 								<footer class="article-footer">
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+                 			 <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 
 								</footer>
 
@@ -109,7 +70,44 @@
 				</div>
 
 
-			</div>
 
+							</div>		
 
 <?php get_footer(); ?>
+</div>
+
+<div id="story-player">
+								<div id="player-content">
+									<div id="audio-embed">
+										<div id="sy-mediaelements" class="col4_5">	
+											<?php echo do_shortcode('[audio src="/wp-content/uploads/2020/04/noisemp3_stimbox_liveinsantacruz.mp3"]')?>
+										</div>
+										<div id="audio-buttons" class="col1_5">	
+											<div id=player-play-placeholder class="icon-btn col"></div>
+											<a id="player-previous" class="icon-btn col1_3" title="Previous"></a>
+											<a id="player-next" class="icon-btn col1_3" title="Next"></a>
+											<a id="player-close" class="icon-btn col1_3" title="Close"></a>
+											</div>
+											
+									</div>
+										
+									<div id="under-player-audio">
+										<div class="col1_4">
+											<h2 id="player-description"></h2>
+										</div>
+										<div class="col2_4">	
+											<a id="player-download" class="player-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download">Download</a>
+										</div>
+										<div class="col3_4">
+											<div id="player-tag-btn" class="player-btn" title="Add Tag">Add Tag</div>
+										</div>
+										<div class="col4_4">
+											<div id="player-tag-wrapper">
+											<h2 id="player-tag-label">Tags:</h2>
+											<div id="player-tags" ></div>
+										</div>
+									</div>
+							
+											
+								</div>
+							</div>

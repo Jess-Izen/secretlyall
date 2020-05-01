@@ -6,65 +6,185 @@ Stylesheet: Story Player Stylesheet
 
 ******************************************************************/
 
+
+
 #story-player{
     display:none;
-    position: fixed;
+    position: sticky;
+    //position: -webkit-sticky; /* Safari */
     bottom: 0;
     width: 100%;
     background-color: $black;
-    height: 200px;
+    min-height: 200px;
+    justify-content: center;
+    p {
+        font-size: 18px;
+    }
+
+
 }
 
-#audio-player {
+#player-content{
     width: 100%;
+    @media only screen and (min-width: 801px){
+        max-width: 1230;
+        
+
+    }
 }
 
-#under-player-audio{
-    margin-top: 30px;
-    margin-bottom:15px;
-    position: relative;
-    bottom: 10px;
+//First Row
+
+#audio-embed{
+    padding-top: 20px;
+    @media only screen and (min-width: 801px){
+    display: flex;
+    justify-content: space-between;
+        .col4_5{
+        width: 79%;
+        }
+        .col1_5{
+            width: 18%;
+            }
+
+    
+    }
 }
 
-#player-description {
-    color: white;
-    margin-left: 60px;
-    margin-top: 0px;
-    width: 200px;
+#audio-buttons {
+    display:flex;  
+    justify-content: space-between;
+    .col1_3 {
+        width: 64px
+
+    }
+
+    @media only screen and (max-width: 800px) {
+    margin: 30px 25px 0 25px;
+    }
+}
+
+#player-play-placeholder{
+    @media only screen and (min-width: 801px) {
+    display:none;
+    }
+}
+
+#player-next{
     display: inline-block;
-    vertical-align: top;
-}
+    background:transparent url(../images/next.svg);
+  }
 
-
-#player-tag-btn {
-  margin-left: 100px;
-}
-
-#player-theme-page {
-    margin-left: 100px;
-}
-
-#player-tags {
+  #player-previous{
     display: inline-block;
-    margin-left: 100px;
-    color: white;
-}
-
+    background:transparent url(../images/previous.svg);
+    //margin: 20px 25px 0 15px;   
+  }
 
 
 
 #player-close{
     display: inline-block;
-    position: absolute;
     background:transparent url(../images/close.svg);
-    height: 64px;
-    width: 64px;
-    right: 60px;
-    filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
-    &:hover{
-      filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
+}
+
+//Second row
+
+
+#under-player-audio{
+    margin-top: 25px;
+    padding-bottom:15px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (min-width: 801px) {
+        min-height: 110px;
+        .col1_4{
+        width: 24%;
+         }
+        .col2_4{
+          width: 18%;
+        }
+        .col3_4{
+          width: 18%;
+        }
+        .col4_4{
+          width:40%;
+        }
     }
-  }
+    @media only screen and (max-width: 800px) {
+        text-align: center;
+        margin-top: 15px;
+        justify-content: center;
+        }
+    
+    
+}
+
+#player-description {
+    color: white;
+    max-width: 200px;
+    margin: 0;
+    justify-content: center;
+    @media only screen and (max-width: 800px) {
+        max-width: 100%;
+        margin: 0 25px 0 25px;
+        font-size: 6.25vw;
+        }
+}
+
+#player-name{
+    @media only screen and (max-width: 800px) {
+    display: inline;
+    }
+}
+
+#player-name:after{
+    @media only screen and (max-width: 800px) {
+    content: " --";
+    }
+}
+
+
+#player-theme{
+    color: white;
+    text-decoration: underline !important;
+    @media only screen and (max-width: 800px) {
+    display: inline;
+    }
+}
+
+#player-download {
+    display: inline-block;
+    @media only screen and (max-width: 800px) {
+        display: none;
+        }    
+}  
+
+#player-tag-btn {
+  @media only screen and (max-width: 800px) {
+    display: none;
+    }
+}
+
+
+#player-tag-wrapper {
+    color: white;
+    @media only screen and (max-width: 800px) {
+        display: none;
+        }   
+    h2{
+        margin: 0;
+    }
+    p{
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
 //icon label text
 .player-label {
     font-family: $sans-serif;

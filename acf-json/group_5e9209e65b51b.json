@@ -92,7 +92,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "acf-hidden",
                 "id": ""
             },
             "hide_admin": 0,
@@ -120,5 +120,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1587945579
+    "modified": 1587948125
 }

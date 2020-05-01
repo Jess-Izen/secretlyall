@@ -416,8 +416,8 @@ function my_acf_save_post( $post_id ) {
     ));
     $story_tags = implode ('; ',$story_tags_prep);
           //the download and listen buttons pass a fair amount of data to the corresponding click functions
-    $download_button = '<a data="'.$audio_link.'" class="sy-btn download-btn" data-fancybox data-src="#download-modal" href="javascript:;">Download</a>';
-    $listen_button = '<a class="sy-btn listen-btn" href="javascript:;" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\');">Listen</a>';
+    $download_button = '<a data="'.$audio_link.'" class="sy-btn download-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download">Download</a>';
+    $listen_button = '<a class="sy-btn listen-btn" href="javascript:;" title="Listen" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\');">Listen</a>';
     update_field('listen',$listen_button);
     update_field('download',$download_button);
 

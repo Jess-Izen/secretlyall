@@ -1,22 +1,16 @@
 <?php
 /*
-Author: Eddie Machado
-URL: http://themble.com/bones/
+Author: Jess Izen
+URL: https://github.com/Jess-Izen/secretlyall
 
-This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images,
-sidebars, comments, etc.
+Incorporates Bones theme function.php, http://themble.com/bones/
 */
 
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
 
-// CUSTOMIZE THE WORDPRESS ADMIN (off by default)
-// require_once( 'library/admin.php' );
-
 /*********************
 LAUNCH BONES
-Let's get everything up and running.
 *********************/
 
 function bones_ahoy() {
@@ -194,59 +188,6 @@ function bones_register_sidebars() {
 } // don't remove this bracket!
 
 
-/************* COMMENT LAYOUT *********************/
-
-// Comment Layout
-function bones_comments( $comment, $args, $depth ) {
-   $GLOBALS['comment'] = $comment; ?>
-  <div id="comment-<?php comment_ID(); ?>" <?php comment_class('cf'); ?>>
-    <article  class="cf">
-      <header class="comment-author vcard">
-        <?php
-        /*
-          this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
-          echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-        */
-        ?>
-        <?php // custom gravatar call ?>
-        <?php
-          // create variable
-          $bgauthemail = get_comment_author_email();
-        ?>
-        <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
-        <?php // end custom gravatar call ?>
-        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'bonestheme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'bonestheme' ),'  ','') ) ?>
-        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'bonestheme' )); ?> </a></time>
-
-      </header>
-      <?php if ($comment->comment_approved == '0') : ?>
-        <div class="alert alert-info">
-          <p><?php _e( 'Your comment is awaiting moderation.', 'bonestheme' ) ?></p>
-        </div>
-      <?php endif; ?>
-      <section class="comment_content cf">
-        <?php comment_text() ?>
-      </section>
-      <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-    </article>
-  <?php // </li> is added by WordPress automatically ?>
-<?php
-} // don't remove this bracket!
-
-
-/*
-This is a modification of a function found in the
-twentythirteen theme where we can declare some
-external fonts. If you're using Google Fonts, you
-can replace these fonts, change it in your scss files
-and be up and running in seconds.
-*/
-/*function bones_fonts() {
-  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
-}
-
-add_action('wp_enqueue_scripts', 'bones_fonts');
-*/
 
 /*************ACF COMMANDS */
 
@@ -459,6 +400,7 @@ add_filter( 'acf/prepare_field/key=field_5e27868af7ba7', 'hide_acf_fields' ); //
 add_filter( 'acf/prepare_field/key=field_5e8ce2342e7d7', 'hide_acf_fields' ); // story - listen
 add_filter( 'acf/prepare_field/key=field_5e8cfaf86fab0', 'hide_acf_fields' ); // story - download
 add_filter( 'acf/prepare_field/key=field_5ea61937faf17', 'hide_acf_fields' ); // story - new tag
+add_filter( 'acf/prepare_field/key=field_5eaef4f9a7d7f', 'hide_acf_fields' ); // story - tag button
 add_filter( 'acf/prepare_field/key=field_5e6e6fca8ad9f', 'hide_acf_fields' ); // event - date formatted
 add_filter( 'acf/prepare_field/key=field_5e6e6fca8ad9f', 'hide_acf_fields' ); // event - date formatted
 
@@ -596,34 +538,15 @@ function loginRedirect( $redirect_to, $request, $user ){
       return "/wp-admin/edit.php?post_type=story";
   }
 }
-add_filter("login_redirect", "loginRedirect", 10, 3);
+add_filter("login_redirect", "loginRedirect", 10, 3); 
 
 
-/**
- * Add an HTML class to MediaElement.js container elements to aid styling.
- *
- * Extends the core _wpmejsSettings object to add a new feature via the
- * MediaElement.js plugin API.
- */
-function example_mejs_add_container_class() {
-	if ( ! wp_script_is( 'mediaelement', 'done' ) ) {
-		return;
-	}
-	?>
-	<script>
-	(function() {
-		var settings = window._wpmejsSettings || {};
-		settings.features = settings.features || mejs.MepDefaults.features;
-		settings.features.push( 'exampleclass' );
+/******POSTS TABLE PRO*************/
 
-		MediaElementPlayer.prototype.buildexampleclass = function( player ) {
-			player.container.addClass( 'mytheme-mejs-container' );
-		};
-	})();
-	</script>
-	<?php
-}
-add_action( 'wp_print_footer_scripts', 'example_mejs_add_container_class' );
-
+//override 'show x entries' text
+add_filter( 'posts_table_language_defaults', function( $defaults ) { 
+  $defaults['lengthMenu'] = 'Show _MENU_'; 
+  return $defaults; 
+} );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

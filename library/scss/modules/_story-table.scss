@@ -30,12 +30,7 @@ Stylesheet: Story Table  Stylesheet
     } 
 }
 
-//hide tag button on desktop
-@media only screen and (min-width: 801px){
-    .col-tag_button{
-        display: none !important;
-    }
-}
+
 
 .col-listen,
 .col-download,
@@ -64,8 +59,34 @@ Stylesheet: Story Table  Stylesheet
     margin-bottom: 24px;
     flex-grow: 1;
     max-width: 1400px;
+    
+    .dataTables_length label#text {
+        display: none;
+    }
 
-}
+
+   @media only screen and (max-width: 800px){
+    .filter-label {
+        display: none !important;
+        }
+
+    .posts-table-reset {
+        display: inline-flex;
+        justify-content: center;
+        margin: 7.5px 0 2.5 0;
+    }
+
+    .col-storyteller {
+        max-width: 60px;
+        background-image: none !important; 
+        
+        }
+
+    }
+
+    }
+
+
 
 .dataTables_wrapper {
     display: flex;
@@ -74,4 +95,18 @@ Stylesheet: Story Table  Stylesheet
 
 .archive-wrapper {
     min-height: 100vh;
+}
+
+td.child {
+    ul.dtr-details{
+        text-align: center;
+        padding-bottom: 10px !important;
+
+        li {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }

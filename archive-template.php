@@ -27,7 +27,48 @@
 								<section  class="entry-content cf id= itemprop="articleBody">
 									<?php
 										the_content();
+										ptp_the_posts_table(
+											array(
+												'columns' =>'tax:storyteller:Storyteller,
+															 tax:story_event:Theme,
+															 cf:listen,
+															 cf:download,
+															 cf:tag_button:Add Tag,
+															 tax:story_tag:Tags, 
+															 cf:story_description:Description,
+															 cf:event_fundraisee:Fundraiser Org,
+															 tax:story_location:Location,
+															 date',
+
+												'priorities' => '1,
+																3,
+																2,
+																4,
+																5,
+																6,
+																7,
+																8,
+																9,
+																10,
+																11',
+
+												
+
+
+
+
+												'responsive_control' => 'column',
+
+												'page_length' => 'bottom',
+
+
+
+
+												
+											)
+										);
 									?>
+
 								</section>
 											
 

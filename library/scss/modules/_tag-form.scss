@@ -14,7 +14,6 @@ Stylesheet: Tag Form Modal Stylesheet
     height: 450px !important;
     @media only screen and (max-width: 800px){
     width: 90% !important;
-    height: 500px !important
     }        
     html {
         overflow-y: hidden;
@@ -93,9 +92,6 @@ body.single-story {
         margin-top: 0px;
         background-color: $black;
         height: 440px;
-        @media only screen and (max-width: 800px){
-            height: 490px;
-        }
     }
 
 

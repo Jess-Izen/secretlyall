@@ -172,8 +172,7 @@ jQuery(document).ready(function($) {
   });
 
   //add click listener to download button (in table and player), to open up fancybox w/ donation prompt
-
-$('.download-btn').on('click',function(){
+$(document).on("click", ".download-btn", function () {
   //passes proper mp3 link based on download button's data attribute
   var audioURL = $(this).attr("data");
   var downloadButton = $("#modal-download-btn");

@@ -1180,53 +1180,81 @@ Stylesheet: Story Table  Stylesheet
     display: none !important;
   }
 }
-@media only screen and (min-width: 801px) {
-  /* line 35, ../scss/modules/_story-table.scss */
-  .col-tag_button {
-    display: none !important;
-  }
-}
-/* line 42, ../scss/modules/_story-table.scss */
+/* line 37, ../scss/modules/_story-table.scss */
 .col-listen,
 .col-download,
 .col-tag_button {
   text-align: center !important;
 }
 
-/* line 47, ../scss/modules/_story-table.scss */
+/* line 42, ../scss/modules/_story-table.scss */
 .listen-btn {
   background: #013237 url(../images/play-small.svg);
   display: inline-block;
 }
 
-/* line 53, ../scss/modules/_story-table.scss */
+/* line 48, ../scss/modules/_story-table.scss */
 .download-btn {
   background: #013237 url(../images/download-small.svg);
   display: inline-block;
 }
 
-/* line 58, ../scss/modules/_story-table.scss */
+/* line 53, ../scss/modules/_story-table.scss */
 .table-tag-btn {
   background: #013237 url(../images/add-small.svg);
   display: inline-block;
 }
 
-/* line 63, ../scss/modules/_story-table.scss */
+/* line 58, ../scss/modules/_story-table.scss */
 .posts-table-wrapper {
   margin-bottom: 24px;
   flex-grow: 1;
   max-width: 1400px;
 }
+/* line 63, ../scss/modules/_story-table.scss */
+.posts-table-wrapper .dataTables_length label#text {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  /* line 69, ../scss/modules/_story-table.scss */
+  .posts-table-wrapper .filter-label {
+    display: none !important;
+  }
+  /* line 73, ../scss/modules/_story-table.scss */
+  .posts-table-wrapper .posts-table-reset {
+    display: inline-flex;
+    justify-content: center;
+    margin: 7.5px 0 2.5 0;
+  }
+  /* line 79, ../scss/modules/_story-table.scss */
+  .posts-table-wrapper .col-storyteller {
+    max-width: 60px;
+    background-image: none !important;
+  }
+}
 
-/* line 70, ../scss/modules/_story-table.scss */
+/* line 91, ../scss/modules/_story-table.scss */
 .dataTables_wrapper {
   display: flex;
   justify-content: center;
 }
 
-/* line 75, ../scss/modules/_story-table.scss */
+/* line 96, ../scss/modules/_story-table.scss */
 .archive-wrapper {
   min-height: 100vh;
+}
+
+/* line 101, ../scss/modules/_story-table.scss */
+td.child ul.dtr-details {
+  text-align: center;
+  padding-bottom: 10px !important;
+}
+/* line 105, ../scss/modules/_story-table.scss */
+td.child ul.dtr-details li {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /******************************************************************
@@ -1658,54 +1686,53 @@ Stylesheet: Tag Form Modal Stylesheet
   /* line 11, ../scss/modules/_tag-form.scss */
   .fancybox-slide--iframe .fancybox-content {
     width: 90% !important;
-    height: 500px !important;
   }
 }
-/* line 19, ../scss/modules/_tag-form.scss */
+/* line 18, ../scss/modules/_tag-form.scss */
 .fancybox-slide--iframe .fancybox-content html {
   overflow-y: hidden;
 }
 
-/* line 24, ../scss/modules/_tag-form.scss */
+/* line 23, ../scss/modules/_tag-form.scss */
 body.single-story {
   overflow-y: hidden;
 }
 
 @media only screen and (max-width: 800px) {
-  /* line 28, ../scss/modules/_tag-form.scss */
+  /* line 27, ../scss/modules/_tag-form.scss */
   .fancybox-slide--iframe {
     padding: 0;
   }
 }
 
-/* line 34, ../scss/modules/_tag-form.scss */
+/* line 33, ../scss/modules/_tag-form.scss */
 #tag-form-wrapper {
   padding: 25px 25px 10px 25px;
 }
 
-/* line 39, ../scss/modules/_tag-form.scss */
+/* line 38, ../scss/modules/_tag-form.scss */
 #tag-form-title {
   margin: 0 auto 25px auto;
   color: white;
   font-size: 1.4em;
 }
 
-/* line 46, ../scss/modules/_tag-form.scss */
+/* line 45, ../scss/modules/_tag-form.scss */
 #tag-form {
   display: block;
   margin: 0 auto 0 auto;
   color: white;
   font-weight: normal;
 }
-/* line 51, ../scss/modules/_tag-form.scss */
+/* line 50, ../scss/modules/_tag-form.scss */
 #tag-form input, #tag-form textarea {
   background: #ece9e5;
 }
-/* line 55, ../scss/modules/_tag-form.scss */
+/* line 54, ../scss/modules/_tag-form.scss */
 #tag-form textarea {
   max-width: 400px;
 }
-/* line 60, ../scss/modules/_tag-form.scss */
+/* line 59, ../scss/modules/_tag-form.scss */
 #tag-form .af-spinner,
 #tag-form .acf-spinner {
   height: 20px;
@@ -1716,40 +1743,34 @@ body.single-story {
   display: none;
 }
 
-/* line 74, ../scss/modules/_tag-form.scss */
+/* line 73, ../scss/modules/_tag-form.scss */
 .single-story .header {
   display: none;
 }
-/* line 78, ../scss/modules/_tag-form.scss */
+/* line 77, ../scss/modules/_tag-form.scss */
 .single-story .article-header {
   display: none;
 }
-/* line 81, ../scss/modules/_tag-form.scss */
+/* line 80, ../scss/modules/_tag-form.scss */
 .single-story .sidebar {
   display: none;
 }
-/* line 85, ../scss/modules/_tag-form.scss */
+/* line 84, ../scss/modules/_tag-form.scss */
 .single-story .footer {
   display: none;
 }
-/* line 89, ../scss/modules/_tag-form.scss */
+/* line 88, ../scss/modules/_tag-form.scss */
 .single-story #wpadminbar {
   display: none;
 }
-/* line 92, ../scss/modules/_tag-form.scss */
+/* line 91, ../scss/modules/_tag-form.scss */
 .single-story #content {
   margin-top: 0px;
   background-color: #013237;
   height: 440px;
 }
-@media only screen and (max-width: 800px) {
-  /* line 92, ../scss/modules/_tag-form.scss */
-  .single-story #content {
-    height: 490px;
-  }
-}
 
-/* line 104, ../scss/modules/_tag-form.scss */
+/* line 100, ../scss/modules/_tag-form.scss */
 .fancybox-iframe {
   background-color: #a7d9cd;
 }

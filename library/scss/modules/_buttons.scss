@@ -115,20 +115,24 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 .icon-btn-small {
   &:visited{
-    background-color: #525252 !important;
+    background-color: #525252;
     }
   height: 50px;
   width: 50px;
   cursor: pointer;
   border-radius: 50%;
-  background-position: center !important;
-  background-repeat: no-repeat!important;
-  background-size: 50px 50px !important;
-  background-color: $black !important;
-  background-blend-mode: screen !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-color: $black;
+  background-blend-mode: screen;
 
   &:hover,
   &:focus  {
-    background-color: #525252 !important
+    background-color: #525252;
+    filter: brightness(80%);
   }
+
+
+
 }

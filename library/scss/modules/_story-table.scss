@@ -37,13 +37,13 @@ Stylesheet: Story Table  Stylesheet
 
 
 .listen-btn{
-    background: url(../images/play-small.svg);
+    background: $black url(../images/play-small.svg);
     display: inline-block;
 }
 
 
 .download-btn{
-    background: url(../images/download-small.svg);
+    background: $black url(../images/download-small.svg);
     display: inline-block;
 }
 

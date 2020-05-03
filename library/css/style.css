@@ -827,19 +827,20 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   width: 50px;
   cursor: pointer;
   border-radius: 50%;
-  background-position: center !important;
-  background-repeat: no-repeat!important;
-  background-size: 50px 50px !important;
-  background-color: #013237 !important;
-  background-blend-mode: screen !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-color: #013237;
+  background-blend-mode: screen;
 }
 /* line 117, ../scss/modules/_buttons.scss */
 .icon-btn-small:visited {
-  background-color: #525252 !important;
+  background-color: #525252;
 }
 /* line 131, ../scss/modules/_buttons.scss */
 .icon-btn-small:hover, .icon-btn-small:focus {
-  background-color: #525252 !important;
+  background-color: #525252;
+  filter: brightness(80%);
 }
 
 /******************************************************************
@@ -1187,13 +1188,13 @@ Stylesheet: Story Table  Stylesheet
 
 /* line 39, ../scss/modules/_story-table.scss */
 .listen-btn {
-  background: url(../images/play-small.svg);
+  background: #013237 url(../images/play-small.svg);
   display: inline-block;
 }
 
 /* line 45, ../scss/modules/_story-table.scss */
 .download-btn {
-  background: url(../images/download-small.svg);
+  background: #013237 url(../images/download-small.svg);
   display: inline-block;
 }
 

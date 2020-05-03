@@ -1180,38 +1180,51 @@ Stylesheet: Story Table  Stylesheet
     display: none !important;
   }
 }
-/* line 34, ../scss/modules/_story-table.scss */
+@media only screen and (min-width: 801px) {
+  /* line 35, ../scss/modules/_story-table.scss */
+  .col-tag_button {
+    display: none !important;
+  }
+}
+/* line 42, ../scss/modules/_story-table.scss */
 .col-listen,
-.col-download {
+.col-download,
+.col-tag_button {
   text-align: center !important;
 }
 
-/* line 39, ../scss/modules/_story-table.scss */
+/* line 47, ../scss/modules/_story-table.scss */
 .listen-btn {
   background: #013237 url(../images/play-small.svg);
   display: inline-block;
 }
 
-/* line 45, ../scss/modules/_story-table.scss */
+/* line 53, ../scss/modules/_story-table.scss */
 .download-btn {
   background: #013237 url(../images/download-small.svg);
   display: inline-block;
 }
 
-/* line 50, ../scss/modules/_story-table.scss */
+/* line 58, ../scss/modules/_story-table.scss */
+.table-tag-btn {
+  background: #013237 url(../images/add-small.svg);
+  display: inline-block;
+}
+
+/* line 63, ../scss/modules/_story-table.scss */
 .posts-table-wrapper {
   margin-bottom: 24px;
   flex-grow: 1;
   max-width: 1400px;
 }
 
-/* line 57, ../scss/modules/_story-table.scss */
+/* line 70, ../scss/modules/_story-table.scss */
 .dataTables_wrapper {
   display: flex;
   justify-content: center;
 }
 
-/* line 62, ../scss/modules/_story-table.scss */
+/* line 75, ../scss/modules/_story-table.scss */
 .archive-wrapper {
   min-height: 100vh;
 }
@@ -1454,43 +1467,6 @@ Stylesheet: Story Player Stylesheet
   }
 }
 
-/* line 206, ../scss/modules/_story-player.scss */
-body.single-story {
-  min-height: 161px;
-  overflow-y: hidden;
-  background-color: #a7d9cd;
-}
-/* line 211, ../scss/modules/_story-player.scss */
-body.single-story .header {
-  display: none;
-}
-/* line 215, ../scss/modules/_story-player.scss */
-body.single-story .article-header {
-  display: none;
-}
-/* line 218, ../scss/modules/_story-player.scss */
-body.single-story .sidebar {
-  display: none;
-}
-/* line 222, ../scss/modules/_story-player.scss */
-body.single-story .footer {
-  display: none;
-}
-/* line 226, ../scss/modules/_story-player.scss */
-body.single-story #wpadminbar {
-  display: none;
-}
-/* line 229, ../scss/modules/_story-player.scss */
-body.single-story #content {
-  margin-top: 0px;
-  background-color: #a7d9cd;
-}
-
-/* line 237, ../scss/modules/_story-player.scss */
-.fancybox-iframe {
-  background-color: #a7d9cd;
-}
-
 /******************************************************************
 Site Name:
 Author:
@@ -1663,6 +1639,110 @@ Stylesheet: Theme Tax Page Stylesheet
 #theme-back-btn {
   display: inline-block;
   margin-left: 100px;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tag Form Modal Stylesheet
+
+******************************************************************/
+/* line 11, ../scss/modules/_tag-form.scss */
+.fancybox-slide--iframe .fancybox-content {
+  max-width: 450px;
+  border: 5px #a7d9cd solid;
+  height: 450px !important;
+}
+@media only screen and (max-width: 800px) {
+  /* line 11, ../scss/modules/_tag-form.scss */
+  .fancybox-slide--iframe .fancybox-content {
+    width: 90% !important;
+    height: 500px !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* line 21, ../scss/modules/_tag-form.scss */
+  .fancybox-slide--iframe {
+    padding: 0;
+  }
+}
+
+/* line 27, ../scss/modules/_tag-form.scss */
+#tag-form-wrapper {
+  padding: 25px 25px 10px 25px;
+}
+
+/* line 32, ../scss/modules/_tag-form.scss */
+#tag-form-title {
+  margin: 0 auto 25px auto;
+  color: white;
+  font-size: 1.4em;
+}
+
+/* line 39, ../scss/modules/_tag-form.scss */
+#tag-form {
+  display: block;
+  margin: 0 auto 0 auto;
+  color: white;
+  font-weight: normal;
+}
+/* line 44, ../scss/modules/_tag-form.scss */
+#tag-form input, #tag-form textarea {
+  background: #ece9e5;
+}
+/* line 48, ../scss/modules/_tag-form.scss */
+#tag-form textarea {
+  max-width: 400px;
+}
+/* line 53, ../scss/modules/_tag-form.scss */
+#tag-form .af-spinner,
+#tag-form .acf-spinner {
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+  vertical-align: text-top;
+  background: transparent url(../images/spinner.gif) no-repeat 50% 50%;
+  display: none;
+}
+
+/* line 65, ../scss/modules/_tag-form.scss */
+.single-story .header {
+  display: none;
+}
+/* line 69, ../scss/modules/_tag-form.scss */
+.single-story .article-header {
+  display: none;
+}
+/* line 72, ../scss/modules/_tag-form.scss */
+.single-story .sidebar {
+  display: none;
+}
+/* line 76, ../scss/modules/_tag-form.scss */
+.single-story .footer {
+  display: none;
+}
+/* line 80, ../scss/modules/_tag-form.scss */
+.single-story #wpadminbar {
+  display: none;
+}
+/* line 83, ../scss/modules/_tag-form.scss */
+.single-story #content {
+  margin-top: 0px;
+  background-color: #013237;
+  height: 440px;
+}
+@media only screen and (max-width: 800px) {
+  /* line 83, ../scss/modules/_tag-form.scss */
+  .single-story #content {
+    height: 490px;
+  }
+}
+
+/* line 95, ../scss/modules/_tag-form.scss */
+.fancybox-iframe {
+  background-color: #a7d9cd;
 }
 
 /*********************

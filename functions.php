@@ -410,18 +410,19 @@ function my_acf_save_post( $post_id ) {
     $audio_link = get_field("audio", $post_id);
     $post_url = get_permalink($post_id);
     $theme_page = get_term_link($story_term);
-          //need to convert tags into a string from the array in order to pass using the onclick function
+    //need to convert tags into a string from the array in order to pass using the onclick function
     $story_tags_prep = wp_get_post_terms($post_id, 'story_tag', $args=array(
       'fields' => 'names' 
     ));
     $story_tags = implode ('; ',$story_tags_prep);
-    //the download and listen buttons pass a fair amount of data to the corresponding click functions
     $download_button_link = "http://secretly-yall-archive.local/#download-".$post_id;
     $play_button_link = "http://secretly-yall-archive.local/#listen-".$post_id;
     $download_button = '<a data="'.$audio_link.'" class="icon-btn-small download-btn" data-fancybox data-src="#download-modal" href="'.$download_button_link.'" onclick="" title="Download"></a>';
     $listen_button = '<a class="icon-btn-small listen-btn" href="'. $play_button_link.'" title="Listen" state="inactive" storyid="'.$post_id.'" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\', \''.$download_button_link.'\');"></a>';
+    $tag_button = '<div class="icon-btn-small table-tag-btn tag-btn" title="Add Tag" post_url="'.$post_url.'"></div>';
     update_field('listen',$listen_button);
     update_field('download',$download_button);
+    update_field('tag_button',$tag_button);
 
   }   
 
@@ -472,9 +473,29 @@ function tag_form_submit($post, $form, $args){
   $post_id = $post->ID;
   wp_set_post_terms($post_id, $new_tag, 'story_tag', $append=true);
   update_field('story_new_tag', '', $post_id);
-
-//insert notification here
 }
+
+//dequeue unnecessary scripts from form
+
+function form_remove_enqueues() {
+  // Stylized select (including user and post fields)
+  wp_dequeue_script( 'select2' );
+  wp_dequeue_style( 'select2' );
+
+  // Date picker
+  wp_dequeue_script( 'jquery-ui-datepicker' );
+  wp_dequeue_style( 'acf-datepicker' );
+
+  // Date and time picker
+  wp_dequeue_script( 'acf-timepicker' );
+  wp_dequeue_style( 'acf-timepicker' );
+
+  // Color picker
+  wp_dequeue_script( 'wp-color-picker' );
+  wp_dequeue_style( 'wp-color-picker' );
+}
+add_action( 'af/form/enqueue/key=FORM_KEY', 'form_remove_enqueues' );
+
 
 //prefill the tag form with hidden fields giving story&theme name&edit link, for use passing to zapier
 add_filter( 'af/field/prefill_value/key=field_5ea6158f84a6c', 'prefill_form_story_name', 10, 4 );

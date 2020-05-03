@@ -1,0 +1,97 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tag Form Modal Stylesheet
+
+******************************************************************/
+
+
+
+.fancybox-slide--iframe .fancybox-content {
+    max-width: 450px;
+    border: 5px $accent-color solid;
+    height: 450px !important;
+    @media only screen and (max-width: 800px){
+    width: 90% !important;
+    height: 500px !important
+    }        
+}
+
+.fancybox-slide--iframe {
+    @media only screen and (max-width: 800px){
+    padding: 0;
+    }
+}
+
+#tag-form-wrapper {
+    padding: 25px 25px 10px 25px;
+}
+
+
+#tag-form-title{
+    margin: 0 auto 25px auto;
+    color: white;
+    font-size: 1.4em;
+
+}
+
+#tag-form {
+    display: block;
+    margin: 0 auto 0 auto;
+    color: white;
+    font-weight: normal;
+    input, textarea {
+        background: $background-grey;
+    }
+
+    textarea{
+        max-width: 400px;
+    }
+
+    .af-spinner,
+    .acf-spinner {
+        height: 20px;
+        width: 20px;
+        margin-left: 5px;
+        vertical-align: text-top;
+        background: transparent url(../images/spinner.gif) no-repeat 50% 50%;
+        display:none;
+    }
+}
+
+.single-story  {
+
+    .header {
+
+        display:none;
+    }
+    .article-header {
+        display: none;
+    }
+    .sidebar {
+        display:none;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    #wpadminbar {
+        display: none;
+    }
+    #content {
+        margin-top: 0px;
+        background-color: $black;
+        height: 440px;
+        @media only screen and (max-width: 800px){
+            height: 490px;
+        }
+    }
+
+
+    }
+
+.fancybox-iframe {
+    background-color: $accent-color;
+    }

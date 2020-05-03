@@ -7,7 +7,7 @@
 
 
 function loadGravatars() {
-  // set the viewport using the function above
+  // set the viewport using the function above  
   viewport = updateViewportDimensions();
   // if the viewport is tablet or larger, we load in the gravatars
   if (viewport.width >= 768) {
@@ -24,6 +24,8 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
   var audioEmbed = document.getElementsByTagName("mediaelementwrapper")[0];
   var audioSRC = audioEmbed.firstChild;
   var playerWrapper = document.getElementById('story-player');
+  var openBackground = "#013237"; //i ought to load these from the sass variables
+  var closedBackground = "#525252";
   staticListen = document.querySelector('[storyid="'+ id + '"]'); //pull static DOM list for validation
   clickState = staticListen.getAttribute("state");
 
@@ -45,6 +47,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
       if (button.getAttribute("state") == "active"){
         button.setAttribute("state", "inactive");
         button.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
+        button.style.backgroundColor = closedBackground;
       }
       });
     
@@ -56,8 +59,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     //handle table listen button
     clickedListen.setAttribute("state","active");
     clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/stop-small.svg)";
-    originalbackground = clickedListen.style.backgroundColor;
-    clickedListen.style.backgroundColor = "#013237";
+    clickedListen.style.backgroundColor = openBackground;
 
 
     //set focus on play/pause button
@@ -79,7 +81,6 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
 
     //pass post ID & URL over to tag form modal button as custom attributes (click listener set in jquery)
     var tagButton = document.getElementById("player-tag-btn");
-    tagButton.setAttribute('post_id',id);
     tagButton.setAttribute('post_url',postURL);
 
     //display tags
@@ -94,7 +95,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     audioSRC.onended = function() {
       clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
       clickedListen.setAttribute("state","inactive");
-      clickedListen.style.backgroundColor = originalbackground;
+      clickedListen.style.backgroundColor = closedBackground;
       nextListen.click();
       return;
       };
@@ -106,7 +107,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
         var prevListen = previousRow.getElementsByClassName("listen-btn")[0];    
         clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
         clickedListen.setAttribute("state","inactive");
-        clickedListen.style.backgroundColor = originalbackground;
+        clickedListen.style.backgroundColor = closedBackground;
         prevListen.click();
         return;
         };
@@ -118,7 +119,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
       nextListen.click();
       clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
       clickedListen.setAttribute("state","inactive");
-      clickedListen.style.backgroundColor = originalbackground;
+      clickedListen.style.backgroundColor = closedBackground;
       return;
     };
 
@@ -130,7 +131,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
       playerWrapper.style.display = "none";
       clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
       clickedListen.setAttribute("state","inactive");
-      clickedListen.style.backgroundColor = originalbackground;
+      clickedListen.style.backgroundColor = closedBackground;
       return;
     };
       
@@ -142,7 +143,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
         playerWrapper.style.display = "none";
         clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
         clickedListen.setAttribute("state","inactive");
-        clickedListen.style.backgroundColor = originalbackground;
+        clickedListen.style.backgroundColor = closedBackground;
         return;
       }
     }
@@ -158,9 +159,8 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
 */
 jQuery(document).ready(function($) {
   
-  //add click listener to player tag button, open fancybox using post's URL as src (which has proper form embedded)
-  $("#player-tag-btn").click(function() {
-    var id = $(this).attr("post_id");
+  //add click listener to player & table tag button, open fancybox using post's URL as src (which has proper form embedded)
+    $(document).on("click", ".tag-btn", function () {
     var postURL = $(this).attr("post_url");
     $.fancybox.open({
       src  : postURL,

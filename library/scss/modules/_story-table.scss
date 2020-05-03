@@ -30,8 +30,16 @@ Stylesheet: Story Table  Stylesheet
     } 
 }
 
+//hide tag button on desktop
+@media only screen and (min-width: 801px){
+    .col-tag_button{
+        display: none !important;
+    }
+}
+
 .col-listen,
-.col-download {
+.col-download,
+.col-tag_button {
     text-align: center !important;
 }
 
@@ -44,6 +52,11 @@ Stylesheet: Story Table  Stylesheet
 
 .download-btn{
     background: $black url(../images/download-small.svg);
+    display: inline-block;
+}
+
+.table-tag-btn{
+    background: $black url(../images/add-small.svg);
     display: inline-block;
 }
 

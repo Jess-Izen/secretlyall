@@ -1168,88 +1168,98 @@ Stylesheet: Story Table  Stylesheet
   text-decoration: none;
 }
 
-/* line 22, ../scss/modules/_story-table.scss */
+/* line 23, ../scss/modules/_story-table.scss */
 .col-event_fundraisee,
 .col-story_location {
   display: none !important;
 }
 
 @media only screen and (max-width: 800px) {
-  /* line 28, ../scss/modules/_story-table.scss */
+  /* line 29, ../scss/modules/_story-table.scss */
   .col-date {
     display: none !important;
   }
 }
-/* line 37, ../scss/modules/_story-table.scss */
+/* line 38, ../scss/modules/_story-table.scss */
 .col-listen,
 .col-download,
 .col-tag_button {
   text-align: center !important;
+  background-image: none !important;
 }
 
-/* line 42, ../scss/modules/_story-table.scss */
+/* line 43, ../scss/modules/_story-table.scss */
+.col-story_tag, .col-story_description {
+  background-image: none !important;
+}
+
+/* line 48, ../scss/modules/_story-table.scss */
 .listen-btn {
   background: #013237 url(../images/play-small.svg);
   display: inline-block;
 }
 
-/* line 48, ../scss/modules/_story-table.scss */
+/* line 54, ../scss/modules/_story-table.scss */
 .download-btn {
   background: #013237 url(../images/download-small.svg);
   display: inline-block;
 }
 
-/* line 53, ../scss/modules/_story-table.scss */
+/* line 59, ../scss/modules/_story-table.scss */
 .table-tag-btn {
   background: #013237 url(../images/add-small.svg);
   display: inline-block;
 }
 
-/* line 58, ../scss/modules/_story-table.scss */
+/* line 64, ../scss/modules/_story-table.scss */
 .posts-table-wrapper {
   margin-bottom: 24px;
   flex-grow: 1;
   max-width: 1400px;
 }
-/* line 63, ../scss/modules/_story-table.scss */
+/* line 69, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .dataTables_length label#text {
   display: none;
 }
+/* line 73, ../scss/modules/_story-table.scss */
+.posts-table-wrapper tr.odd {
+  background-color: #E6E0DB;
+}
 @media only screen and (max-width: 800px) {
-  /* line 69, ../scss/modules/_story-table.scss */
+  /* line 79, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .filter-label {
     display: none !important;
   }
-  /* line 73, ../scss/modules/_story-table.scss */
+  /* line 83, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-reset {
     display: inline-flex;
     justify-content: center;
     margin: 7.5px 0 2.5 0;
   }
-  /* line 79, ../scss/modules/_story-table.scss */
+  /* line 89, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-storyteller {
     max-width: 60px;
     background-image: none !important;
   }
 }
 
-/* line 91, ../scss/modules/_story-table.scss */
+/* line 101, ../scss/modules/_story-table.scss */
 .dataTables_wrapper {
   display: flex;
   justify-content: center;
 }
 
-/* line 96, ../scss/modules/_story-table.scss */
+/* line 106, ../scss/modules/_story-table.scss */
 .archive-wrapper {
   min-height: 100vh;
 }
 
-/* line 101, ../scss/modules/_story-table.scss */
+/* line 111, ../scss/modules/_story-table.scss */
 td.child ul.dtr-details {
   text-align: center;
   padding-bottom: 10px !important;
 }
-/* line 105, ../scss/modules/_story-table.scss */
+/* line 115, ../scss/modules/_story-table.scss */
 td.child ul.dtr-details li {
   display: inline-flex;
   flex-wrap: wrap;
@@ -1653,17 +1663,35 @@ Author:
 Stylesheet: Theme Tax Page Stylesheet
 
 ******************************************************************/
-/* line 9, ../scss/modules/_theme-tax-page.scss */
+/* line 11, ../scss/modules/_theme-tax-page.scss */
 #theme-intro {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-
-/* line 13, ../scss/modules/_theme-tax-page.scss */
-#theme-intro-text {
-  display: inline-block;
-}
-
 /* line 17, ../scss/modules/_theme-tax-page.scss */
+#theme-intro .col1_3 {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 22, ../scss/modules/_theme-tax-page.scss */
+#theme-intro .col2_3 {
+  width: 30%;
+}
+/* line 25, ../scss/modules/_theme-tax-page.scss */
+#theme-intro .col3_3 {
+  width: 40%;
+}
+
+/* line 30, ../scss/modules/_theme-tax-page.scss */
+#theme-title {
+  margin-top: 0;
+  width: 100%;
+}
+
+/* line 35, ../scss/modules/_theme-tax-page.scss */
 #theme-back-btn {
   display: inline-block;
   margin-left: 100px;
@@ -1678,9 +1706,9 @@ Stylesheet: Tag Form Modal Stylesheet
 ******************************************************************/
 /* line 11, ../scss/modules/_tag-form.scss */
 .fancybox-slide--iframe .fancybox-content {
-  max-width: 450px;
+  max-width: 490px;
   border: 5px #a7d9cd solid;
-  height: 450px !important;
+  height: 480px !important;
 }
 @media only screen and (max-width: 800px) {
   /* line 11, ../scss/modules/_tag-form.scss */
@@ -1732,7 +1760,11 @@ body.single-story {
 #tag-form textarea {
   max-width: 400px;
 }
-/* line 59, ../scss/modules/_tag-form.scss */
+/* line 58, ../scss/modules/_tag-form.scss */
+#tag-form label {
+  font-weight: normal;
+}
+/* line 63, ../scss/modules/_tag-form.scss */
 #tag-form .af-spinner,
 #tag-form .acf-spinner {
   height: 20px;
@@ -1743,36 +1775,57 @@ body.single-story {
   display: none;
 }
 
-/* line 73, ../scss/modules/_tag-form.scss */
+/* line 77, ../scss/modules/_tag-form.scss */
 .single-story .header {
   display: none;
 }
-/* line 77, ../scss/modules/_tag-form.scss */
+/* line 81, ../scss/modules/_tag-form.scss */
 .single-story .article-header {
   display: none;
 }
-/* line 80, ../scss/modules/_tag-form.scss */
+/* line 84, ../scss/modules/_tag-form.scss */
 .single-story .sidebar {
   display: none;
 }
-/* line 84, ../scss/modules/_tag-form.scss */
+/* line 88, ../scss/modules/_tag-form.scss */
 .single-story .footer {
   display: none;
 }
-/* line 88, ../scss/modules/_tag-form.scss */
+/* line 92, ../scss/modules/_tag-form.scss */
 .single-story #wpadminbar {
   display: none;
 }
-/* line 91, ../scss/modules/_tag-form.scss */
+/* line 95, ../scss/modules/_tag-form.scss */
 .single-story #content {
   margin-top: 0px;
   background-color: #013237;
-  height: 440px;
+  height: 480px;
 }
 
-/* line 100, ../scss/modules/_tag-form.scss */
+/* line 104, ../scss/modules/_tag-form.scss */
 .fancybox-iframe {
   background-color: #a7d9cd;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Download Modal Stylesheet
+
+******************************************************************/
+/* line 9, ../scss/modules/_download_modal.scss */
+#download-modal {
+  background-color: #013237;
+  border: 5px #a7d9cd solid;
+}
+/* line 12, ../scss/modules/_download_modal.scss */
+#download-modal h3 {
+  color: white;
+}
+/* line 16, ../scss/modules/_download_modal.scss */
+#download-modal .fancybox-close-small svg {
+  filter: invert(100%) sepia(5%) saturate(7470%) hue-rotate(207deg) brightness(109%) contrast(100%);
 }
 
 /*********************

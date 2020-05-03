@@ -15,7 +15,7 @@
 <?php get_header(); 
 //pull term variables for page - the term description is the post id for the theme CPT that stores all the data
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
-$term_slug = $term->slug;
+$term_slug = 'story_event:'.$term->slug;
 $post_id = $term->description;
 $description = get_field('event_description',$post_id);
 $location_prep = get_field('event_location',$post_id);
@@ -40,41 +40,55 @@ $event_audio = get_field('event_audio',$post_id);
 	<?php //generate posts table for story posts w/ taxonomy term matching archive page ?>
 	
 	<div id="theme-intro">
-		<div id="theme-intro-text">
-			<div class="d-1of3">
-				<h1 class="theme-title"><?php single_cat_title(); ?></h1>
-				<h3 class="theme-description"><?php echo $description ?></h3>
+		<div id="theme-first_intro" class="col1_3">
+				<h1 id="theme-title"><?php single_cat_title(); ?></h1>
+				<h3 id="theme-location">Held at: <?php echo $location ?></h3>
+				<h3 id="theme-partner">Partner Organization: <?php echo $partner_org_link ?></h3>
 			</div>
-			<div class="d-2of3">	
-				<h3 class="theme-location"><?php echo $location ?></h3>
-				<h3 class="theme-partner"><?php echo $partner_org_link ?></h3>
+		<div id="theme-second-intro" class="col2_3">
+			<a class="sy-btn" id="theme-back-btn" href="/">Back To All</a>
+			<h3 id="theme-description" ><?php echo $description ?></h3>
 			</div>	
-		</div>
-		<a class="sy-btn" id="theme-back-btn" href="/">Back To All</a>
-	</div>	
-	<?php echo do_shortcode('[posts_table  columns="tax:storyteller:Storyteller,cf:listen,cf:story_description:Description,cf:download,tax:story_tag:Tags" term="story_event:'.$term_slug.'"]'); ?>
+		<div id="theme-third-intro" class="col3_3">
+			</div>
+	</div>
+	<?php ptp_the_posts_table(
+											array(
+												'term' => $term_slug,
+
+												'columns' => 'tax:storyteller:Storyteller,
+															 cf:theme_play_button:Listen,
+															 cf:download,
+															 cf:tag_button:Add Tag,
+															 tax:story_tag:Tags, 
+															 cf:story_description:Description,
+															 cf:event_fundraisee:Fundraiser Org,
+															 tax:story_location:Location',
+
+												'priorities' => '1,
+																3,
+																2,
+																4,
+																5,
+																6,
+																7,
+																8,
+																9,
+																10,
+																11',
+
+												'responsive_control' => 'column',
+
+												'page_length' => 'bottom',
+
+
+
+
+												
+											)
+										); ?>
 	</section>
 
-
-	<?php //player tab, hidden until onclick event ?>
-								<div id="story-player">
-									<div id="audio-embed">
-									<?php echo do_shortcode('[audio src="/wp-content/uploads/2020/04/noisemp3_stimbox_liveinsantacruz.mp3"]')?>
-									<a id="player-previous" class="icon-btn" title="Previous"></a>
-									<a id="player-next" class="icon-btn" title="Next"></a>
-									</div>
-									<div id="under-player-audio">
-										<h2 id="player-description"></h2>
-										<a id="player-download" class="player-btn download-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download">Download</a>
-										<div id="player-tag-btn" class="player-btn" title="Add Tag">Add Tag</div>
-										<div id="player-tags"></div>
-										<div id="player-close" class= title="Close">
-											<a id="label-close" class="player-label">Close</a>
-										</div>												
-											
-										</div>
-									</div>
-								</div>
 	<div style="display: none;" id="download-modal">
 		<h2>Consider donating!</h2>
 		<a id="donate-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true" target="_blank">Donate</a>
@@ -87,4 +101,38 @@ $event_audio = get_field('event_audio',$post_id);
 </div>
 
 <?php get_footer(); ?>
-
+<div id="story-player">
+		<div id="player-content">
+			<div id="audio-embed">
+				<div id="sy-mediaelements" class="col4_5">	
+					<?php echo do_shortcode('[audio src="/wp-content/uploads/2020/04/noisemp3_stimbox_liveinsantacruz.mp3"]')?>
+				</div>
+				<div id="audio-buttons" class="col1_5">	
+					<div id=player-play-placeholder class="icon-btn col"></div>
+					<a id="player-previous" class="icon-btn col1_3" title="Previous"></a>
+					<a id="player-next" class="icon-btn col1_3" title="Next"></a>
+					<a id="player-close" class="icon-btn col1_3" title="Close"></a>
+					</div>
+					
+			</div>
+				
+			<div id="under-player-audio">
+				<div class="col1_4">
+					<h2 id="player-description"></h2>
+				</div>
+				<div class="col2_4">	
+					<div id="player-download-btn" class="icon-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download"></div>
+					<h3 class="player-btn-label">Download</h3>
+				</div>
+				<div class="col3_4">
+					<div id="player-tag-btn" class="icon-btn tag-btn" title="Add Tag"></div>
+					<h3 class="player-btn-label">Add Tag</h3>
+				</div>
+				<div class="col4_4">
+					<div id="player-tag-wrapper">
+					<h2 id="player-tag-label">Tags:</h2>
+					<div id="player-tags" ></div>
+				</div>
+			</div>
+		</div>
+	</div>

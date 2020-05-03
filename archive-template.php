@@ -52,19 +52,12 @@
 																10,
 																11',
 
-												
-
-
-
-
+												'filters' => 'tax:story_event, 
+															  tax:story_org',
+											
 												'responsive_control' => 'column',
 
 												'page_length' => 'bottom',
-
-
-
-
-												
 											)
 										);
 									?>

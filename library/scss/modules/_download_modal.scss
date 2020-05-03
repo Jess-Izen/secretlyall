@@ -1,0 +1,19 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Download Modal Stylesheet
+
+******************************************************************/
+
+#download-modal{
+    background-color: $black;
+    border: 5px $accent-color solid;
+    h3{
+    color: white;
+    }
+
+    .fancybox-close-small svg{
+        filter: invert(100%) sepia(5%) saturate(7470%) hue-rotate(207deg) brightness(109%) contrast(100%);
+    }
+}

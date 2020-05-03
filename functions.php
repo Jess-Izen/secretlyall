@@ -332,8 +332,6 @@ function my_acf_save_post( $post_id ) {
     update_field('fundraisee_url', $fundraisee_url);
     update_field('event_fundraisee', $event_fundraisee);
     update_field('event_date',$event_date);
-
-    //update taxonomies using title + event details
     
     //attaching theme title as taxonomy to story
     $storyteller = get_the_title ($post_id);
@@ -351,6 +349,7 @@ function my_acf_save_post( $post_id ) {
     $audio_link = get_field("audio", $post_id);
     $post_url = get_permalink($post_id);
     $theme_page = get_term_link($story_term);
+    $root_page = get_home_path();
     //need to convert tags into a string from the array in order to pass using the onclick function
     $story_tags_prep = wp_get_post_terms($post_id, 'story_tag', $args=array(
       'fields' => 'names' 
@@ -358,13 +357,15 @@ function my_acf_save_post( $post_id ) {
     $story_tags = implode ('; ',$story_tags_prep);
     $download_button_link = "http://secretly-yall-archive.local/#download-".$post_id;
     $play_button_link = "http://secretly-yall-archive.local/#listen-".$post_id;
+    $theme_play_button_link = $theme_page."#listen-".$post_id;
     $download_button = '<a data="'.$audio_link.'" class="icon-btn-small download-btn" data-fancybox data-src="#download-modal" href="'.$download_button_link.'" onclick="" title="Download"></a>';
     $listen_button = '<a class="icon-btn-small listen-btn" href="'. $play_button_link.'" title="Listen" state="inactive" storyid="'.$post_id.'" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\', \''.$download_button_link.'\');"></a>';
+    $theme_listen_button = '<a class="icon-btn-small listen-btn" href="'. $theme_play_button_link.'" title="Listen" state="inactive" storyid="'.$post_id.'" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\', \''.$download_button_link.'\');"></a>';
     $tag_button = '<div class="icon-btn-small table-tag-btn tag-btn" title="Add Tag" post_url="'.$post_url.'"></div>';
     update_field('listen',$listen_button);
     update_field('download',$download_button);
     update_field('tag_button',$tag_button);
-
+    update_field('theme_play_button',$theme_listen_button);
   }   
 
 }
@@ -397,7 +398,7 @@ return false;
 add_filter( 'acf/prepare_field/key=field_5e209e86e8786', 'hide_acf_fields' ); //story - fundraisee link
 add_filter( 'acf/prepare_field/key=field_5e262a4a186c4', 'hide_acf_fields' ); // story - audio
 add_filter( 'acf/prepare_field/key=field_5e27868af7ba7', 'hide_acf_fields' ); // story - date formatted
-add_filter( 'acf/prepare_field/key=field_5e8ce2342e7d7', 'hide_acf_fields' ); // story - listen
+//add_filter( 'acf/prepare_field/key=field_5e8ce2342e7d7', 'hide_acf_fields' ); // story - listen
 add_filter( 'acf/prepare_field/key=field_5e8cfaf86fab0', 'hide_acf_fields' ); // story - download
 add_filter( 'acf/prepare_field/key=field_5ea61937faf17', 'hide_acf_fields' ); // story - new tag
 add_filter( 'acf/prepare_field/key=field_5eaef4f9a7d7f', 'hide_acf_fields' ); // story - tag button

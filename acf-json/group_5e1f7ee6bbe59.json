@@ -268,6 +268,26 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_5eaf2f85c6187",
+            "label": "Listen",
+            "name": "theme_play_button",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -287,5 +307,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1588524301
+    "modified": 1588539424
 }

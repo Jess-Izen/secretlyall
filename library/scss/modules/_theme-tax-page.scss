@@ -6,12 +6,30 @@ Stylesheet: Theme Tax Page Stylesheet
 
 ******************************************************************/
 
+
+
 #theme-intro {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .col1_3{
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col2_3{
+        width: 30%;
+    }
+    .col3_3{
+        width: 40%;
+    }
 }
 
-#theme-intro-text {
-    display: inline-block;
+#theme-title{
+    margin-top: 0;
+    width: 100%;
 }
 
 #theme-back-btn{

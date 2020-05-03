@@ -17,6 +17,7 @@ Stylesheet: Story Table  Stylesheet
     text-decoration: none;
     }  
 
+
 //hide columns we want to be able to search by but not display
 .col-event_fundraisee,
 .col-story_location  {
@@ -36,6 +37,11 @@ Stylesheet: Story Table  Stylesheet
 .col-download,
 .col-tag_button {
     text-align: center !important;
+    background-image: none !important; 
+}
+
+.col-story_tag, .col-story_description{
+    background-image: none !important; 
 }
 
 
@@ -62,6 +68,10 @@ Stylesheet: Story Table  Stylesheet
     
     .dataTables_length label#text {
         display: none;
+    }
+
+    tr.odd{
+        background-color:#E6E0DB;
     }
 
 

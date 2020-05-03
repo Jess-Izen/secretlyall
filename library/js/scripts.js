@@ -35,6 +35,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     audioSRC.setAttribute("src","");
     playerWrapper.style.display = "none";
     clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
+    button.style.backgroundColor = closedBackground;
     return;
   }
 

@@ -1661,42 +1661,51 @@ Stylesheet: Tag Form Modal Stylesheet
     height: 500px !important;
   }
 }
+/* line 19, ../scss/modules/_tag-form.scss */
+.fancybox-slide--iframe .fancybox-content html {
+  overflow-y: hidden;
+}
+
+/* line 24, ../scss/modules/_tag-form.scss */
+body.single-story {
+  overflow-y: hidden;
+}
 
 @media only screen and (max-width: 800px) {
-  /* line 21, ../scss/modules/_tag-form.scss */
+  /* line 28, ../scss/modules/_tag-form.scss */
   .fancybox-slide--iframe {
     padding: 0;
   }
 }
 
-/* line 27, ../scss/modules/_tag-form.scss */
+/* line 34, ../scss/modules/_tag-form.scss */
 #tag-form-wrapper {
   padding: 25px 25px 10px 25px;
 }
 
-/* line 32, ../scss/modules/_tag-form.scss */
+/* line 39, ../scss/modules/_tag-form.scss */
 #tag-form-title {
   margin: 0 auto 25px auto;
   color: white;
   font-size: 1.4em;
 }
 
-/* line 39, ../scss/modules/_tag-form.scss */
+/* line 46, ../scss/modules/_tag-form.scss */
 #tag-form {
   display: block;
   margin: 0 auto 0 auto;
   color: white;
   font-weight: normal;
 }
-/* line 44, ../scss/modules/_tag-form.scss */
+/* line 51, ../scss/modules/_tag-form.scss */
 #tag-form input, #tag-form textarea {
   background: #ece9e5;
 }
-/* line 48, ../scss/modules/_tag-form.scss */
+/* line 55, ../scss/modules/_tag-form.scss */
 #tag-form textarea {
   max-width: 400px;
 }
-/* line 53, ../scss/modules/_tag-form.scss */
+/* line 60, ../scss/modules/_tag-form.scss */
 #tag-form .af-spinner,
 #tag-form .acf-spinner {
   height: 20px;
@@ -1707,40 +1716,40 @@ Stylesheet: Tag Form Modal Stylesheet
   display: none;
 }
 
-/* line 65, ../scss/modules/_tag-form.scss */
+/* line 74, ../scss/modules/_tag-form.scss */
 .single-story .header {
   display: none;
 }
-/* line 69, ../scss/modules/_tag-form.scss */
+/* line 78, ../scss/modules/_tag-form.scss */
 .single-story .article-header {
   display: none;
 }
-/* line 72, ../scss/modules/_tag-form.scss */
+/* line 81, ../scss/modules/_tag-form.scss */
 .single-story .sidebar {
   display: none;
 }
-/* line 76, ../scss/modules/_tag-form.scss */
+/* line 85, ../scss/modules/_tag-form.scss */
 .single-story .footer {
   display: none;
 }
-/* line 80, ../scss/modules/_tag-form.scss */
+/* line 89, ../scss/modules/_tag-form.scss */
 .single-story #wpadminbar {
   display: none;
 }
-/* line 83, ../scss/modules/_tag-form.scss */
+/* line 92, ../scss/modules/_tag-form.scss */
 .single-story #content {
   margin-top: 0px;
   background-color: #013237;
   height: 440px;
 }
 @media only screen and (max-width: 800px) {
-  /* line 83, ../scss/modules/_tag-form.scss */
+  /* line 92, ../scss/modules/_tag-form.scss */
   .single-story #content {
     height: 490px;
   }
 }
 
-/* line 95, ../scss/modules/_tag-form.scss */
+/* line 104, ../scss/modules/_tag-form.scss */
 .fancybox-iframe {
   background-color: #a7d9cd;
 }

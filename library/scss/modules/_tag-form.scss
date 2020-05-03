@@ -16,6 +16,13 @@ Stylesheet: Tag Form Modal Stylesheet
     width: 90% !important;
     height: 500px !important
     }        
+    html {
+        overflow-y: hidden;
+    }
+}
+
+body.single-story {
+    overflow-y: hidden;
 }
 
 .fancybox-slide--iframe {
@@ -62,6 +69,8 @@ Stylesheet: Tag Form Modal Stylesheet
 
 .single-story  {
 
+    
+    
     .header {
 
         display:none;

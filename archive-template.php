@@ -75,41 +75,38 @@
 
 <?php get_footer(); ?>
 </div>
-
-<div id="story-player">
-								<div id="player-content">
-									<div id="audio-embed">
-										<div id="sy-mediaelements" class="col4_5">	
-											<?php echo do_shortcode('[audio src="/wp-content/uploads/2020/04/noisemp3_stimbox_liveinsantacruz.mp3"]')?>
-										</div>
-										<div id="audio-buttons" class="col1_5">	
-											<div id=player-play-placeholder class="icon-btn col"></div>
-											<a id="player-previous" class="icon-btn col1_3" title="Previous"></a>
-											<a id="player-next" class="icon-btn col1_3" title="Next"></a>
-											<a id="player-close" class="icon-btn col1_3" title="Close"></a>
-											</div>
-											
-									</div>
-										
-									<div id="under-player-audio">
-										<div class="col1_4">
-											<h2 id="player-description"></h2>
-										</div>
-										<div class="col2_4">	
-											<div id="player-download-btn" class="icon-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download"></div>
-											<h3 class="player-btn-label">Download</h3>
-										</div>
-										<div class="col3_4">
-											<div id="player-tag-btn" class="icon-btn" title="Add Tag"></div>
-											<h3 class="player-btn-label">Add Tag</h3>
-										</div>
-										<div class="col4_4">
-											<div id="player-tag-wrapper">
-											<h2 id="player-tag-label">Tags:</h2>
-											<div id="player-tags" ></div>
-										</div>
-									</div>
-							
-											
-								</div>
-							</div>
+	<div id="story-player">
+		<div id="player-content">
+			<div id="audio-embed">
+				<div id="sy-mediaelements" class="col4_5">	
+					<?php echo do_shortcode('[audio src="/wp-content/uploads/2020/04/noisemp3_stimbox_liveinsantacruz.mp3"]')?>
+				</div>
+				<div id="audio-buttons" class="col1_5">	
+					<div id=player-play-placeholder class="icon-btn col"></div>
+					<a id="player-previous" class="icon-btn col1_3" title="Previous"></a>
+					<a id="player-next" class="icon-btn col1_3" title="Next"></a>
+					<a id="player-close" class="icon-btn col1_3" title="Close"></a>
+					</div>
+					
+			</div>
+				
+			<div id="under-player-audio">
+				<div class="col1_4">
+					<h2 id="player-description"></h2>
+				</div>
+				<div class="col2_4">	
+					<div id="player-download-btn" class="icon-btn download-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download"></div>
+					<h3 class="player-btn-label">Download</h3>
+				</div>
+				<div class="col3_4">
+					<div id="player-tag-btn" class="icon-btn" title="Add Tag"></div>
+					<h3 class="player-btn-label">Add Tag</h3>
+				</div>
+				<div class="col4_4">
+					<div id="player-tag-wrapper">
+					<h2 id="player-tag-label">Tags:</h2>
+					<div id="player-tags" ></div>
+				</div>
+			</div>
+		</div>
+	

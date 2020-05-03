@@ -18,7 +18,7 @@ function loadGravatars() {
 } // end function
 
 
-function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL, storyTags){
+function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL, storyTags, downloadButtonLink){
   //embed audio - swaps out the existing src URL in the mediaelements audio widget
   var clickedListen = event.target;
   var audioEmbed = document.getElementsByTagName("mediaelementwrapper")[0];
@@ -33,25 +33,21 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     audioSRC.setAttribute("src","");
     playerWrapper.style.display = "none";
     clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
-    clickedListen.style.filter = "brightness(70%)";
     return;
   }
 
   //if story isn't open
   if (clickState == "inactive"){
     allListenButtons = document.querySelectorAll('a.listen-btn');
-    allListenButtons.forEach(function(button) {
+
+    //revert all active buttons, in case of clicking a different listen button with old still open
+    allListenButtons.forEach(function(button) { 
       if (button.getAttribute("state") == "active"){
-        button.style.filter = "brightness(70%)"
         button.setAttribute("state", "inactive");
         button.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
       }
       });
     
-    /*allListenButtons.forEach(ListenButton => {
-      ListenButton.setAttribute("state", "inactive");
-      ListenButton.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
-    });*/
     //display player, load music
     playerWrapper.style.display = "flex";
     audioSRC.setAttribute("src",audioURL);
@@ -59,7 +55,6 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
 
     //handle table listen button
     clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/stop-small.svg)";
-    clickedListen.style.filter = "brightness(100%)";
     clickedListen.setAttribute("state","active");
 
     //set focus on play/pause button
@@ -77,7 +72,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     //download button
     var playerDownload = document.getElementById('player-download-btn');
     playerDownload.setAttribute("data",audioURL);
-
+    playerDownload.setAttribute("href",downloadButtonLink); //this is used for adding to tracking icon click in browser history
 
     //pass post ID & URL over to tag form modal button as custom attributes (click listener set in jquery)
     var tagButton = document.getElementById("player-tag-btn");
@@ -95,7 +90,6 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     var nextListen = nextRow.getElementsByClassName("listen-btn")[0];  
     audioSRC.onended = function() {
       clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
-      clickedListen.style.filter = "brightness(70%)";  
       clickedListen.setAttribute("state","inactive");
       nextListen.click();
       return;
@@ -107,7 +101,6 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
         var previousRow = clickedRow.previousSibling;
         var prevListen = previousRow.getElementsByClassName("listen-btn")[0];    
         clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
-        clickedListen.style.filter = "brightness(70%)";  
         clickedListen.setAttribute("state","inactive");
         prevListen.click();
         return;
@@ -119,7 +112,6 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     skipButton.onclick = function skipStory() {
       nextListen.click();
       clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
-      clickedListen.style.filter = "brightness(70%)";  
       clickedListen.setAttribute("state","inactive");
       return;
     };
@@ -131,19 +123,17 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
       audioSRC.setAttribute("src","");
       playerWrapper.style.display = "none";
       clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
-      clickedListen.style.filter = "brightness(70%)";
       clickedListen.setAttribute("state","inactive");
       return;
     };
       
-    //let's make the escape key close too, for screenreaders
+    //let's make the escape key close too
     document.onkeydown = function(evt) {
       evt = evt || window.event;
       if (evt.keyCode == 27) {
         audioSRC.setAttribute("src","");
         playerWrapper.style.display = "none";
         clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
-        clickedListen.style.filter = "brightness(70%)";
         clickedListen.setAttribute("state","inactive");
         return;
       }
@@ -174,13 +164,18 @@ jQuery(document).ready(function($) {
   });
 
   //add click listener to download button (in table and player), to open up fancybox w/ donation prompt
-  $('.download-btn').on('click',function(){
-  $(this).css("filter","brightness(70%)");
+
+$('.download-btn').on('click',function(){
+  //passes proper mp3 link based on download button's data attribute
   var audioURL = $(this).attr("data");
   var downloadButton = $("#modal-download-btn");
-  //passes proper mp3 link based on download button's data attribute
   downloadButton.attr("href",audioURL);
-  });
+
+  //add history entry for the download button, so we can show a :visited style
+  var buttonURL = $(this).attr("href"); 
+  history.pushState(1, "SY-Download", buttonURL);
+
+    });
 
 });
 /* end of as page load scripts */

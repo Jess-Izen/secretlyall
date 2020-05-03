@@ -3,10 +3,8 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#013237;}
-	.st1{fill:#A7D9CD;}
+	.st0{fill:#A7D9CD;}
 </style>
-<ellipse class="st0" cx="25.6" cy="24.4" rx="14.9" ry="14.8"/>
-<path class="st1" d="M25,4C13.4,4,4,13.4,4,25s9.4,21,21,21s21-9.4,21-21C46,13.4,36.6,4,25,4z M31,32.5H19c-0.8,0-1.5-0.7-1.5-1.5
-	V19c0-0.8,0.7-1.5,1.5-1.5H31c0.8,0,1.5,0.7,1.5,1.5V31C32.5,31.9,31.9,32.5,31,32.5z"/>
+<path class="st0" d="M25,4C13.4,4,4,13.4,4,25s9.4,21,21,21s21-9.4,21-21S36.6,4,25,4z M31,32.5H19c-0.8,0-1.5-0.7-1.5-1.5V19
+	c0-0.8,0.7-1.5,1.5-1.5h12c0.8,0,1.5,0.7,1.5,1.5v12C32.5,31.9,31.9,32.5,31,32.5z"/>
 </svg>

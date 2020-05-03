@@ -826,10 +826,20 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   height: 50px;
   width: 50px;
   cursor: pointer;
+  border-radius: 50%;
+  background-position: center !important;
+  background-repeat: no-repeat!important;
+  background-size: 50px 50px !important;
+  background-color: #013237 !important;
+  background-blend-mode: screen !important;
 }
-/* line 122, ../scss/modules/_buttons.scss */
-.icon-btn-small:hover, .icon-btn-small:focus, .icon-btn-small:visited {
-  filter: brightness(70%);
+/* line 117, ../scss/modules/_buttons.scss */
+.icon-btn-small:visited {
+  background-color: #525252 !important;
+}
+/* line 131, ../scss/modules/_buttons.scss */
+.icon-btn-small:hover, .icon-btn-small:focus {
+  background-color: #525252 !important;
 }
 
 /******************************************************************
@@ -1212,91 +1222,93 @@ Author:
 Stylesheet: Story Player Stylesheet
 
 ******************************************************************/
-/* line 11, ../scss/modules/_story-player.scss */
+/* line 9, ../scss/modules/_story-player.scss */
 #story-player {
   display: none;
   position: sticky;
+  position: -webkit-sticky;
   bottom: 0;
   width: 100%;
   background-color: #013237;
+  border: 5px #a7d9cd solid;
   justify-content: center;
 }
-/* line 19, ../scss/modules/_story-player.scss */
+/* line 18, ../scss/modules/_story-player.scss */
 #story-player p {
   font-size: 18px;
 }
 
-/* line 27, ../scss/modules/_story-player.scss */
+/* line 26, ../scss/modules/_story-player.scss */
 #player-content {
+  max-width: 1400px;
   width: 100%;
 }
 @media only screen and (min-width: 801px) {
-  /* line 27, ../scss/modules/_story-player.scss */
+  /* line 26, ../scss/modules/_story-player.scss */
   #player-content {
-    max-width: 1230;
     padding-bottom: 15px;
   }
 }
 
 @media only screen and (min-width: 801px) {
-  /* line 38, ../scss/modules/_story-player.scss */
+  /* line 36, ../scss/modules/_story-player.scss */
   #audio-embed {
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
   }
-  /* line 43, ../scss/modules/_story-player.scss */
+  /* line 41, ../scss/modules/_story-player.scss */
   #audio-embed .col4_5 {
     width: 79%;
   }
-  /* line 46, ../scss/modules/_story-player.scss */
+  /* line 44, ../scss/modules/_story-player.scss */
   #audio-embed .col1_5 {
     width: 18%;
   }
 }
 
-/* line 52, ../scss/modules/_story-player.scss */
+/* line 50, ../scss/modules/_story-player.scss */
 #audio-buttons {
   display: flex;
   justify-content: space-between;
 }
-/* line 55, ../scss/modules/_story-player.scss */
+/* line 53, ../scss/modules/_story-player.scss */
 #audio-buttons .col1_3 {
   width: 64px;
 }
 @media only screen and (max-width: 800px) {
-  /* line 52, ../scss/modules/_story-player.scss */
+  /* line 50, ../scss/modules/_story-player.scss */
   #audio-buttons {
     margin: 5px 25px 0 25px;
   }
 }
 
 @media only screen and (min-width: 801px) {
-  /* line 65, ../scss/modules/_story-player.scss */
+  /* line 63, ../scss/modules/_story-player.scss */
   #player-play-placeholder {
     display: none;
   }
 }
 
-/* line 71, ../scss/modules/_story-player.scss */
+/* line 69, ../scss/modules/_story-player.scss */
 #player-next {
   display: inline-block;
   background: transparent url(../images/next.svg);
 }
 
-/* line 76, ../scss/modules/_story-player.scss */
+/* line 74, ../scss/modules/_story-player.scss */
 #player-previous {
   display: inline-block;
   background: transparent url(../images/previous.svg);
 }
 
-/* line 83, ../scss/modules/_story-player.scss */
+/* line 81, ../scss/modules/_story-player.scss */
 #player-close {
   display: inline-block;
   background: transparent url(../images/close.svg);
 }
 
-/* line 91, ../scss/modules/_story-player.scss */
+/* line 89, ../scss/modules/_story-player.scss */
 #under-player-audio {
   margin-top: 25px;
   position: relative;
@@ -1305,27 +1317,27 @@ Stylesheet: Story Player Stylesheet
   align-items: center;
 }
 @media only screen and (min-width: 801px) {
-  /* line 98, ../scss/modules/_story-player.scss */
+  /* line 96, ../scss/modules/_story-player.scss */
   #under-player-audio .col1_4 {
     width: 24%;
   }
-  /* line 101, ../scss/modules/_story-player.scss */
+  /* line 99, ../scss/modules/_story-player.scss */
   #under-player-audio .col2_4 {
     width: 20%;
     display: flex;
   }
-  /* line 105, ../scss/modules/_story-player.scss */
+  /* line 103, ../scss/modules/_story-player.scss */
   #under-player-audio .col3_4 {
     width: 20%;
     display: flex;
   }
-  /* line 109, ../scss/modules/_story-player.scss */
+  /* line 107, ../scss/modules/_story-player.scss */
   #under-player-audio .col4_4 {
     width: 36%;
   }
 }
 @media only screen and (max-width: 800px) {
-  /* line 91, ../scss/modules/_story-player.scss */
+  /* line 89, ../scss/modules/_story-player.scss */
   #under-player-audio {
     text-align: center;
     margin-top: 15px;
@@ -1334,7 +1346,7 @@ Stylesheet: Story Player Stylesheet
   }
 }
 
-/* line 123, ../scss/modules/_story-player.scss */
+/* line 121, ../scss/modules/_story-player.scss */
 #player-description {
   color: white;
   max-width: 200px;
@@ -1342,7 +1354,7 @@ Stylesheet: Story Player Stylesheet
   justify-content: center;
 }
 @media only screen and (max-width: 800px) {
-  /* line 123, ../scss/modules/_story-player.scss */
+  /* line 121, ../scss/modules/_story-player.scss */
   #player-description {
     max-width: 100%;
     margin: 0 25px 0 25px;
@@ -1351,56 +1363,56 @@ Stylesheet: Story Player Stylesheet
 }
 
 @media only screen and (max-width: 800px) {
-  /* line 135, ../scss/modules/_story-player.scss */
+  /* line 133, ../scss/modules/_story-player.scss */
   #player-name {
     display: inline;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  /* line 141, ../scss/modules/_story-player.scss */
+  /* line 139, ../scss/modules/_story-player.scss */
   #player-name:after {
     content: " --";
   }
 }
 
-/* line 148, ../scss/modules/_story-player.scss */
+/* line 146, ../scss/modules/_story-player.scss */
 #player-theme {
   color: white;
   text-decoration: underline !important;
 }
 @media only screen and (max-width: 800px) {
-  /* line 148, ../scss/modules/_story-player.scss */
+  /* line 146, ../scss/modules/_story-player.scss */
   #player-theme {
     display: inline;
   }
 }
 
-/* line 156, ../scss/modules/_story-player.scss */
+/* line 154, ../scss/modules/_story-player.scss */
 #player-download-btn {
   background: transparent url(../images/download.svg);
   display: inline-block;
 }
 @media only screen and (max-width: 800px) {
-  /* line 156, ../scss/modules/_story-player.scss */
+  /* line 154, ../scss/modules/_story-player.scss */
   #player-download-btn {
     display: none;
   }
 }
 
-/* line 164, ../scss/modules/_story-player.scss */
+/* line 162, ../scss/modules/_story-player.scss */
 #player-tag-btn {
   background: transparent url(../images/add.svg);
   display: inline-block;
 }
 @media only screen and (max-width: 800px) {
-  /* line 164, ../scss/modules/_story-player.scss */
+  /* line 162, ../scss/modules/_story-player.scss */
   #player-tag-btn {
     display: none;
   }
 }
 
-/* line 172, ../scss/modules/_story-player.scss */
+/* line 170, ../scss/modules/_story-player.scss */
 .player-btn-label {
   display: inline-block;
   color: white;
@@ -1410,70 +1422,70 @@ Stylesheet: Story Player Stylesheet
   line-height: 64px;
 }
 @media only screen and (max-width: 800px) {
-  /* line 172, ../scss/modules/_story-player.scss */
+  /* line 170, ../scss/modules/_story-player.scss */
   .player-btn-label {
     display: none;
   }
 }
 
-/* line 185, ../scss/modules/_story-player.scss */
+/* line 183, ../scss/modules/_story-player.scss */
 #player-tag-wrapper {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-/* line 190, ../scss/modules/_story-player.scss */
+/* line 188, ../scss/modules/_story-player.scss */
 #player-tag-wrapper h2 {
   width: 100%;
   margin: 0;
 }
-/* line 194, ../scss/modules/_story-player.scss */
+/* line 192, ../scss/modules/_story-player.scss */
 #player-tag-wrapper p {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 0;
 }
 @media only screen and (max-width: 800px) {
-  /* line 185, ../scss/modules/_story-player.scss */
+  /* line 183, ../scss/modules/_story-player.scss */
   #player-tag-wrapper {
     display: none;
   }
 }
 
-/* line 208, ../scss/modules/_story-player.scss */
+/* line 206, ../scss/modules/_story-player.scss */
 body.single-story {
   min-height: 161px;
   overflow-y: hidden;
   background-color: #a7d9cd;
 }
-/* line 213, ../scss/modules/_story-player.scss */
+/* line 211, ../scss/modules/_story-player.scss */
 body.single-story .header {
   display: none;
 }
-/* line 217, ../scss/modules/_story-player.scss */
+/* line 215, ../scss/modules/_story-player.scss */
 body.single-story .article-header {
   display: none;
 }
-/* line 220, ../scss/modules/_story-player.scss */
+/* line 218, ../scss/modules/_story-player.scss */
 body.single-story .sidebar {
   display: none;
 }
-/* line 224, ../scss/modules/_story-player.scss */
+/* line 222, ../scss/modules/_story-player.scss */
 body.single-story .footer {
   display: none;
 }
-/* line 228, ../scss/modules/_story-player.scss */
+/* line 226, ../scss/modules/_story-player.scss */
 body.single-story #wpadminbar {
   display: none;
 }
-/* line 231, ../scss/modules/_story-player.scss */
+/* line 229, ../scss/modules/_story-player.scss */
 body.single-story #content {
   margin-top: 0px;
   background-color: #a7d9cd;
 }
 
-/* line 239, ../scss/modules/_story-player.scss */
+/* line 237, ../scss/modules/_story-player.scss */
 .fancybox-iframe {
   background-color: #a7d9cd;
 }

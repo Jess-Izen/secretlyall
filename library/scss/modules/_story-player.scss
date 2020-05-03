@@ -6,15 +6,14 @@ Stylesheet: Story Player Stylesheet
 
 ******************************************************************/
 
-
-
 #story-player{
-    display:none;
+    display: none;
     position: sticky;
-    //position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
     bottom: 0;
     width: 100%;
     background-color: $black;
+    border: 5px $accent-color solid;
     justify-content: center;
     p {
         font-size: 18px;
@@ -25,11 +24,10 @@ Stylesheet: Story Player Stylesheet
 }
 
 #player-content{
+    max-width: 1400px;
     width: 100%;
     @media only screen and (min-width: 801px){
-        max-width: 1230;
         padding-bottom: 15px;        
-
     }
 }
 

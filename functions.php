@@ -415,9 +415,11 @@ function my_acf_save_post( $post_id ) {
       'fields' => 'names' 
     ));
     $story_tags = implode ('; ',$story_tags_prep);
-          //the download and listen buttons pass a fair amount of data to the corresponding click functions
-    $download_button = '<a data="'.$audio_link.'" class="icon-btn-small download-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download"></a>';
-    $listen_button = '<a class="icon-btn-small listen-btn" href="javascript:;" title="Listen" state="inactive" storyid="'.$post_id.'" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\',);"></a>';
+    //the download and listen buttons pass a fair amount of data to the corresponding click functions
+    $download_button_link = "http://secretly-yall-archive.local/#download-".$post_id;
+    $play_button_link = "http://secretly-yall-archive.local/#listen-".$post_id;
+    $download_button = '<a data="'.$audio_link.'" class="icon-btn-small download-btn" data-fancybox data-src="#download-modal" href="'.$download_button_link.'" onclick="" title="Download"></a>';
+    $listen_button = '<a class="icon-btn-small listen-btn" href="'. $play_button_link.'" title="Listen" state="inactive" storyid="'.$post_id.'" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\', \''.$download_button_link.'\');"></a>';
     update_field('listen',$listen_button);
     update_field('download',$download_button);
 
@@ -454,7 +456,7 @@ add_filter( 'acf/prepare_field/key=field_5e209e86e8786', 'hide_acf_fields' ); //
 add_filter( 'acf/prepare_field/key=field_5e262a4a186c4', 'hide_acf_fields' ); // story - audio
 add_filter( 'acf/prepare_field/key=field_5e27868af7ba7', 'hide_acf_fields' ); // story - date formatted
 add_filter( 'acf/prepare_field/key=field_5e8ce2342e7d7', 'hide_acf_fields' ); // story - listen
-//add_filter( 'acf/prepare_field/key=field_5e8cfaf86fab0', 'hide_acf_fields' ); // story - download
+add_filter( 'acf/prepare_field/key=field_5e8cfaf86fab0', 'hide_acf_fields' ); // story - download
 add_filter( 'acf/prepare_field/key=field_5ea61937faf17', 'hide_acf_fields' ); // story - new tag
 add_filter( 'acf/prepare_field/key=field_5e6e6fca8ad9f', 'hide_acf_fields' ); // event - date formatted
 add_filter( 'acf/prepare_field/key=field_5e6e6fca8ad9f', 'hide_acf_fields' ); // event - date formatted

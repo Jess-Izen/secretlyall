@@ -87,23 +87,40 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 .player-btn {
   @extend %sy-btn;
   display: inline-block;
-  padding: 15px;
+  padding: 10px 15px;
   width: 115px;
-  height: 70px;
-  border-radius: 36px;
+  height: 60px;
+  border-radius: 20px;
   text-align: center;
   line-height: 40px;
   font-size: 18px;
   
 }
 
-
-.icon-btn {
+%icon-btn{
   cursor: pointer;
-  height: 64px;
-  width: 64px;
   filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
-  &:hover{
+  &:hover,
+  &:focus {
     filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
   }
+}
+
+.icon-btn {
+  @extend %icon-btn;
+  color: white;
+  height: 64px;
+  width: 64px;
+}
+
+.icon-btn-small {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  &:visited {
+    filter: brightness(70%);
+  }
+
 }

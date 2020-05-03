@@ -30,15 +30,33 @@ Stylesheet: Story Table  Stylesheet
     } 
 }
 
-td.col-listen {
-    @media only screen and (max-width: 800px){
-    min-width: 70px;
-    padding: 0px 10px;
-    }
+.col-listen,
+.col-download {
+    text-align: center !important;
 }
 
-.secretlyyall .posts-table-wrapper {
+
+.listen-btn{
+    background: url(../images/play-small.svg);
+    display: inline-block;
+}
+
+
+.download-btn{
+    background: url(../images/download-small.svg);
+    display: inline-block;
+}
+
+.posts-table-wrapper {
     margin-bottom: 24px;
+    flex-grow: 1;
+    max-width: 1400px;
+
+}
+
+.dataTables_wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .archive-wrapper {

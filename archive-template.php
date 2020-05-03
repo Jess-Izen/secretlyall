@@ -96,10 +96,12 @@
 											<h2 id="player-description"></h2>
 										</div>
 										<div class="col2_4">	
-											<a id="player-download" class="player-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download">Download</a>
+											<div id="player-download-btn" class="icon-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download"></div>
+											<h3 class="player-btn-label">Download</h3>
 										</div>
 										<div class="col3_4">
-											<div id="player-tag-btn" class="player-btn" title="Add Tag">Add Tag</div>
+											<div id="player-tag-btn" class="icon-btn" title="Add Tag"></div>
+											<h3 class="player-btn-label">Add Tag</h3>
 										</div>
 										<div class="col4_4">
 											<div id="player-tag-wrapper">

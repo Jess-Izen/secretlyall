@@ -141,8 +141,10 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-size: 1.125em;
+	font-size: 1.25em;
 	color: $heading-color;
+	font-family: $sans-serif;
+	font-weight: 500;
 }
 
 h4, .h4 {

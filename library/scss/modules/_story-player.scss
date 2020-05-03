@@ -15,11 +15,11 @@ Stylesheet: Story Player Stylesheet
     bottom: 0;
     width: 100%;
     background-color: $black;
-    min-height: 200px;
     justify-content: center;
     p {
         font-size: 18px;
     }
+
 
 
 }
@@ -28,7 +28,7 @@ Stylesheet: Story Player Stylesheet
     width: 100%;
     @media only screen and (min-width: 801px){
         max-width: 1230;
-        
+        padding-bottom: 15px;        
 
     }
 }
@@ -36,19 +36,17 @@ Stylesheet: Story Player Stylesheet
 //First Row
 
 #audio-embed{
-    padding-top: 20px;
     @media only screen and (min-width: 801px){
-    display: flex;
-    justify-content: space-between;
-        .col4_5{
-        width: 79%;
-        }
-        .col1_5{
-            width: 18%;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+            .col4_5{
+            width: 79%;
             }
-
-    
-    }
+            .col1_5{
+                width: 18%;
+                }
+        }
 }
 
 #audio-buttons {
@@ -60,7 +58,7 @@ Stylesheet: Story Player Stylesheet
     }
 
     @media only screen and (max-width: 800px) {
-    margin: 30px 25px 0 25px;
+    margin: 5px 25px 0 25px;
     }
 }
 
@@ -78,7 +76,6 @@ Stylesheet: Story Player Stylesheet
   #player-previous{
     display: inline-block;
     background:transparent url(../images/previous.svg);
-    //margin: 20px 25px 0 15px;   
   }
 
 
@@ -93,29 +90,31 @@ Stylesheet: Story Player Stylesheet
 
 #under-player-audio{
     margin-top: 25px;
-    padding-bottom:15px;
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     @media only screen and (min-width: 801px) {
-        min-height: 110px;
         .col1_4{
         width: 24%;
          }
         .col2_4{
-          width: 18%;
+          width: 20%;
+          display: flex;
         }
         .col3_4{
-          width: 18%;
+          width: 20%;
+          display: flex;
         }
         .col4_4{
-          width:40%;
+          width:36%;
         }
     }
     @media only screen and (max-width: 800px) {
         text-align: center;
         margin-top: 15px;
         justify-content: center;
+        padding-bottom: 15px;
         }
     
     
@@ -154,7 +153,8 @@ Stylesheet: Story Player Stylesheet
     }
 }
 
-#player-download {
+#player-download-btn {
+    background:transparent url(../images/download.svg);
     display: inline-block;
     @media only screen and (max-width: 800px) {
         display: none;
@@ -162,44 +162,46 @@ Stylesheet: Story Player Stylesheet
 }  
 
 #player-tag-btn {
-  @media only screen and (max-width: 800px) {
+    background:transparent url(../images/add.svg);
+    display: inline-block;
+    @media only screen and (max-width: 800px) {
     display: none;
+    }
+}
+
+.player-btn-label {
+    display: inline-block;
+    color: white; 
+    padding: 0 10px;
+    margin: 0;
+    height: 64px;
+    line-height: 64px;
+    @media only screen and (max-width: 800px) {
+        display: none;    
     }
 }
 
 
 #player-tag-wrapper {
     color: white;
-    @media only screen and (max-width: 800px) {
-        display: none;
-        }   
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
     h2{
+        width: 100%;
         margin: 0;
     }
     p{
+        width: 100%;
         margin-top: 10px;
+        margin-bottom: 0;
     }
+
+    @media only screen and (max-width: 800px) {
+        display: none;
+        }  
 }
 
-
-
-
-
-//icon label text
-.player-label {
-    font-family: $sans-serif;
-    font-size: 2rem;
-    position: relative;
-    height: inherit;
-    line-height: 64px;
-    vertical-align: middle;
-
-    
-}
-
-#label-close{
-    left: -90px;
-}
 
 //Modal page styles, iframed in
 
@@ -209,6 +211,7 @@ body.single-story  {
         background-color: $accent-color;
 
     .header {
+
         display:none;
     }
     .article-header {

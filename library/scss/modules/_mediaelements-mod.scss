@@ -46,7 +46,7 @@ Stylesheet: Modified Mediaelements.js Widget Stylesheet
       filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
     }
     @media only screen and (max-width: 800px) {
-    margin-top: 95px;
+    margin-top: 70px;
 
       }
     }
@@ -63,7 +63,7 @@ Stylesheet: Modified Mediaelements.js Widget Stylesheet
   .mejs-currenttime-container {
     height: 18px;
     padding-top: 0px;
-    margin-top: 23px;
+    margin-top: 21px;
     font-size: 18px;
     line-height: 18px;
     @media only screen and (min-width: 801px) {
@@ -75,7 +75,7 @@ Stylesheet: Modified Mediaelements.js Widget Stylesheet
   .mejs-time-rail {
     height: 30px;
     padding-top: 0px;
-    margin-top: 17px;
+    margin-top: 15px;
     max-width: 850px;
     }
 
@@ -110,14 +110,14 @@ Stylesheet: Modified Mediaelements.js Widget Stylesheet
   .mejs-duration-container{
     height: 18px;
     padding-top: 0px;
-    margin-top: 23px;
+    margin-top: 21px;
     font-size: 18px;
     line-height: 18px;
   }
 
   .mejs-volume-button {
     height: 18px;
-    margin-top: 23px;
+    margin-top: 21px;
     filter: brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(93%) contrast(83%);
     &:hover {
       filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
@@ -130,7 +130,7 @@ Stylesheet: Modified Mediaelements.js Widget Stylesheet
 
   .mejs-horizontal-volume-slider {
     height: 18px;
-    margin-top: 8px;
+    margin-top: 6px;
     width: 80px;
   }
 

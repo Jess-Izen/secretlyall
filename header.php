@@ -32,7 +32,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon-16x16.png">
-<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Nunito:300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Proza+Libre:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/library/images/manifest.json">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 <meta name="msapplication-TileColor" content="#ffffff">

@@ -365,6 +365,7 @@ function my_acf_save_post( $post_id ) {
     update_field('listen',$listen_button);
     update_field('download',$download_button);
     update_field('tag_button',$tag_button);
+    update_field('tag_button_2',$tag_button);
     update_field('theme_play_button',$theme_listen_button);
   }   
 

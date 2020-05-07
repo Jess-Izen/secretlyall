@@ -18,26 +18,34 @@ Stylesheet: Story Table  Stylesheet
     }  
 
 
+
+    .dataTables_wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .archive-wrapper {
+        min-height: 100vh;
+    }
+    
+
 //hide columns we want to be able to search by but not display
 .col-event_fundraisee,
 .col-story_location  {
     display:none !important;
 }
 
-//hide date on mobile only
-@media only screen and (max-width: 800px){
-    .col-date{
-        display: none !important;
-    } 
-}
-
 
 
 .col-listen,
 .col-download,
-.col-tag_button {
+.col-tag_button,
+.col-tag_button_2 {
     text-align: center !important;
     background-image: none !important; 
+    @media only screen and (min-width: 801px){
+    width: 79px; // make the button columns equally sized on desktop/tablet
+    }
 }
 
 .col-story_tag, .col-story_description{
@@ -66,57 +74,101 @@ Stylesheet: Story Table  Stylesheet
     flex-grow: 1;
     max-width: 1400px;
     
+    td, th {
+        font-size: 95%;
+        border-right: none !important;
+    }
+
+    table{
+        border: 1px solid $accent-color-3 !important;
+        width: 98% !important;
+    }
+
+    thead tr,
+    thead th{
+        border-bottom: 1px solid $accent-color-3 !important;
+    }
+    
     .dataTables_length label#text {
         display: none;
     }
 
     tr.odd{
-        background-color:#E6E0DB;
+        background-color:$background-grey-dark
     }
+
+    .col-story_tag a{
+        color: $accent-color-2;
+    }
+
 
 
    @media only screen and (max-width: 800px){
+            .col-date{
+                display: none !important;
+            }     
+    
     .filter-label {
-        display: none !important;
-        }
+            display: none !important;
+            }
 
-    .posts-table-reset {
-        display: inline-flex;
-        justify-content: center;
-        margin: 7.5px 0 2.5 0;
-    }
-
-    .col-storyteller {
-        max-width: 60px;
-        background-image: none !important; 
-        
-        }
-
-    }
-
-    }
-
-
-
-.dataTables_wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.archive-wrapper {
-    min-height: 100vh;
-}
-
-td.child {
-    ul.dtr-details{
-        text-align: center;
-        padding-bottom: 10px !important;
-
-        li {
-            display: inline-flex;
-            flex-wrap: wrap;
+        .posts-table-select-filters {
+            display: flex;
             justify-content: center;
-            align-items: center;
+            flex-wrap: wrap;
+            margin-right: 0px !important;
         }
+
+        .posts-table-reset {
+            display: none;
+        }
+
+        .col-storyteller {
+            max-width: 60px;
+            background-image: none !important; 
+            
+            }
+        th {
+            font-size: 90% !important;
+            padding-left: 9px !important;
+        }   
+
+
+        td.control::before{
+        color: $accent-color-2 !important;
+        top: 11px !important;
+        }
+        .col_tag_button_2 {
+            display: none;
+        }
+
+        td.child {
+            ul.dtr-details{
+                text-align: center;
+                padding-bottom: 10px !important;
+        
+                li {
+                    display: inline-flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: none;
+                }
+
+                li:nth-child(5){
+                    display: none;
+                }
+
+            }
+        }
+
     }
-}
+
+    @media only screen and (min-width: 801px){
+            .col-tag_button{
+                display: none;
+            }
+    }
+
+    }
+

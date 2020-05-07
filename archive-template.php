@@ -29,16 +29,19 @@
 										the_content();
 										ptp_the_posts_table(
 											array(
-												'columns' =>'tax:storyteller:Storyteller,
+												'columns' =>',
+																tax:storyteller:Storyteller,
 															 tax:story_event:Theme,
 															 cf:listen,
 															 cf:download,
 															 cf:tag_button:Add Tag,
-															 tax:story_tag:Tags, 
 															 cf:story_description:Description,
+															 tax:story_tag:Tags, 
 															 cf:event_fundraisee:Fundraiser Org,
 															 tax:story_location:Location,
-															 date',
+															 cf:tag_button_2:Add Tag,
+															 date
+															 ',
 
 												'priorities' => '1,
 																3,
@@ -50,7 +53,9 @@
 																8,
 																9,
 																10,
-																11',
+																11,
+																12',
+
 
 												'filters' => 'tax:story_event, 
 															  tax:story_org',

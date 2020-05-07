@@ -59,11 +59,13 @@ $event_audio = get_field('event_audio',$post_id);
 												'columns' => 'tax:storyteller:Storyteller,
 															 cf:theme_play_button:Listen,
 															 cf:download,
-															 cf:tag_button:Add Tag,
-															 tax:story_tag:Tags, 
 															 cf:story_description:Description,
+															 tax:story_tag:Tags, 
+															 cf:tag_button_2:Add Tag,
 															 cf:event_fundraisee:Fundraiser Org,
-															 tax:story_location:Location',
+															 tax:story_location:Location,
+															 date'
+															,
 
 												'priorities' => '1,
 																3,

@@ -101,7 +101,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
       return;
       };
 
-      //previous button
+      //previous button  
       var prevButton = document.getElementById('player-previous');
       prevButton.onclick = function skipStory() {
         var previousRow = clickedRow.previousSibling;

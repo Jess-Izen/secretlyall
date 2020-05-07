@@ -361,12 +361,14 @@ function my_acf_save_post( $post_id ) {
     $download_button = '<a data="'.$audio_link.'" class="icon-btn-small download-btn" data-fancybox data-src="#download-modal" href="'.$download_button_link.'" onclick="" title="Download"></a>';
     $listen_button = '<a class="icon-btn-small listen-btn" href="'. $play_button_link.'" title="Listen" state="inactive" storyid="'.$post_id.'" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\', \''.$download_button_link.'\');"></a>';
     $theme_listen_button = '<a class="icon-btn-small listen-btn" href="'. $theme_play_button_link.'" title="Listen" state="inactive" storyid="'.$post_id.'" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\', \''.$download_button_link.'\');"></a>';
-    $tag_button = '<div class="icon-btn-small table-tag-btn tag-btn" title="Add Tag" post_url="'.$post_url.'"></div>';
+    $tag_button = '<a class="icon-btn-small table-tag-btn tag-btn" title="Add Tag" post_url="'.$post_url.'"></a>';
+    $theme_button = '<a class="icon-btn-small table-theme-btn" title="Event Page" href="'.$theme_page.'"></a>';
     update_field('listen',$listen_button);
     update_field('download',$download_button);
     update_field('tag_button',$tag_button);
     update_field('tag_button_2',$tag_button);
     update_field('theme_play_button',$theme_listen_button);
+    update_field('theme_button',$theme_button);
   }   
 
 }
@@ -399,11 +401,13 @@ return false;
 add_filter( 'acf/prepare_field/key=field_5e209e86e8786', 'hide_acf_fields' ); //story - fundraisee link
 add_filter( 'acf/prepare_field/key=field_5e262a4a186c4', 'hide_acf_fields' ); // story - audio
 add_filter( 'acf/prepare_field/key=field_5e27868af7ba7', 'hide_acf_fields' ); // story - date formatted
-//add_filter( 'acf/prepare_field/key=field_5e8ce2342e7d7', 'hide_acf_fields' ); // story - listen
-add_filter( 'acf/prepare_field/key=field_5e8cfaf86fab0', 'hide_acf_fields' ); // story - download
+add_filter( 'acf/prepare_field/key=field_5e8ce2342e7d7', 'hide_acf_fields' ); // story - listen
+add_filter( 'acf/prepare_field/key=field_5eaf2f85c6187', 'hide_acf_fields' ); // story - listen 2
+//add_filter( 'acf/prepare_field/key=field_5e8cfaf86fab0', 'hide_acf_fields' ); // story - download
 add_filter( 'acf/prepare_field/key=field_5ea61937faf17', 'hide_acf_fields' ); // story - new tag
 add_filter( 'acf/prepare_field/key=field_5eaef4f9a7d7f', 'hide_acf_fields' ); // story - tag button
-add_filter( 'acf/prepare_field/key=field_5e6e6fca8ad9f', 'hide_acf_fields' ); // event - date formatted
+//add_filter( 'acf/prepare_field/key=field_5eb48bbb7170b', 'hide_acf_fields' ); // story - theme button
+add_filter( 'acf/prepare_field/key=field_5eb45bc9c3f6f', 'hide_acf_fields' ); // story - tag button 2
 add_filter( 'acf/prepare_field/key=field_5e6e6fca8ad9f', 'hide_acf_fields' ); // event - date formatted
 
 

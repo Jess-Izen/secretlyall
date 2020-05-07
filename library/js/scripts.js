@@ -71,17 +71,20 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     var playerDescription = document.getElementById('player-description');
     playerDescription.innerHTML =' <div id="player-name">' + storyName +'</div> <a id="player-theme">' + eventName + '</a';
 
-    //theme page link
-    var playerTitleTheme = document.getElementById('player-theme')
+    //theme page link + button
+    var playerTitleTheme = document.getElementById('player-theme');
+    var themeButton = document.getElementById('player-theme-wrapper');
     playerTitleTheme.setAttribute("href",themeURL);
+    themeButton.setAttribute("href",themeURL);
+
 
     //download button
-    var playerDownload = document.getElementById('player-download-btn');
+    var playerDownload = document.getElementById('player-download-wrapper');
     playerDownload.setAttribute("data",audioURL);
     playerDownload.setAttribute("href",downloadButtonLink); //this is used for adding to tracking icon click in browser history
 
     //pass post ID & URL over to tag form modal button as custom attributes (click listener set in jquery)
-    var tagButton = document.getElementById("player-tag-btn");
+    var tagButton = document.getElementById("player-tag-button-wrapper");
     tagButton.setAttribute('post_url',postURL);
 
     //display tags

@@ -34,6 +34,7 @@
 															 tax:story_event:Theme,
 															 cf:listen,
 															 cf:download,
+															 cf:theme_button:View Event,
 															 cf:tag_button:Add Tag,
 															 cf:story_description:Description,
 															 tax:story_tag:Tags, 
@@ -54,11 +55,11 @@
 																9,
 																10,
 																11,
-																12',
+																12,
+																13',
 
 
-												'filters' => 'tax:story_event, 
-															  tax:story_org',
+												'filters' => 'tax:story_event',
 											
 												'responsive_control' => 'column',
 
@@ -130,20 +131,24 @@
 			</div>
 				
 			<div id="under-player-audio">
-				<div class="col1_4">
+				<div class="col1_5">
 					<h2 id="player-description"></h2>
 				</div>
-				<div class="col2_4">	
-					<div id="player-download-btn" class="icon-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download"></div>
+				<a class="col2_5 player-btn-wrapper" id="player-download-wrapper" data-fancybox data-src="#download-modal" href="javascript:;" title="Download">	
+					<div id="player-download-btn" class="icon-btn" ></div>
 					<h3 class="player-btn-label">Download</h3>
-				</div>
-				<div class="col3_4">
-					<div id="player-tag-btn" class="icon-btn tag-btn" title="Add Tag"></div>
+				</a>
+				<a class="col3_5 player-btn-wrapper" id="player-theme-wrapper"  title="View Event">
+					<div id="player-theme-btn" class="icon-btn theme-btn"></div>
+					<h3 class="player-btn-label">View Event</h3>
+							</a>
+				<a class="col4_5 player-btn-wrapper tag-btn" id="player-tag-button-wrapper" href="#0"  title="Add Tag">
+					<div id="player-tag-btn" class="icon-btn tag-btn"></div>
 					<h3 class="player-btn-label">Add Tag</h3>
-				</div>
-				<div class="col4_4">
+							</a>
+				<div class="col5_5">
 					<div id="player-tag-wrapper">
-					<h2 id="player-tag-label">Tags:</h2>
+						<h2 id="player-tag-label">Tags:</h2>
 					<div id="player-tags" ></div>
 				</div>
 			</div>

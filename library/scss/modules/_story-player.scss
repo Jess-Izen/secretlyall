@@ -93,19 +93,24 @@ Stylesheet: Story Player Stylesheet
     justify-content: space-between;
     align-items: center;
     @media only screen and (min-width: 801px) {
-        .col1_4{
-        width: 24%;
+        .col1_5{
+        width: 15%;
          }
-        .col2_4{
-          width: 20%;
+        .col2_5{
+          width: 18%;
           display: flex;
         }
-        .col3_4{
-          width: 20%;
+        .col3_5{
+          width: 18%;
           display: flex;
         }
-        .col4_4{
-          width:36%;
+        .col4_5{
+          width:18%;
+          display: flex;
+        }
+
+        .col5_5{
+            width:25%
         }
     }
     @media only screen and (max-width: 800px) {
@@ -167,6 +172,14 @@ Stylesheet: Story Player Stylesheet
     }
 }
 
+#player-theme-btn{
+    background:transparent url(../images/playlist.svg);
+    display: inline-block;
+    @media only screen and (max-width: 800px) {
+    display: none;
+    }
+}
+
 .player-btn-label {
     display: inline-block;
     color: white; 
@@ -177,6 +190,10 @@ Stylesheet: Story Player Stylesheet
     @media only screen and (max-width: 800px) {
         display: none;    
     }
+}
+
+.player-btn-wrapper {
+        text-decoration: none;
 }
 
 

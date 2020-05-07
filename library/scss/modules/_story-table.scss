@@ -43,15 +43,15 @@ Stylesheet: Story Table  Stylesheet
 .col-tag_button_2 {
     text-align: center !important;
     background-image: none !important; 
-    @media only screen and (min-width: 801px){
-    width: 79px; // make the button columns equally sized on desktop/tablet
-    }
 }
 
 .col-story_tag, .col-story_description{
     background-image: none !important; 
 }
 
+    .col-story_tag {
+        max-width: 275px;
+    }    
 
 .listen-btn{
     background: $black url(../images/play-small.svg);
@@ -69,6 +69,11 @@ Stylesheet: Story Table  Stylesheet
     display: inline-block;
 }
 
+.table-theme-btn{
+    background: $black url(../images/playlist-small.svg);
+    display: inline-block;
+}
+
 .posts-table-wrapper {
     margin-bottom: 24px;
     flex-grow: 1;
@@ -77,10 +82,11 @@ Stylesheet: Story Table  Stylesheet
     td, th {
         font-size: 95%;
         border-right: none !important;
+        vertical-align: middle;
     }
 
     table{
-        border: 1px solid $accent-color-3 !important;
+        //border: 1px solid $accent-color-3 !important;
         width: 98% !important;
     }
 
@@ -101,74 +107,132 @@ Stylesheet: Story Table  Stylesheet
         color: $accent-color-2;
     }
 
+    .posts-table-controls select{
+        background-position: 95% center;
+    }
+    .dataTables_length select{
+        background-position: 87% center; 
+    }
+
+
 
 
    @media only screen and (max-width: 800px){
-            .col-date{
-                display: none !important;
-            }     
-    
-    .filter-label {
-            display: none !important;
-            }
+                        .col-date{
+                            display: none !important;
+                        }     
+                
+                    .filter-label {
+                            display: none !important;
+                            }
+                    .posts-table-select-filters {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        margin-right: 0px !important;
+                        justify-content: space-between;
+                        select {
+                            width: 60% !important;
+                        }
+                        .posts-table-reset{
+                            width: 30%;
+                            margin: 0;
+                        }
+                    }
+                    
 
-        .posts-table-select-filters {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-right: 0px !important;
-        }
-
-        .posts-table-reset {
-            display: none;
-        }
-
-        .col-storyteller {
-            max-width: 60px;
-            background-image: none !important; 
-            
-            }
-        th {
-            font-size: 90% !important;
-            padding-left: 9px !important;
-        }   
+                    .col-storyteller {
+                        max-width: 60px;
+                        background-image: none !important; 
+                        margin-right: 5px;     
+                        }
+                    
+                    .col-listen {
+                        padding-right: 18px;
+                    }
 
 
-        td.control::before{
-        color: $accent-color-2 !important;
-        top: 11px !important;
-        }
-        .col_tag_button_2 {
-            display: none;
-        }
+                    th {
+                        font-size: 85% !important;
+                        padding-left: 9px !important;
+                    }   
 
-        td.child {
-            ul.dtr-details{
-                text-align: center;
-                padding-bottom: 10px !important;
-        
-                li {
-                    display: inline-flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    align-items: center;
-                    border-bottom: none;
+
+                    td.control::before{
+                    color: $accent-color-2 !important;
+                        top: 28px !important;
+                    }
+                    .col_tag_button_2 {
+                        display: none;
+                    }
+
+                    td.child {
+                        border-bottom: 1px solid $accent-color-3;
+
+                        a{
+                            color: $accent-color-2;
+                        }
+                        
+                        
+                        ul.dtr-details{
+                            text-align: center;
+                            padding-bottom: 10px !important;
+                            display: flex;
+                    
+                            li {
+                                text-align: center;
+                                font-size:95%;
+                                display: inline-flex;
+                                flex-wrap: wrap;
+                                justify-content: center;
+                                align-items: center;
+                                border-bottom: none !important;
+                                margin-bottom: 5px;
+
+                                .dtr-title {
+                                    margin: 0 0 3px 0;
+                                }
+                            }
+
+                            li:nth-child(1),
+                            li:nth-child(3){
+                                width: 30%;
+                            }
+
+                            li:nth-child(2){
+                                width:40%;
+                            }
+
+
+
+                            li:nth-child(6){
+                                display: none;
+                                        }
+
+                        }
+                    }
+
+                    tr.post-row.odd {
+                        background-color: $background-grey-dark !important;
+
+                    }
+
+                    tr.child {
+                        border-bottom: 1px solid $accent-color-3
+
+                    }
+
+
+
                 }
-
-                li:nth-child(5){
-                    display: none;
-                }
-
-            }
-        }
-
-    }
 
     @media only screen and (min-width: 801px){
-            .col-tag_button{
+            .col-tag_button,
+            .col-theme_button{
                 display: none;
             }
     }
 
-    }
+}
 

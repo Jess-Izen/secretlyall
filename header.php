@@ -69,13 +69,13 @@
 					</div>
 					<div id="header-button-wrapper">
 						<div id="header-buttons">
-							<a class="col1_3 header-button">
+							<a class="col1_3 header-button" href="#0">
 								<h3>What is Secretly Y'all?</h3>
 							</a>
-							<a class="col1_3 header-button">
+							<a class="col1_3 header-button" href="#0">
 								<h3>Support the Archive</h3>
 							</a>
-							<a class="col1_3 header-button">
+							<a class="col1_3 header-button" href="#0">
 								<h3>Want to Tell a Story?</h3>
 							</a>	
 						</div>

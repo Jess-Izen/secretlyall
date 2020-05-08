@@ -101,12 +101,14 @@ Stylesheet: Header Stylesheet
         }
 
         .hamburger-menu-item {
+            text-decoration: none;
             h2 { 
                 color: white;
                 font-size: 1.25em;
                 border-bottom: 3px solid $accent-color;
             }
         }
+
 
 @media only screen and (min-width: 700px){
     header {
@@ -293,13 +295,25 @@ Stylesheet: Header Stylesheet
         align-items: center;
         padding-right: 20px;
         flex-direction: row;
+        text-decoration: none;
         .header-button h3 {
             color: white;
             font-family: serif;
-            border-bottom: 3px solid $accent-color;
             margin: 60px 0 0 0;
-
+            border-bottom: 3px solid $accent-color;
         }
+
+        .header-button {
+            text-decoration: none;
+        }
+
+        .header-button:hover,
+        .header-button:active {
+            h3{
+            border-bottom-color: $accent-color-3;
+            }
+        }
+
     }
 
     #hamburger-icon {

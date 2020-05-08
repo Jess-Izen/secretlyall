@@ -122,12 +122,12 @@ $event_audio = get_field('event_audio',$post_id);
 				<div class="col1_4">
 					<h2 id="player-description"></h2>
 				</div>
-				<div class="col2_4">	
-					<div id="player-download-btn" class="icon-btn" data-fancybox data-src="#download-modal" href="javascript:;" title="Download"></div>
+				<div class="col2_4 player-btn-wrapper" id="player-download-wrapper" data-fancybox data-src="#download-modal" href="javascript:;" title="Download">
+					<div id="player-download-btn" class="icon-btn"></div>
 					<h3 class="player-btn-label">Download</h3>
 				</div>
-				<div class="col3_4">
-					<div id="player-tag-btn" class="icon-btn tag-btn" title="Add Tag"></div>
+				<div class="col3_4 player-btn-wrapper tag-btn" id="player-tag-button-wrapper" href="#0"  title="Add Tag">
+					<div id="player-tag-btn" class="icon-btn"></div>
 					<h3 class="player-btn-label">Add Tag</h3>
 				</div>
 				<div class="col4_4">

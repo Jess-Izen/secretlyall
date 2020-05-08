@@ -75,7 +75,9 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     var playerTitleTheme = document.getElementById('player-theme');
     var themeButton = document.getElementById('player-theme-wrapper');
     playerTitleTheme.setAttribute("href",themeURL);
-    themeButton.setAttribute("href",themeURL);
+    if(typeof(themeButton) != 'undefined' && themeButton != null){
+      themeButton.setAttribute("href",themeURL);
+    }
 
 
     //download button

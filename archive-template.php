@@ -143,7 +143,7 @@
 					<h3 class="player-btn-label">View Event</h3>
 							</a>
 				<a class="col4_5 player-btn-wrapper tag-btn" id="player-tag-button-wrapper" href="#0"  title="Add Tag">
-					<div id="player-tag-btn" class="icon-btn tag-btn"></div>
+					<div id="player-tag-btn" class="icon-btn"></div>
 					<h3 class="player-btn-label">Add Tag</h3>
 							</a>
 				<div class="col5_5">

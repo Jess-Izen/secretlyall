@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Secretly Y'all
+Author: Jess Izen
 
 Stylesheet: Story Table  Stylesheet
 
@@ -118,13 +118,9 @@ Stylesheet: Story Table  Stylesheet
 
 
    @media only screen and (max-width: 800px){
-                        .col-date{
-                            display: none !important;
-                        }     
+
                 
-                    .filter-label {
-                            display: none !important;
-                            }
+
                     .posts-table-select-filters {
                         display: flex;
                         justify-content: center;
@@ -132,18 +128,26 @@ Stylesheet: Story Table  Stylesheet
                         width: 100%;
                         margin-right: 0px !important;
                         justify-content: space-between;
+                        
+                        .filter-label {
+                            display: none !important;
+                            }
+                        
                         select {
                             width: 60% !important;
                         }
                         .posts-table-reset{
                             width: 30%;
                             margin: 0;
+                            color: $accent-color-3;
+                            a {
+                                color: $accent-color-3 !important;
+                            }
                         }
                     }
                     
 
                     .col-storyteller {
-                        max-width: 60px;
                         background-image: none !important; 
                         margin-right: 5px;     
                         }
@@ -151,6 +155,11 @@ Stylesheet: Story Table  Stylesheet
                     .col-listen {
                         padding-right: 18px;
                     }
+
+                    .col-story_event {
+                        min-width: 80px;
+                    }
+
 
 
                     th {
@@ -163,7 +172,9 @@ Stylesheet: Story Table  Stylesheet
                     color: $accent-color-2 !important;
                         top: 28px !important;
                     }
-                    .col_tag_button_2 {
+
+                    .col_tag_button_2,
+                    .col-date {
                         display: none;
                     }
 
@@ -204,9 +215,15 @@ Stylesheet: Story Table  Stylesheet
                                 width:40%;
                             }
 
+                            li:nth-child(4),
+                            li:nth-child(5){
+                                display: flex;
+                                flex-direction: column;
+                            }
 
 
-                            li:nth-child(6){
+                            li:nth-child(6),
+                            li:nth-child(7){
                                 display: none;
                                         }
 

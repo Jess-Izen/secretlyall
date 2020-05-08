@@ -1,26 +1,13 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Secretly Y'all Archive
+Author: Jess Izen
 
 Stylesheet: Button Styles
-
-Buttons are a pretty important part of your site's style, so it's
-important to have a consistent baseline for them. Use this stylesheet
-to create all kinds of buttons.
-
-Helpful Links:
-http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
 
 ******************************************************************/
 
 /*********************
 BUTTON DEFAULTS
-We're gonna use a placeholder selector here
-so we can use common styles. We then use this
-to load up the defaults in all our buttons.
-
-Here's a quick video to show how it works:
-http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
 
@@ -58,7 +45,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
  @extend %btn; // here we load the btn defaults
   background-color: $accent-color;
   color: #002517;
-  font-weight: bold;
 
   &:visited {
     background-color: darken($accent-color, 10%);

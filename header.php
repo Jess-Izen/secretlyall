@@ -50,17 +50,54 @@
 
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<body <?php body_class(); ?> >
 
 		<div id="container">
-
-			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<header class="header" role="banner">
 
 				<div id="inner-header" class="wrap cf">
+					<div id="header-title-wrapper">
+						<a id="header-logo" href="https://secretlyall.org" target="_blank"></a>
+						
+						<div id="desktop-title-wrapper">
+						<div id="mobile-title-wrapper">
+							<a id="header-mobile-logo" href="https://secretlyall.org" target="_blank"></a>
+							<h1 id="header-text" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow">Story Archival Project</a></h1>
+							</div>
+							<h3 id="subheader-text">10 years of live, unscripted storytelling</h3>
+						</div>
+					</div>
+					<div id="header-button-wrapper">
+						<div id="header-buttons">
+							<a class="col1_3 header-button">
+								<h3>What is Secretly Y'all?</h3>
+							</a>
+							<a class="col1_3 header-button">
+								<h3>Support the Archive</h3>
+							</a>
+							<a class="col1_3 header-button">
+								<h3>Want to Tell a Story?</h3>
+							</a>	
+						</div>
+					</div>
+				</div>
+				<div id="hamburger-menu">
+					<div id="hamburger-buttons-wrapper">
+						<a class="col1_3 hamburger-menu-item" href="#0">
+							<h2>What is Secretly Y'all?</h2>
+						</a>						
+						<a class="col1_3 hamburger-menu-item" href="#0">
+							<h2>Support the Archive</h2>
+						</a>						
+						<a class="col1_3 hamburger-menu-item" href="#0">
+							<h2 >Want to Tell a Story?</h2>
+						</a>
+					</div>
+				</div>
+				<a id="hamburger-icon" href="#0" class="header-icon" onclick="openHamburger()"></a>
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
+	
+					</div>	
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
 

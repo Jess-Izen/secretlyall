@@ -403,10 +403,10 @@ add_filter( 'acf/prepare_field/key=field_5e262a4a186c4', 'hide_acf_fields' ); //
 add_filter( 'acf/prepare_field/key=field_5e27868af7ba7', 'hide_acf_fields' ); // story - date formatted
 add_filter( 'acf/prepare_field/key=field_5e8ce2342e7d7', 'hide_acf_fields' ); // story - listen
 add_filter( 'acf/prepare_field/key=field_5eaf2f85c6187', 'hide_acf_fields' ); // story - listen 2
-//add_filter( 'acf/prepare_field/key=field_5e8cfaf86fab0', 'hide_acf_fields' ); // story - download
+add_filter( 'acf/prepare_field/key=field_5e8cfaf86fab0', 'hide_acf_fields' ); // story - download
 add_filter( 'acf/prepare_field/key=field_5ea61937faf17', 'hide_acf_fields' ); // story - new tag
 add_filter( 'acf/prepare_field/key=field_5eaef4f9a7d7f', 'hide_acf_fields' ); // story - tag button
-//add_filter( 'acf/prepare_field/key=field_5eb48bbb7170b', 'hide_acf_fields' ); // story - theme button
+add_filter( 'acf/prepare_field/key=field_5eb48bbb7170b', 'hide_acf_fields' ); // story - theme button
 add_filter( 'acf/prepare_field/key=field_5eb45bc9c3f6f', 'hide_acf_fields' ); // story - tag button 2
 add_filter( 'acf/prepare_field/key=field_5e6e6fca8ad9f', 'hide_acf_fields' ); // event - date formatted
 

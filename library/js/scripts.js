@@ -155,6 +155,16 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
 
 };
 
+//opens hamburger menu
+function openHamburger(){
+  var menu = document.getElementById('hamburger-menu');
+  if (menu.style.display === 'flex') {
+    menu.style.display = "none";
+  }
+  else {
+    menu.style.display = "flex";
+  }
+}
 
 
 

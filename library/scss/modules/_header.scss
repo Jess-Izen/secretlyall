@@ -1,0 +1,294 @@
+/******************************************************************
+Site Name: Secretly Y'all
+Author: Jess Izen
+
+Stylesheet: Header Stylesheet
+
+******************************************************************/
+
+//mobile size first
+@media only screen{
+    header {
+        display: flex;
+        justify-content: center;
+        background-color: $black;
+        min-height: 175px;
+        border-bottom: 5px solid $accent-color;
+    }
+
+    #inner-header {
+        padding: 20px 10px 0 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+        #header-logo {
+            display: none;
+        }	
+
+        #mobile-title-wrapper{
+            display: flex;
+            align-content: flex-end;
+            justify-content: flex-start;
+            padding-right: 25px;
+        }
+
+
+        #header-mobile-logo{
+            width: 32%;
+            min-height: 100px;
+            background: transparent url(../images/logo-white.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        #header-text {
+            margin: 0;
+            width: 65%;
+            max-width: 210px;
+            text-align: center;
+            font-size: 2em;
+            a {
+                color: $white;
+            }
+        }
+
+        #subheader-text {
+            color: $white;
+            font-family: $serif;
+            margin: .5em 0 0 0;
+            text-align: center;
+        }	
+        
+
+
+        #header-buttons {
+            display: none;           
+        }
+
+        #header-button-wrapper {
+            display: none;
+        }
+
+        #hamburger-icon{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-width: 50px;
+            right: 2px;
+            top: 2px;
+            background: transparent url(../images/hamburger.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+        #hamburger-menu{
+            display: none;
+            width: 100%;
+            min-height: 175px;
+            position: absolute;
+            justify-content: center;
+            background-color: $black;
+            border-bottom: 5px solid $accent-color;
+        }
+
+        #hamburger-buttons-wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hamburger-menu-item {
+            h2 { 
+                color: white;
+                font-size: 1.35em;
+                border-bottom: 3px solid $accent-color;
+            }
+        }
+
+@media only screen and (min-width: 700px){
+    header {
+        display: flex;
+        justify-content: space-between;
+        background-color: $black;
+        min-height: 175px;
+        border-bottom: 5px solid $accent-color;
+    }
+    
+    #inner-header {
+        padding: 20px 0 0 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+        #header-mobile-logo{
+            display: none;
+        }	
+        
+
+        #header-title-wrapper{
+            display: flex;
+            justify-content: space-between;
+            width: 65%;
+
+        }
+
+        #mobile-title-wrapper{
+            padding: 0;
+        }
+
+        #desktop-title-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 125px;
+            width: 80%;
+            padding-left: 10px;
+        }
+    
+    
+        #header-logo {
+            display: block;
+            width: 175px;
+            height: 150px;
+            background: transparent url(../images/logo-white.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    
+        #header-text {
+            margin: 0;
+            min-width: 215px;
+            max-width: none;
+            text-align: center;
+            width: 100%;
+            a {
+                color: $white;
+            }
+        }
+    
+        #subheader-text {
+            color: $white;
+            font-family: $serif;
+            margin-top: .5em;
+            text-align: center;
+        }	
+        
+
+
+        #hamburger-icon{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-width: 64px;
+            right: 3px;
+            top: 3px;
+            background: transparent url(../images/hamburger.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+
+}
+
+@media only screen and (min-width: 1250px){
+    #header-mobile-logo{
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        background-color: $black;
+        min-height: 175px;
+    }
+    
+    #inner-header {
+        max-width: 1400px;
+        margin-top: 15px;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    
+    }
+    #header-title-wrapper{
+    display: flex;
+    justify-content: left;
+    width: 50%;
+    }   
+        #header-logo{
+            display: block;
+            width: 175px;
+            height: 150px;
+            background: transparent url(../images/logo-white.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+        #mobile-title-wrapper{
+            padding: 0;
+        }
+
+        #desktop-title-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding-left: 25px;
+            justify-content: center;
+            width: auto;
+        }
+
+        #header-text {
+            margin: 0;
+            text-align: left;
+            font-size: 2.75em;
+            width: 100%;
+            max-width: none;
+            a {
+                color: $white;
+            }
+        }
+    
+        #subheader-text {
+            color: $white;
+            font-family: $serif;
+            margin: 0;
+            font-size: 1.5em;
+            text-align: left;
+        }	
+
+    #header-button-wrapper{
+        width: 50%;
+        display: block;
+    }    
+
+    #header-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 20px;
+        flex-direction: row;
+        .header-button h3 {
+            color: white;
+            font-family: serif;
+            border-bottom: 3px solid $accent-color;
+            margin: 60px 0 0 0;
+
+        }
+    }
+
+    #hamburger-icon {
+        display: none;
+    }
+    
+
+
+}

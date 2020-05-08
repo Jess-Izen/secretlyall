@@ -2043,7 +2043,7 @@ Stylesheet: Header Stylesheet
 #hamburger-menu {
   display: none;
   width: 100%;
-  min-height: 175px;
+  height: 175px;
   position: absolute;
   justify-content: center;
   background-color: #013237;
@@ -2059,7 +2059,7 @@ Stylesheet: Header Stylesheet
 /* line 104, ../scss/modules/_header.scss */
 .hamburger-menu-item h2 {
   color: white;
-  font-size: 1.35em;
+  font-size: 1.25em;
   border-bottom: 3px solid #a7d9cd;
 }
 
@@ -2154,14 +2154,30 @@ Stylesheet: Header Stylesheet
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  /* line 196, ../scss/modules/_header.scss */
+  #hamburger-buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+
+  /* line 205, ../scss/modules/_header.scss */
+  .hamburger-menu-item h2 {
+    color: white;
+    font-size: 1.25em;
+    border-bottom: 3px solid #a7d9cd;
+  }
 }
 @media only screen and (min-width: 1250px) {
-  /* line 200, ../scss/modules/_header.scss */
+  /* line 217, ../scss/modules/_header.scss */
   #header-mobile-logo {
     display: none;
   }
 
-  /* line 204, ../scss/modules/_header.scss */
+  /* line 221, ../scss/modules/_header.scss */
   header {
     display: flex;
     justify-content: center;
@@ -2169,7 +2185,7 @@ Stylesheet: Header Stylesheet
     min-height: 175px;
   }
 
-  /* line 211, ../scss/modules/_header.scss */
+  /* line 228, ../scss/modules/_header.scss */
   #inner-header {
     max-width: 1400px;
     margin-top: 15px;
@@ -2181,14 +2197,14 @@ Stylesheet: Header Stylesheet
     align-content: center;
   }
 
-  /* line 222, ../scss/modules/_header.scss */
+  /* line 239, ../scss/modules/_header.scss */
   #header-title-wrapper {
     display: flex;
     justify-content: left;
     width: 50%;
   }
 
-  /* line 227, ../scss/modules/_header.scss */
+  /* line 244, ../scss/modules/_header.scss */
   #header-logo {
     display: block;
     width: 175px;
@@ -2199,12 +2215,12 @@ Stylesheet: Header Stylesheet
     background-size: contain;
   }
 
-  /* line 237, ../scss/modules/_header.scss */
+  /* line 254, ../scss/modules/_header.scss */
   #mobile-title-wrapper {
     padding: 0;
   }
 
-  /* line 241, ../scss/modules/_header.scss */
+  /* line 258, ../scss/modules/_header.scss */
   #desktop-title-wrapper {
     display: flex;
     flex-direction: column;
@@ -2213,7 +2229,7 @@ Stylesheet: Header Stylesheet
     width: auto;
   }
 
-  /* line 249, ../scss/modules/_header.scss */
+  /* line 266, ../scss/modules/_header.scss */
   #header-text {
     margin: 0;
     text-align: left;
@@ -2221,12 +2237,12 @@ Stylesheet: Header Stylesheet
     width: 100%;
     max-width: none;
   }
-  /* line 255, ../scss/modules/_header.scss */
+  /* line 272, ../scss/modules/_header.scss */
   #header-text a {
     color: white;
   }
 
-  /* line 260, ../scss/modules/_header.scss */
+  /* line 277, ../scss/modules/_header.scss */
   #subheader-text {
     color: white;
     font-family: "EB Garamond", Cambria, Times New Roman, Times, serif;
@@ -2235,13 +2251,13 @@ Stylesheet: Header Stylesheet
     text-align: left;
   }
 
-  /* line 268, ../scss/modules/_header.scss */
+  /* line 285, ../scss/modules/_header.scss */
   #header-button-wrapper {
     width: 50%;
     display: block;
   }
 
-  /* line 273, ../scss/modules/_header.scss */
+  /* line 290, ../scss/modules/_header.scss */
   #header-buttons {
     display: flex;
     justify-content: space-between;
@@ -2249,7 +2265,7 @@ Stylesheet: Header Stylesheet
     padding-right: 20px;
     flex-direction: row;
   }
-  /* line 279, ../scss/modules/_header.scss */
+  /* line 296, ../scss/modules/_header.scss */
   #header-buttons .header-button h3 {
     color: white;
     font-family: serif;
@@ -2257,7 +2273,7 @@ Stylesheet: Header Stylesheet
     margin: 60px 0 0 0;
   }
 
-  /* line 288, ../scss/modules/_header.scss */
+  /* line 305, ../scss/modules/_header.scss */
   #hamburger-icon {
     display: none;
   }

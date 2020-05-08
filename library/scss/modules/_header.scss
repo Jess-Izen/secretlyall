@@ -88,7 +88,7 @@ Stylesheet: Header Stylesheet
         #hamburger-menu{
             display: none;
             width: 100%;
-            min-height: 175px;
+            height: 175px;
             position: absolute;
             justify-content: center;
             background-color: $black;
@@ -103,7 +103,7 @@ Stylesheet: Header Stylesheet
         .hamburger-menu-item {
             h2 { 
                 color: white;
-                font-size: 1.35em;
+                font-size: 1.25em;
                 border-bottom: 3px solid $accent-color;
             }
         }
@@ -192,6 +192,23 @@ Stylesheet: Header Stylesheet
             background-repeat: no-repeat;
             background-size: contain;
         }
+
+        #hamburger-buttons-wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+        }
+
+        .hamburger-menu-item {
+            h2 { 
+                color: white;
+                font-size: 1.25em;
+                border-bottom: 3px solid $accent-color;
+            }
+        }
+
 
 
 }

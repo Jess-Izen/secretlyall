@@ -1267,50 +1267,52 @@ Stylesheet: Story Table  Stylesheet
   .posts-table-wrapper .posts-table-select-filters .posts-table-reset {
     width: 30%;
     margin: 0;
+    display: flex;
+    align-items: center;
   }
-  /* line 151, ../scss/modules/_story-table.scss */
+  /* line 154, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-storyteller {
     background-image: none !important;
     margin-right: 5px;
   }
-  /* line 156, ../scss/modules/_story-table.scss */
+  /* line 159, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-listen {
     padding-right: 18px;
   }
-  /* line 160, ../scss/modules/_story-table.scss */
+  /* line 163, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-story_event {
     min-width: 80px;
   }
-  /* line 166, ../scss/modules/_story-table.scss */
+  /* line 169, ../scss/modules/_story-table.scss */
   .posts-table-wrapper th {
     font-size: 85% !important;
     padding-left: 9px !important;
   }
-  /* line 172, ../scss/modules/_story-table.scss */
+  /* line 175, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.control::before {
     color: #015660 !important;
     top: 28px !important;
   }
-  /* line 178, ../scss/modules/_story-table.scss */
+  /* line 181, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col_tag_button_2,
   .posts-table-wrapper .col-date {
     display: none;
   }
-  /* line 182, ../scss/modules/_story-table.scss */
+  /* line 185, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child {
     border-bottom: 1px solid #603e60;
   }
-  /* line 185, ../scss/modules/_story-table.scss */
+  /* line 188, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child a {
     color: #015660;
   }
-  /* line 190, ../scss/modules/_story-table.scss */
+  /* line 193, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details {
     text-align: center;
     padding-bottom: 10px !important;
     display: flex;
   }
-  /* line 195, ../scss/modules/_story-table.scss */
+  /* line 198, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li {
     text-align: center;
     font-size: 95%;
@@ -1323,69 +1325,77 @@ Stylesheet: Story Table  Stylesheet
     margin-bottom: 5px;
     min-height: 85px;
   }
-  /* line 207, ../scss/modules/_story-table.scss */
+  /* line 210, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li .dtr-title {
     margin: 0 0 3px 0;
   }
-  /* line 213, ../scss/modules/_story-table.scss */
+  /* line 216, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(1),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(3) {
     width: 30%;
   }
-  /* line 217, ../scss/modules/_story-table.scss */
+  /* line 220, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(2) {
     width: 40%;
   }
-  /* line 222, ../scss/modules/_story-table.scss */
+  /* line 225, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(4),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(5) {
     display: flex;
     flex-direction: column;
   }
-  /* line 229, ../scss/modules/_story-table.scss */
+  /* line 232, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(6),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(7) {
     display: none;
   }
-  /* line 236, ../scss/modules/_story-table.scss */
+  /* line 239, ../scss/modules/_story-table.scss */
   .posts-table-wrapper tr.post-row.odd {
     background-color: #e2dbe6 !important;
   }
-  /* line 241, ../scss/modules/_story-table.scss */
+  /* line 244, ../scss/modules/_story-table.scss */
   .posts-table-wrapper tr.child {
     border-bottom: 1px solid #603e60;
   }
 }
 @media only screen and (min-width: 436px) and (max-width: 505px) {
-  /* line 254, ../scss/modules/_story-table.scss */
+  /* line 257, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child li:nth-child(5) {
     display: none !important;
   }
 }
 @media only screen and (min-width: 506px) and (max-width: 575px) {
-  /* line 264, ../scss/modules/_story-table.scss */
+  /* line 267, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child li:nth-child(4),
   .posts-table-wrapper td.child li:nth-child(5) {
     display: none !important;
   }
 }
 @media only screen and (min-width: 575px) and (max-width: 1100px) {
-  /* line 272, ../scss/modules/_story-table.scss */
+  /* line 275, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-tag_button {
     display: none;
   }
-  /* line 276, ../scss/modules/_story-table.scss */
+  /* line 279, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .control {
     display: none;
   }
+  /* line 283, ../scss/modules/_story-table.scss */
+  .posts-table-wrapper .posts-table-select-filters {
+    width: initial;
+  }
+  /* line 287, ../scss/modules/_story-table.scss */
+  .posts-table-wrapper .posts-table-reset {
+    margin-right: 10px !important;
+  }
 }
 @media only screen and (min-width: 1100px) {
-  /* line 286, ../scss/modules/_story-table.scss */
+  /* line 298, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-tag_button,
   .posts-table-wrapper .col-theme_button {
     display: none;
   }
-  /* line 291, ../scss/modules/_story-table.scss */
+  /* line 303, ../scss/modules/_story-table.scss */
   .posts-table-wrapper th.control,
   .posts-table-wrapper td.control {
     display: none;

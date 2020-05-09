@@ -26,7 +26,7 @@ Stylesheet: Story Player Stylesheet
 #player-content{
     max-width: 1400px;
     width: 100%;
-    @media only screen and (min-width: 801px){
+    @media only screen and (min-width: 1100px){
         padding-bottom: 15px;        
     }
 }
@@ -34,7 +34,7 @@ Stylesheet: Story Player Stylesheet
 //First Row
 
 #audio-embed{
-    @media only screen and (min-width: 801px){
+    @media only screen and (min-width: 1100px){
         padding-top: 20px;
         display: flex;
         justify-content: space-between;
@@ -55,13 +55,13 @@ Stylesheet: Story Player Stylesheet
 
     }
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
     margin: 5px 25px 0 25px;
     }
 }
 
 #player-play-placeholder{
-    @media only screen and (min-width: 801px) {
+    @media only screen and (min-width: 1100px) {
     display:none;
     }
 }
@@ -92,7 +92,7 @@ Stylesheet: Story Player Stylesheet
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media only screen and (min-width: 801px) {
+    @media only screen and (min-width: 1100px) {
         .col1_5{
         width: 15%;
          }
@@ -131,7 +131,7 @@ Stylesheet: Story Player Stylesheet
             width: 36%;
         }
     }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
         text-align: center;
         margin-top: 15px;
         justify-content: center;
@@ -146,7 +146,7 @@ Stylesheet: Story Player Stylesheet
     max-width: 200px;
     margin: 0;
     justify-content: center;
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
         max-width: 100%;
         margin: 0 25px 0 25px;
         font-size: 6.25vw;
@@ -154,7 +154,7 @@ Stylesheet: Story Player Stylesheet
 }
 
 #player-name{
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
     display: inline;
     }
 }
@@ -169,7 +169,7 @@ Stylesheet: Story Player Stylesheet
 #player-theme{
     color: white;
     text-decoration: underline !important;
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
     display: inline;
     }
 }
@@ -177,7 +177,7 @@ Stylesheet: Story Player Stylesheet
 #player-download-btn {
     background:transparent url(../images/download.svg);
     display: inline-block;
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
         display: none;
         }    
 }  
@@ -185,7 +185,7 @@ Stylesheet: Story Player Stylesheet
 #player-tag-btn {
     background:transparent url(../images/add.svg);
     display: inline-block;
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
     display: none;
     }
 }
@@ -193,7 +193,7 @@ Stylesheet: Story Player Stylesheet
 #player-theme-btn{
     background:transparent url(../images/playlist.svg);
     display: inline-block;
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
     display: none;
     }
 }
@@ -205,7 +205,7 @@ Stylesheet: Story Player Stylesheet
     margin: 0;
     height: 64px;
     line-height: 64px;
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
         display: none;    
     }
 }
@@ -230,7 +230,7 @@ Stylesheet: Story Player Stylesheet
         margin-bottom: 0;
     }
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
         display: none;
         }  
 }

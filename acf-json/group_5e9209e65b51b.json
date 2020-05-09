@@ -23,26 +23,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5e9de8ed2c16e",
-            "label": "Comment",
-            "name": "comment",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": "tag-form-comment"
-            },
-            "hide_admin": 0,
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
             "key": "field_5ea6159f84a6d",
             "label": "Theme",
             "name": "tag_theme",
@@ -120,5 +100,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1588520854
+    "modified": 1588965273
 }

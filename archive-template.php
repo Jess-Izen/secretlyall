@@ -29,8 +29,7 @@
 										the_content();
 										ptp_the_posts_table(
 											array(
-												'columns' =>',
-																tax:storyteller:Storyteller,
+												'columns' =>'tax:storyteller:Storyteller,
 															 tax:story_event:Theme,
 															 cf:listen,
 															 cf:download,
@@ -56,8 +55,9 @@
 																10,
 																11,
 																12,
-																13',
+																',
 
+											
 
 												'filters' => 'tax:story_event',
 											

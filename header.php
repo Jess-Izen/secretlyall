@@ -57,11 +57,11 @@
 
 				<div id="inner-header" class="wrap cf">
 					<div id="header-title-wrapper">
-						<a id="header-logo" href="https://secretlyall.org" target="_blank"></a>
+						<a id="header-logo" href="<?php echo home_url(); ?>"></a>
 						
 						<div id="desktop-title-wrapper">
 						<div id="mobile-title-wrapper">
-							<a id="header-mobile-logo" href="https://secretlyall.org" target="_blank"></a>
+							<a id="header-mobile-logo" href="<?php echo home_url(); ?>"></a>
 							<h1 id="header-text" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow">Story Archival Project</a></h1>
 							</div>
 							<h3 id="subheader-text">10 years of live, unscripted storytelling</h3>

@@ -22,7 +22,7 @@ Stylesheet: Modified Mediaelements.js Widget Stylesheet
   padding: 0;
   }
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1100px) {
     .mejs-controls{
     padding: 0 25px 0 25px;
     }
@@ -32,7 +32,7 @@ Stylesheet: Modified Mediaelements.js Widget Stylesheet
   .mejs-playpause-button {
     margin-right: 15px;
     width: 0px;
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
     margin: 0px;
     }
   }
@@ -45,7 +45,7 @@ Stylesheet: Modified Mediaelements.js Widget Stylesheet
     &:hover{
       filter: invert(87%) sepia(39%) saturate(207%) hue-rotate(107deg) brightness(75%) contrast(83%);
     }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1100px) {
     margin-top: 70px;
 
       }
@@ -66,7 +66,7 @@ Stylesheet: Modified Mediaelements.js Widget Stylesheet
     margin-top: 21px;
     font-size: 18px;
     line-height: 18px;
-    @media only screen and (min-width: 801px) {
+    @media only screen and (min-width: 1100px) {
       margin-left: 64px;
     }
 

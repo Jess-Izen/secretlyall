@@ -114,6 +114,10 @@ Stylesheet: Story Table  Stylesheet
         background-position: 87% center; 
     }
 
+    .posts-table-reset a {
+        color: $accent-color-3 !important;
+    }
+
 
 
 
@@ -139,10 +143,7 @@ Stylesheet: Story Table  Stylesheet
                         .posts-table-reset{
                             width: 30%;
                             margin: 0;
-                            color: $accent-color-3;
-                            a {
-                                color: $accent-color-3 !important;
-                            }
+
                         }
                     }
                     
@@ -196,10 +197,12 @@ Stylesheet: Story Table  Stylesheet
                                 font-size:95%;
                                 display: inline-flex;
                                 flex-wrap: wrap;
+                                flex-direction: column;
                                 justify-content: center;
                                 align-items: center;
                                 border-bottom: none !important;
                                 margin-bottom: 5px;
+                                min-height: 85px;
 
                                 .dtr-title {
                                     margin: 0 0 3px 0;
@@ -244,9 +247,48 @@ Stylesheet: Story Table  Stylesheet
 
                 }
 
-    @media only screen and (min-width: 1101px){
+    
+
+    @media only screen and (min-width: 436px ) and (max-width: 505px){
+        td.child{
+            li:nth-child(5){
+                display: none !important;
+            }
+
+        }
+    }
+
+    @media only screen and (min-width: 506px ) and (max-width: 575px){
+        td.child{
+            li:nth-child(4),
+            li:nth-child(5){
+                display: none !important;
+            }
+
+        }
+    }
+
+    @media only screen and (min-width: 575px ) and (max-width: 1100px){
+        .col-tag_button {
+            display: none;
+        }
+
+        .control {
+            display: none;
+        }
+    }
+        
+
+
+    @media only screen and (min-width: 1100px){
+         
             .col-tag_button,
             .col-theme_button{
+                display: none;
+            }
+
+            th.control,
+            td.control {
                 display: none;
             }
     }

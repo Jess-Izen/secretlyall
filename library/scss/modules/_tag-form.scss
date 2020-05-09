@@ -9,14 +9,18 @@ Stylesheet: Tag Form Modal Stylesheet
 
 
 .fancybox-slide--iframe .fancybox-content {
-    max-width: 490px;
+    max-width: 350px;
     border: 5px $accent-color solid;
-    height: 480px !important;
+    height: 275px !important;
     @media only screen and (max-width: 800px){
     width: 90% !important;
     }        
     html {
         overflow-y: hidden;
+    }
+    button{
+        top: -6px;
+        right: -6px;
     }
 }
 
@@ -51,8 +55,8 @@ body.single-story {
         background: $background-grey;
     }
 
-    textarea{
-        max-width: 400px;
+    input, textarea{
+        max-width: 250px;
     }
 
     label{

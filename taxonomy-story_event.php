@@ -1,14 +1,6 @@
 <?php
 /*
- * EVENT TAXONOMY (STORY CPT) TEMPLATE
- *
- * This is the custom post type taxonomy template. If you edit the custom taxonomy name,
- * you've got to change the name of this template to reflect that name change.
- *
- * For Example, if your custom taxonomy is called "register_taxonomy('shoes')",
- * then your template name should be taxonomy-shoes.php
- *
- * For more info: http://codex.wordpress.org/Post_Type_Templates#Displaying_Custom_Taxonomies
+ EVENT TAXONOMY (STORY CPT) TEMPLATE
 */
 ?>
 
@@ -17,6 +9,7 @@
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
 $term_slug = 'story_event:'.$term->slug;
 $post_id = $term->description;
+$date = get_field('event_date',$post_id);
 $description = get_field('event_description',$post_id);
 $location_prep = get_field('event_location',$post_id);
 $location = esc_html( $location_prep->name );
@@ -25,7 +18,6 @@ $partner_org_link = '<a href="'.get_field('fundraisee_url',$post_id).'" target="
 $main_photo = get_field('event_photo',$post_id);
 $photo_gallery = get_field('event_gallery',$post_id);
 $event_audio = get_field('event_audio',$post_id);
-
 ?>
 
 
@@ -40,17 +32,49 @@ $event_audio = get_field('event_audio',$post_id);
 	<?php //generate posts table for story posts w/ taxonomy term matching archive page ?>
 	
 	<div id="theme-intro">
-		<div id="theme-first_intro" class="col1_3">
-				<h1 id="theme-title"><?php single_cat_title(); ?></h1>
-				<h3 id="theme-location">Held at: <?php echo $location ?></h3>
-				<h3 id="theme-partner">Partner Organization: <?php echo $partner_org_link ?></h3>
+	<? if (get_field('event_gallery',$post_id)) echo '<div id="theme-wrapper">';
+		else echo '<div id="theme-wrapper" class="no-image">' ?>
+
+		<div class="col1_3 intro-column">
+				<div id="theme-info-primary">	
+					<div id="theme-info-primary-main">	
+						<h2 id="theme-title"><?php single_cat_title(); ?></h2>
+						<h3 id="theme-date"><?php echo $date ?></h3>
+					</div>
+					<div id="theme-info-primary-sub">
+						<h3 id="theme-description" ><?php echo $description ?></h3>
+						<div id="theme-info-secondary">
+							<p id="theme-location">Location: <?php echo $location ?></p>
+							<p> // </p>
+							<p id="theme-partner">Fundraiser for: <?php echo $partner_org_link ?></p>
+				</div>
+					</div>
+				</div>
+
+		</div>
+
+			<div class="col2_3 intro-column">
+			<div id="theme-gallery-wrapper" data-fancybox data-src="#theme-gallery-modal">
+				<div id="theme-gallery-main" style="background-image: url('<?php echo $photo_gallery[0]['url']; ?>')"></div>
 			</div>
-		<div id="theme-second-intro" class="col2_3">
-			<a class="sy-btn" id="theme-back-btn" href="/">Back To All</a>
-			<h3 id="theme-description" ><?php echo $description ?></h3>
-			</div>	
-		<div id="theme-third-intro" class="col3_3">
+		</div>
+		<div class="col3_3 intro-column">
+				<div class="icon-btn-wrapper" id="home-btn-wrapper" title="Back to All">
+					<a id="theme-back-btn" class="icon-btn-medium" href="<?php echo home_url(); ?>" ></a>
+					<h3 class="icon-btn-label">Back to All</h3>
+				</div>
+				<div class="icon-btn-wrapper" id="download-full-btn-wrapper" href="#0" title="Download Full Event Audio">
+					<a id="theme-download-btn" class="icon-btn-medium download-btn" data-fancybox data-src="#download-modal" href="#0 " 
+					data="<? echo $event_audio ?>"></a>
+					<h3 class="icon-btn-label"> <div id="mobile-download-text">Download Event</div><div id="desktop-download-text">Download Full Event </div></h3>
+				</div>
+				<div class="icon-btn-wrapper" id="gallery-btn-wrapper" title="View Gallery" data-fancybox data-src="#theme-gallery-modal">
+					<a id="theme-gallery-btn" class="icon-btn-medium" href="#0"></a>
+					<h3 class="icon-btn-label">View Gallery</h3>
+				</div>
 			</div>
+		</div>	
+
 	</div>
 	<?php ptp_the_posts_table(
 											array(
@@ -93,8 +117,43 @@ $event_audio = get_field('event_audio',$post_id);
 
 	<div style="display: none;" id="download-modal">
 		<h2>Consider donating!</h2>
-		<a id="donate-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true" target="_blank">Donate</a>
-		<a id="modal-download-btn" class="sy-btn" download>Download</a>
+		<div id="download-button-wrapper">
+			<a id="donate-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true" target="_blank">Donate</a>
+			<a id="modal-download-btn" class="sy-btn" download>Download</a>
+		</div>
+	</div>
+
+	<div style="display: none" id="theme-gallery-modal">
+		<div id="theme-gallery-modal-desktop">
+			<div id="galleryThumbs">
+				<?php $i = 0;
+				foreach($photo_gallery as $galleryThumb){
+						$i++;
+						if($i==1){
+								$imgClass = 'active';   
+						}else{
+								$imgClass = '';   
+						}
+						echo '<img src="'.$galleryThumb['sizes']['thumbnail'].'" class="imageThumb imageNum'.$i.' '.$imgClass.'" picURL="'.$galleryThumb['sizes']['gallery-large'].'" />';
+				} ?>    
+			</div>
+			<div id="largeGalleryImage">
+			<img src="<?php echo $photo_gallery[0]['sizes']['gallery-large']; ?>" id="galleryImageLarge" href="<?php echo $photo_gallery[0]['url']?>"/>
+			</div>
+		</div>
+		<div id="theme-gallery-modal-mobile">
+				<?php	if( $photo_gallery ): ?>
+				<ul>
+					<?php foreach( $photo_gallery as $image ): ?>
+						<li >
+							<a class="mobile-gallery-image" href="<?php echo $image['url']; ?>" target="_blank" >
+								<img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+							</a>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			<?php endif; ?>
+		</div>
 	</div>
 
 

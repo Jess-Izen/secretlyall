@@ -200,5 +200,17 @@ $(document).on("click", ".download-btn", function () {
 
     });
 
+//Setup Gallery Clicks
+$("#galleryThumbs .imageThumb").click(function () {
+  if ($(this).hasClass('active')) {
+          //do nothing
+  } else {
+          var newImage = $(this).attr('picURL');
+          $('#galleryImageLarge').attr('src', newImage);
+          $("#galleryThumbs .imageThumb").removeClass('active');
+          $(this).addClass('active');
+  }
+});    
+
 });
 /* end of as page load scripts */

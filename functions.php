@@ -555,4 +555,11 @@ add_filter( 'posts_table_language_defaults', function( $defaults ) {
   return $defaults; 
 } );
 
+/*****Custom Image Sizes, for Theme Page Gallery */
+if ( function_exists( 'add_image_size' ) ) { 
+  add_image_size( 'gallery-large', 750, 750, false ); //(scaled)
+
+}
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

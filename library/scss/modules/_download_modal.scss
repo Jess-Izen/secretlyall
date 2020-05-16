@@ -12,8 +12,16 @@ Stylesheet: Download Modal Stylesheet
     h3{
     color: white;
     }
-
+        
     .fancybox-close-small svg{
         filter: invert(100%) sepia(5%) saturate(7470%) hue-rotate(207deg) brightness(109%) contrast(100%);
+    }
+
+
+
+    #download-button-wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
     }
 }

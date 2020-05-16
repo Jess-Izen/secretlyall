@@ -7,13 +7,14 @@ Stylesheet: Header Stylesheet
 ******************************************************************/
 
 //mobile size first
-@media only screen{
+
     header {
         display: flex;
         justify-content: center;
         background-color: $black;
         min-height: 175px;
         border-bottom: 5px solid $accent-color;
+
     }
 
     #inner-header {
@@ -43,7 +44,7 @@ Stylesheet: Header Stylesheet
             background-size: contain;
         }
 
-        #header-text {
+        #header-text-mobile{
             margin: 0;
             width: 65%;
             max-width: 210px;
@@ -53,6 +54,10 @@ Stylesheet: Header Stylesheet
             a {
                 color: $white;
             }
+        }
+
+        #header-text-tablet {
+            display: none;
         }
 
         #subheader-text {
@@ -74,9 +79,8 @@ Stylesheet: Header Stylesheet
 
         #hamburger-icon{
             position: absolute;
-            width: 100%;
-            height: 100%;
-            max-width: 50px;
+            width: 50px;
+            height: 50px;
             right: 2px;
             top: 2px;
             text-decoration: none;
@@ -85,7 +89,7 @@ Stylesheet: Header Stylesheet
             background-repeat: no-repeat;
             background-size: contain;
         }
-    }
+    
 
         #hamburger-menu{
             display: none;
@@ -113,7 +117,7 @@ Stylesheet: Header Stylesheet
         }
 
 
-@media only screen and (min-width: 700px){
+    @media only screen and (min-width: 700px){
     header {
         display: flex;
         justify-content: space-between;
@@ -164,8 +168,13 @@ Stylesheet: Header Stylesheet
             background-repeat: no-repeat;
             background-size: contain;
         }
-    
-        #header-text {
+        
+        #header-text-mobile {
+            display: none;
+        }
+
+        #header-text-tablet {
+            display: block;
             margin: 0;
             min-width: 215px;
             max-width: none;
@@ -173,6 +182,7 @@ Stylesheet: Header Stylesheet
             width: 100%;
             a {
                 color: $white;
+                display: inline-block;
             }
         }
     
@@ -187,9 +197,8 @@ Stylesheet: Header Stylesheet
 
         #hamburger-icon{
             position: absolute;
-            width: 100%;
-            height: 100%;
-            max-width: 64px;
+            width: 64px;
+            height: 64px;
             right: 3px;
             top: 3px;
             background: transparent url(../images/hamburger.png);
@@ -203,7 +212,7 @@ Stylesheet: Header Stylesheet
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            width: 90%;
+            width: 80%;
         }
 
         .hamburger-menu-item {
@@ -216,9 +225,7 @@ Stylesheet: Header Stylesheet
 
 
 
-}
-
-@media only screen and (min-width: 1250px){
+    @media only screen and (min-width: 1250px){
     #header-mobile-logo{
         display: none;
     }
@@ -268,7 +275,7 @@ Stylesheet: Header Stylesheet
             width: auto;
         }
 
-        #header-text {
+        #header-text-tablet {
             margin: 0;
             text-align: left;
             font-size: 2.75em;
@@ -325,4 +332,4 @@ Stylesheet: Header Stylesheet
     
 
 
-}
+}}

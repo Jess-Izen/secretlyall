@@ -18,7 +18,7 @@ BUTTON DEFAULTS
   text-decoration: none;
   font-size: 0.9em;
   line-height: 25px;
-  font-weight: bold;
+  font-weight: 400;
   padding: 0 12px;
   border-radius: 4px;
   border: 0;
@@ -117,8 +117,23 @@ BUTTON DEFAULTS
   &:focus  {
     background-color: #525252;
     filter: brightness(80%);
+}
+}
+
+.icon-btn-medium {
+  &:visited{
+    background-color: #525252;
+    }
+  cursor: pointer;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $black;
+  background-blend-mode: screen;
+
+  &:hover,
+  &:focus  {
+    background-color: #525252;
+    filter: brightness(80%);
   }
-
-
-
 }

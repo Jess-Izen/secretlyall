@@ -305,7 +305,7 @@ body#tinymce.wp-editor {
   /* NOTE: value of "padding-box" is only supported in Gecko. So
   probably best not to use it. I mean, were you going to anyway? */
   width: 731px;
-  font-family: "Proza Libre", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: black;

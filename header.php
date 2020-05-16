@@ -32,7 +32,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon-16x16.png">
-<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Proza+Libre:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Merriweather+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/library/images/manifest.json">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 <meta name="msapplication-TileColor" content="#ffffff">
@@ -62,7 +62,8 @@
 						<div id="desktop-title-wrapper">
 						<div id="mobile-title-wrapper">
 							<a id="header-mobile-logo" href="<?php echo home_url(); ?>"></a>
-							<h1 id="header-text" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow">Story Archival Project</a></h1>
+							<h1 id="header-text-mobile" ><a href="<?php echo home_url(); ?>" rel="nofollow"><div id="header-title-1">Story<br>Archival Project</a></h1>
+							<h1 id="header-text-tablet" ><a href="<?php echo home_url(); ?>" rel="nofollow"><div id="header-title-1">Story Archival Project</a></h1>
 							</div>
 							<h3 id="subheader-text">10 years of live, unscripted storytelling</h3>
 						</div>

@@ -64,7 +64,7 @@ $event_audio = get_field('event_audio',$post_id);
 					<h3 class="icon-btn-label">Back to All</h3>
 				</div>
 				<div class="icon-btn-wrapper" id="download-full-btn-wrapper" href="#0" title="Download Full Event Audio">
-					<a id="theme-download-btn" class="icon-btn-medium download-btn" data-fancybox data-src="#download-modal" href="#0 " 
+					<a id="theme-download-btn" class="icon-btn-medium download-btn" data-fancybox data-src="#download-modal" href="#0" 
 					data="<? echo $event_audio ?>"></a>
 					<h3 class="icon-btn-label"> <div id="mobile-download-text">Download Event</div><div id="desktop-download-text">Download Full Event </div></h3>
 				</div>
@@ -122,6 +122,21 @@ $event_audio = get_field('event_audio',$post_id);
 			<a id="modal-download-btn" class="sy-btn" download>Download</a>
 		</div>
 	</div>
+
+	<div style="display: none;" id="about-modal">
+		<div id="about-wrapper-main">	
+			<h2 id="about-title">What is Secretly Y'all?</h2>
+			<p id="about-text"> 
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at sem auctor, tempus tortor at, sodales risus. Vestibulum a dolor lacus. Ut sit amet mollis orci. Nam purus nibh, dictum nec consequat at, pretium sed nunc. 
+			<br><br>Phasellus consequat lacus bibendum urna consectetur, vitae volutpat lorem faucibus. Vivamus et pellentesque tellus. 
+			</p>
+			<div id="contact-button-wrapper">
+				<h3>Have a question?</h3>
+				<a id="contact-button" class="sy-btn" target="_blank">Contact Us</a>
+			</div>
+		</div>
+	</div>
+
 
 	<div style="display: none" id="theme-gallery-modal">
 		<div id="theme-gallery-modal-desktop">

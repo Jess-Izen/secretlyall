@@ -6,6 +6,29 @@ Stylesheet: Story Table  Stylesheet
 
 ******************************************************************/
 
+.story-page-content {
+    display: flex;
+    justify-content: center;
+    #story-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1430px;
+
+        #intro-wrapper {
+            padding-top: 20px;
+            width: 70%;
+            #intro-title{
+                text-align: center;
+            }
+        }
+
+        div:nth-of-type(2n) {
+            width: 100%;
+        }
+    }
+}
+
 /*targets content cells and restricts to terms that we want to remove hyperlinks from 
 (by default PTP is all or nothing on term hyperlinks, we want only tags)*/
 .col-storyteller a,

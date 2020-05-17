@@ -1148,9 +1148,35 @@ Author: Jess Izen
 Stylesheet: Story Table  Stylesheet
 
 ******************************************************************/
+/* line 9, ../scss/modules/_story-table.scss */
+.story-page-content {
+  display: flex;
+  justify-content: center;
+}
+/* line 12, ../scss/modules/_story-table.scss */
+.story-page-content #story-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1430px;
+}
+/* line 18, ../scss/modules/_story-table.scss */
+.story-page-content #story-content #intro-wrapper {
+  padding-top: 20px;
+  width: 70%;
+}
+/* line 21, ../scss/modules/_story-table.scss */
+.story-page-content #story-content #intro-wrapper #intro-title {
+  text-align: center;
+}
+/* line 26, ../scss/modules/_story-table.scss */
+.story-page-content #story-content div:nth-of-type(2n) {
+  width: 100%;
+}
+
 /*targets content cells and restricts to terms that we want to remove hyperlinks from 
 (by default PTP is all or nothing on term hyperlinks, we want only tags)*/
-/* line 13, ../scss/modules/_story-table.scss */
+/* line 36, ../scss/modules/_story-table.scss */
 .col-storyteller a,
 .col-story_event a {
   pointer-events: none;
@@ -1159,24 +1185,24 @@ Stylesheet: Story Table  Stylesheet
   text-decoration: none;
 }
 
-/* line 22, ../scss/modules/_story-table.scss */
+/* line 45, ../scss/modules/_story-table.scss */
 .dataTables_wrapper {
   display: flex;
   justify-content: center;
 }
 
-/* line 27, ../scss/modules/_story-table.scss */
+/* line 50, ../scss/modules/_story-table.scss */
 .archive-wrapper {
   min-height: 100vh;
 }
 
-/* line 34, ../scss/modules/_story-table.scss */
+/* line 57, ../scss/modules/_story-table.scss */
 .col-event_fundraisee,
 .col-story_location {
   display: none !important;
 }
 
-/* line 43, ../scss/modules/_story-table.scss */
+/* line 66, ../scss/modules/_story-table.scss */
 .col-listen,
 .col-download,
 .col-tag_button,
@@ -1185,41 +1211,41 @@ Stylesheet: Story Table  Stylesheet
   background-image: none !important;
 }
 
-/* line 48, ../scss/modules/_story-table.scss */
+/* line 71, ../scss/modules/_story-table.scss */
 .col-story_tag, .col-story_description {
   background-image: none !important;
 }
 
-/* line 52, ../scss/modules/_story-table.scss */
+/* line 75, ../scss/modules/_story-table.scss */
 .col-story_tag {
   max-width: 275px;
 }
 
-/* line 56, ../scss/modules/_story-table.scss */
+/* line 79, ../scss/modules/_story-table.scss */
 .listen-btn {
   background: #013237 url(../images/play-small.svg);
   display: inline-block;
 }
 
-/* line 62, ../scss/modules/_story-table.scss */
+/* line 85, ../scss/modules/_story-table.scss */
 .download-btn {
   background: #013237 url(../images/download-small.svg);
   display: inline-block;
 }
 
-/* line 67, ../scss/modules/_story-table.scss */
+/* line 90, ../scss/modules/_story-table.scss */
 .table-tag-btn {
   background: #013237 url(../images/add-small.svg);
   display: inline-block;
 }
 
-/* line 72, ../scss/modules/_story-table.scss */
+/* line 95, ../scss/modules/_story-table.scss */
 .table-theme-btn {
   background: #013237 url(../images/playlist-small.svg);
   display: inline-block;
 }
 
-/* line 77, ../scss/modules/_story-table.scss */
+/* line 100, ../scss/modules/_story-table.scss */
 .posts-table-wrapper {
   box-shadow: 0px 0px 4px #603e60;
   padding: 15px;
@@ -1227,47 +1253,47 @@ Stylesheet: Story Table  Stylesheet
   flex-grow: 1;
   max-width: 1430px;
 }
-/* line 84, ../scss/modules/_story-table.scss */
+/* line 107, ../scss/modules/_story-table.scss */
 .posts-table-wrapper td, .posts-table-wrapper th {
   font-size: 95%;
   border-right: none !important;
   vertical-align: middle;
 }
-/* line 90, ../scss/modules/_story-table.scss */
+/* line 113, ../scss/modules/_story-table.scss */
 .posts-table-wrapper table {
   width: 98% !important;
 }
-/* line 96, ../scss/modules/_story-table.scss */
+/* line 119, ../scss/modules/_story-table.scss */
 .posts-table-wrapper thead tr,
 .posts-table-wrapper thead th {
   border-bottom: 1px solid #603e60 !important;
 }
-/* line 100, ../scss/modules/_story-table.scss */
+/* line 123, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .dataTables_length label#text {
   display: none;
 }
-/* line 104, ../scss/modules/_story-table.scss */
+/* line 127, ../scss/modules/_story-table.scss */
 .posts-table-wrapper tr.odd {
   background-color: #e2dbe6;
 }
-/* line 108, ../scss/modules/_story-table.scss */
+/* line 131, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .col-story_tag a {
   color: #015660;
 }
-/* line 112, ../scss/modules/_story-table.scss */
+/* line 135, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .posts-table-controls select {
   background-position: 95% center;
 }
-/* line 115, ../scss/modules/_story-table.scss */
+/* line 138, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .dataTables_length select {
   background-position: 87% center;
 }
-/* line 119, ../scss/modules/_story-table.scss */
+/* line 142, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .posts-table-reset a {
   color: #603e60 !important;
 }
 @media only screen and (max-width: 1100px) {
-  /* line 130, ../scss/modules/_story-table.scss */
+  /* line 153, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters {
     display: flex;
     justify-content: center;
@@ -1276,64 +1302,64 @@ Stylesheet: Story Table  Stylesheet
     margin-right: 0px !important;
     justify-content: space-between;
   }
-  /* line 138, ../scss/modules/_story-table.scss */
+  /* line 161, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters .filter-label {
     display: none !important;
   }
-  /* line 142, ../scss/modules/_story-table.scss */
+  /* line 165, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters select {
     width: 60% !important;
   }
-  /* line 145, ../scss/modules/_story-table.scss */
+  /* line 168, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters .posts-table-reset {
     width: 30%;
     margin: 0;
     display: flex;
     align-items: center;
   }
-  /* line 156, ../scss/modules/_story-table.scss */
+  /* line 179, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-storyteller {
     background-image: none !important;
     margin-right: 5px;
   }
-  /* line 161, ../scss/modules/_story-table.scss */
+  /* line 184, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-listen {
     padding-right: 18px;
   }
-  /* line 165, ../scss/modules/_story-table.scss */
+  /* line 188, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-story_event {
     min-width: 80px;
   }
-  /* line 171, ../scss/modules/_story-table.scss */
+  /* line 194, ../scss/modules/_story-table.scss */
   .posts-table-wrapper th {
     font-size: 85% !important;
     padding-left: 9px !important;
   }
-  /* line 177, ../scss/modules/_story-table.scss */
+  /* line 200, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.control::before {
     color: #015660 !important;
     top: 28px !important;
   }
-  /* line 183, ../scss/modules/_story-table.scss */
+  /* line 206, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col_tag_button_2,
   .posts-table-wrapper .col-date {
     display: none;
   }
-  /* line 187, ../scss/modules/_story-table.scss */
+  /* line 210, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child {
     border-bottom: 1px solid #603e60;
   }
-  /* line 190, ../scss/modules/_story-table.scss */
+  /* line 213, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child a {
     color: #015660;
   }
-  /* line 195, ../scss/modules/_story-table.scss */
+  /* line 218, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details {
     text-align: center;
     padding-bottom: 10px !important;
     display: flex;
   }
-  /* line 200, ../scss/modules/_story-table.scss */
+  /* line 223, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li {
     text-align: center;
     font-size: 95%;
@@ -1346,77 +1372,77 @@ Stylesheet: Story Table  Stylesheet
     margin-bottom: 5px;
     min-height: 85px;
   }
-  /* line 212, ../scss/modules/_story-table.scss */
+  /* line 235, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li .dtr-title {
     margin: 0 0 3px 0;
   }
-  /* line 218, ../scss/modules/_story-table.scss */
+  /* line 241, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(1),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(3) {
     width: 30%;
   }
-  /* line 222, ../scss/modules/_story-table.scss */
+  /* line 245, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(2) {
     width: 40%;
   }
-  /* line 227, ../scss/modules/_story-table.scss */
+  /* line 250, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(4),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(5) {
     display: flex;
     flex-direction: column;
   }
-  /* line 234, ../scss/modules/_story-table.scss */
+  /* line 257, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(6),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(7) {
     display: none;
   }
-  /* line 241, ../scss/modules/_story-table.scss */
+  /* line 264, ../scss/modules/_story-table.scss */
   .posts-table-wrapper tr.post-row.odd {
     background-color: #e2dbe6 !important;
   }
-  /* line 246, ../scss/modules/_story-table.scss */
+  /* line 269, ../scss/modules/_story-table.scss */
   .posts-table-wrapper tr.child {
     border-bottom: 1px solid #603e60;
   }
 }
 @media only screen and (min-width: 436px) and (max-width: 505px) {
-  /* line 259, ../scss/modules/_story-table.scss */
+  /* line 282, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child li:nth-child(5) {
     display: none !important;
   }
 }
 @media only screen and (min-width: 506px) and (max-width: 575px) {
-  /* line 269, ../scss/modules/_story-table.scss */
+  /* line 292, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child li:nth-child(4),
   .posts-table-wrapper td.child li:nth-child(5) {
     display: none !important;
   }
 }
 @media only screen and (min-width: 575px) and (max-width: 1100px) {
-  /* line 277, ../scss/modules/_story-table.scss */
+  /* line 300, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-tag_button {
     display: none;
   }
-  /* line 281, ../scss/modules/_story-table.scss */
+  /* line 304, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .control {
     display: none;
   }
-  /* line 285, ../scss/modules/_story-table.scss */
+  /* line 308, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters {
     width: initial;
   }
-  /* line 289, ../scss/modules/_story-table.scss */
+  /* line 312, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-reset {
     margin-right: 10px !important;
   }
 }
 @media only screen and (min-width: 1100px) {
-  /* line 300, ../scss/modules/_story-table.scss */
+  /* line 323, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-tag_button,
   .posts-table-wrapper .col-theme_button {
     display: none;
   }
-  /* line 305, ../scss/modules/_story-table.scss */
+  /* line 328, ../scss/modules/_story-table.scss */
   .posts-table-wrapper th.control,
   .posts-table-wrapper td.control {
     display: none;
@@ -2337,26 +2363,90 @@ Author:
 Stylesheet: Download Modal Stylesheet
 
 ******************************************************************/
-/* line 9, ../scss/modules/_download_modal.scss */
+/* line 9, ../scss/modules/_download-modal.scss */
 #download-modal {
   background-color: #013237;
   border: 5px #a7d9cd solid;
 }
-/* line 12, ../scss/modules/_download_modal.scss */
+/* line 12, ../scss/modules/_download-modal.scss */
 #download-modal h3 {
   color: white;
 }
-/* line 16, ../scss/modules/_download_modal.scss */
+/* line 16, ../scss/modules/_download-modal.scss */
 #download-modal .fancybox-close-small svg {
   filter: invert(100%) sepia(5%) saturate(7470%) hue-rotate(207deg) brightness(109%) contrast(100%);
 }
-/* line 22, ../scss/modules/_download_modal.scss */
+/* line 22, ../scss/modules/_download-modal.scss */
 #download-modal #download-button-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 0 5px;
 }
 
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Download Modal Stylesheet
+
+******************************************************************/
+/* line 9, ../scss/modules/_about-modal.scss */
+#about-modal {
+  background-color: #013237;
+  border: 5px #a7d9cd solid;
+  max-width: 90%;
+}
+/* line 13, ../scss/modules/_about-modal.scss */
+#about-modal h2, #about-modal p {
+  color: white;
+}
+/* line 17, ../scss/modules/_about-modal.scss */
+#about-modal #about-title {
+  margin-top: 0;
+}
+/* line 21, ../scss/modules/_about-modal.scss */
+#about-modal #about-text {
+  padding-bottom: 30px;
+  border-bottom: 2px solid white;
+  margin-bottom: 30px;
+}
+/* line 27, ../scss/modules/_about-modal.scss */
+#about-modal #contact-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* line 32, ../scss/modules/_about-modal.scss */
+#about-modal #contact-button-wrapper h3 {
+  margin: 0;
+  color: white;
+}
+/* line 36, ../scss/modules/_about-modal.scss */
+#about-modal #contact-button-wrapper #contact-button {
+  max-height: 33px;
+  margin: 10px 0 0 0;
+}
+/* line 43, ../scss/modules/_about-modal.scss */
+#about-modal .fancybox-close-small svg {
+  filter: invert(100%) sepia(5%) saturate(7470%) hue-rotate(207deg) brightness(109%) contrast(100%);
+}
+
+@media only screen and (min-width: 1250px) {
+  /* line 50, ../scss/modules/_about-modal.scss */
+  #about-modal {
+    max-width: 30%;
+  }
+  /* line 54, ../scss/modules/_about-modal.scss */
+  #about-modal #contact-button-wrapper {
+    display: inline-flex;
+    flex-direction: row;
+  }
+  /* line 57, ../scss/modules/_about-modal.scss */
+  #about-modal #contact-button-wrapper #contact-button {
+    margin: 0 0 0 20px;
+  }
+}
 /******************************************************************
 Site Name: Secretly Y'all
 Author: Jess Izen
@@ -2558,10 +2648,9 @@ header {
   /* line 183, ../scss/modules/_header.scss */
   #header-text-tablet a {
     color: white;
-    display: inline-block;
   }
 
-  /* line 189, ../scss/modules/_header.scss */
+  /* line 188, ../scss/modules/_header.scss */
   #subheader-text {
     color: white;
     font-family: "EB Garamond", Cambria, Times New Roman, Times, serif;
@@ -2569,7 +2658,7 @@ header {
     text-align: center;
   }
 
-  /* line 198, ../scss/modules/_header.scss */
+  /* line 197, ../scss/modules/_header.scss */
   #hamburger-icon {
     position: absolute;
     width: 64px;
@@ -2582,7 +2671,7 @@ header {
     background-size: contain;
   }
 
-  /* line 210, ../scss/modules/_header.scss */
+  /* line 209, ../scss/modules/_header.scss */
   #hamburger-buttons-wrapper {
     display: flex;
     flex-direction: row;
@@ -2591,7 +2680,7 @@ header {
     width: 80%;
   }
 
-  /* line 219, ../scss/modules/_header.scss */
+  /* line 218, ../scss/modules/_header.scss */
   .hamburger-menu-item h2 {
     color: white;
     font-size: 1.25em;
@@ -2599,12 +2688,12 @@ header {
   }
 }
 @media only screen and (min-width: 700px) and (min-width: 1250px) {
-  /* line 229, ../scss/modules/_header.scss */
+  /* line 228, ../scss/modules/_header.scss */
   #header-mobile-logo {
     display: none;
   }
 
-  /* line 233, ../scss/modules/_header.scss */
+  /* line 232, ../scss/modules/_header.scss */
   header {
     display: flex;
     justify-content: center;
@@ -2612,7 +2701,7 @@ header {
     min-height: 175px;
   }
 
-  /* line 240, ../scss/modules/_header.scss */
+  /* line 239, ../scss/modules/_header.scss */
   #inner-header {
     max-width: 1400px;
     margin-top: 15px;
@@ -2624,14 +2713,14 @@ header {
     align-content: center;
   }
 
-  /* line 251, ../scss/modules/_header.scss */
+  /* line 250, ../scss/modules/_header.scss */
   #header-title-wrapper {
     display: flex;
     justify-content: left;
     width: 50%;
   }
 
-  /* line 256, ../scss/modules/_header.scss */
+  /* line 255, ../scss/modules/_header.scss */
   #header-logo {
     display: block;
     width: 175px;
@@ -2642,12 +2731,12 @@ header {
     background-size: contain;
   }
 
-  /* line 266, ../scss/modules/_header.scss */
+  /* line 265, ../scss/modules/_header.scss */
   #mobile-title-wrapper {
     padding: 0;
   }
 
-  /* line 270, ../scss/modules/_header.scss */
+  /* line 269, ../scss/modules/_header.scss */
   #desktop-title-wrapper {
     display: flex;
     flex-direction: column;
@@ -2656,7 +2745,7 @@ header {
     width: auto;
   }
 
-  /* line 278, ../scss/modules/_header.scss */
+  /* line 277, ../scss/modules/_header.scss */
   #header-text-tablet {
     margin: 0;
     text-align: left;
@@ -2664,12 +2753,12 @@ header {
     width: 100%;
     max-width: none;
   }
-  /* line 284, ../scss/modules/_header.scss */
+  /* line 283, ../scss/modules/_header.scss */
   #header-text-tablet a {
     color: white;
   }
 
-  /* line 289, ../scss/modules/_header.scss */
+  /* line 288, ../scss/modules/_header.scss */
   #subheader-text {
     color: white;
     font-family: "EB Garamond", Cambria, Times New Roman, Times, serif;
@@ -2678,13 +2767,13 @@ header {
     text-align: left;
   }
 
-  /* line 297, ../scss/modules/_header.scss */
+  /* line 296, ../scss/modules/_header.scss */
   #header-button-wrapper {
     width: 50%;
     display: block;
   }
 
-  /* line 302, ../scss/modules/_header.scss */
+  /* line 301, ../scss/modules/_header.scss */
   #header-buttons {
     display: flex;
     justify-content: space-between;
@@ -2693,24 +2782,24 @@ header {
     flex-direction: row;
     text-decoration: none;
   }
-  /* line 309, ../scss/modules/_header.scss */
+  /* line 308, ../scss/modules/_header.scss */
   #header-buttons .header-button h3 {
     color: white;
     font-family: serif;
     margin: 60px 0 0 0;
     border-bottom: 3px solid #a7d9cd;
   }
-  /* line 316, ../scss/modules/_header.scss */
+  /* line 315, ../scss/modules/_header.scss */
   #header-buttons .header-button {
     text-decoration: none;
   }
-  /* line 322, ../scss/modules/_header.scss */
+  /* line 321, ../scss/modules/_header.scss */
   #header-buttons .header-button:hover h3,
   #header-buttons .header-button:active h3 {
     border-bottom-color: #603e60;
   }
 
-  /* line 329, ../scss/modules/_header.scss */
+  /* line 328, ../scss/modules/_header.scss */
   #hamburger-icon {
     display: none;
   }

@@ -467,8 +467,17 @@ function prefill_form_story_link( $value, $field, $form, $args ) {
   return $post_link;
 }
 
-
-
+//add options page
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));	
+}
 
 /*************END ACF COMMANDS********* */
 

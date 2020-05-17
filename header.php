@@ -32,7 +32,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon-16x16.png">
-<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Merriweather+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Merriweather+Sans:wght@300;700&display=swap" rel="stylesheet">
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/library/images/manifest.json">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 <meta name="msapplication-TileColor" content="#ffffff">
@@ -70,7 +70,7 @@
 					</div>
 					<div id="header-button-wrapper">
 						<div id="header-buttons">
-							<a class="col1_3 header-button" href="#0">
+							<a class="col1_3 header-button" data-fancybox data-src="#about-modal" href="#0">
 								<h3>What is Secretly Y'all?</h3>
 							</a>
 							<a class="col1_3 header-button" href="#0">
@@ -84,7 +84,7 @@
 				</div>
 				<div id="hamburger-menu">
 					<div id="hamburger-buttons-wrapper">
-						<a class="col1_3 hamburger-menu-item" href="#0">
+						<a class="col1_3 hamburger-menu-item" data-fancybox data-src="#about-modal" href="#0">
 							<h2>What is Secretly Y'all?</h2>
 						</a>						
 						<a class="col1_3 hamburger-menu-item" href="#0">

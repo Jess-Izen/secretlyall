@@ -11,6 +11,11 @@
  *
  * For more info: http://codex.wordpress.org/Page_Templates
 */
+
+$intro_title = get_field('intro_title','option');
+$intro_text = get_field('intro_text','option');
+$about_title = get_field('about_title','option');
+$about_text = get_field('about_text', 'option');
 ?>
 	<div id="archive-wrapper">
 			<?php get_header(); ?>
@@ -24,7 +29,15 @@
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<section  class="entry-content cf id= itemprop="articleBody">
+								<section  class="entry-content story-page-content cf">
+									<div id="story-content">
+									<div id="intro-wrapper">
+										<? 
+										echo '<h3 id="intro-title">'.$intro_title.'</h3>';
+										echo '<p id="intro-text">'.$intro_text.'</p>'; 
+										?>
+
+									</div>
 									<?php
 										the_content();
 										ptp_the_posts_table(
@@ -67,7 +80,7 @@
 											)
 										);
 									?>
-
+									</div>
 								</section>
 											
 
@@ -79,6 +92,21 @@
 										<a id="modal-download-btn" class="sy-btn" download>Download</a>
 									</div>
 								</div>
+
+															
+								<div style="display: none;" id="about-modal">
+									<div id="about-wrapper-main">	
+										<? 
+										echo '<h2 id="about-title">'.$about_title.'</h2>';
+										echo '<p id="about-text">'.$about_text.'</p>';
+										?>
+										<div id="contact-button-wrapper">
+											<h3>Have a question?</h3>
+											<a id="contact-button" class="sy-btn" target="_blank">Contact Us</a>
+										</div>
+									</div>
+								</div>
+
 
 								<footer class="article-footer">
                  			 <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>

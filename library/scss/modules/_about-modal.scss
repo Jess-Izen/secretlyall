@@ -1,0 +1,64 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Download Modal Stylesheet
+
+******************************************************************/
+
+#about-modal{
+    background-color: $black;
+    border: 5px $accent-color solid;
+    max-width: 90%;
+    h2, p{
+    color: white;
+    }
+
+    #about-title {
+        margin-top: 0;
+    }
+
+    #about-text{
+        padding-bottom: 30px;
+        border-bottom: 2px solid white;
+        margin-bottom: 30px;
+    }
+
+    #contact-button-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h3 {
+            margin: 0;
+            color: white;
+        }
+        #contact-button { 
+            max-height: 33px;
+            margin: 10px 0 0 0;
+        }
+    }
+
+        
+    .fancybox-close-small svg{
+        filter: invert(100%) sepia(5%) saturate(7470%) hue-rotate(207deg) brightness(109%) contrast(100%);
+    }
+
+}
+
+@media only screen and (min-width: 1250px){
+    #about-modal {
+        max-width: 30%;
+
+
+        #contact-button-wrapper {
+            display: inline-flex;
+            flex-direction: row;
+            #contact-button { 
+                margin: 0 0 0 20px;
+            }
+    
+        }
+
+    }
+}

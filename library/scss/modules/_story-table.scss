@@ -2,30 +2,84 @@
 Site Name: Secretly Y'all
 Author: Jess Izen
 
-Stylesheet: Story Table  Stylesheet
+Stylesheet: Story Table Page Stylesheet
 
 ******************************************************************/
 
-.story-page-content {
-    display: flex;
-    justify-content: center;
-    #story-content{
+
+#intro-wrapper-desktop {
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+    .intro-title{
+        text-align: center;
+    }
+    .intro-text {
+        margin: 0;
+    }
+}
+
+.intro-text-below {
+    display: flex; 
+    justify-content: space-between;
+    .col1_2 {
+        width: 70%;
+    }
+    .col2_2{
+        width: 25%;
+    }
+
+    .intro-text-below-text {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 1430px;
-
-        #intro-wrapper {
-            padding-top: 20px;
-            width: 70%;
-            #intro-title{
-                text-align: center;
-            }
+        align-items: flex-end;
+        p{
+           margin: 0;
         }
+    }
+    .intro-text-below-logo-wrapper{
+        display: flex;
+        align-items: flex-end;
 
-        div:nth-of-type(2n) {
+        .intro-text-below-logo {
             width: 100%;
+            height: 100%;
+            min-height: 48px;
+            min-width: 250px;
+            background: url(../images/va-humanities-blue.png);
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: contain;
+
         }
+    }
+}
+
+
+#intro-wrapper-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1100px){
+    #intro-wrapper-desktop{
+        display: none;
+    }
+
+    #intro-wrapper-mobile {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+
+    .intro-text-below {
+        flex-direction: column;
+
+        .intro-text-below-text {
+            margin-bottom: 20px;
+        }
+
+        .intro-text-below-logo {
+            background-position: left;
+        }
+    }
+        
     }
 }
 
@@ -75,6 +129,13 @@ Stylesheet: Story Table  Stylesheet
     .col-story_tag {
         max-width: 275px;
     }    
+
+//table headings
+.posts-data-table th {
+    color: $heading-color;
+    font-weight: 500 !important;
+}
+
 
 .listen-btn{
     background: $black url(../images/play-small.svg);
@@ -147,12 +208,10 @@ Stylesheet: Story Table  Stylesheet
 
 
    @media only screen and (max-width: 1100px){
-
-                
+                  
 
                     .posts-table-select-filters {
                         display: flex;
-                        justify-content: center;
                         flex-wrap: wrap;
                         width: 100%;
                         margin-right: 0px !important;
@@ -277,6 +336,7 @@ Stylesheet: Story Table  Stylesheet
 
     
 
+
     @media only screen and (min-width: 436px ) and (max-width: 505px){
         td.child{
             li:nth-child(5){
@@ -315,7 +375,7 @@ Stylesheet: Story Table  Stylesheet
         }
     }
         
-
+}
 
     @media only screen and (min-width: 1100px){
          
@@ -330,5 +390,4 @@ Stylesheet: Story Table  Stylesheet
             }
     }
 
-}
 

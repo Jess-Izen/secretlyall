@@ -16,6 +16,7 @@ Stylesheet: Download Modal Stylesheet
 
     #about-title {
         margin-top: 0;
+        text-align: center;
     }
 
     #about-text{
@@ -29,6 +30,7 @@ Stylesheet: Download Modal Stylesheet
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
         h3 {
             margin: 0;
             color: white;
@@ -48,12 +50,17 @@ Stylesheet: Download Modal Stylesheet
 
 @media only screen and (min-width: 1250px){
     #about-modal {
-        max-width: 30%;
-
+        max-width: 700px;
+        
+        #about-title{
+            text-align: initial;
+        }
 
         #contact-button-wrapper {
             display: inline-flex;
             flex-direction: row;
+            text-align: initial;
+
             #contact-button { 
                 margin: 0 0 0 20px;
             }

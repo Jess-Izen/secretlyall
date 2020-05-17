@@ -31,11 +31,16 @@ $about_text = get_field('about_text', 'option');
 
 								<section  class="entry-content story-page-content cf">
 									<div id="story-content">
-									<div id="intro-wrapper">
+									<div id="intro-wrapper-desktop">
 										<? 
-										echo '<h3 id="intro-title">'.$intro_title.'</h3>';
-										echo '<p id="intro-text">'.$intro_text.'</p>'; 
+										echo '<h3 class="intro-title">'.$intro_title.'</h3>';
+										echo '<p class="intro-text">'.$intro_text.'</p>';
 										?>
+										<div class="intro-text-below">
+											<div class="intro-text-below-text col1_2"><p>This project has been made possible with the generous support of Virginia Humanities.</p></div>
+											<div class="intro-text-below-logo-wrapper col2_2"><div class="intro-text-below-logo"></div></div>
+										</div>
+										
 
 									</div>
 									<?php
@@ -80,6 +85,18 @@ $about_text = get_field('about_text', 'option');
 											)
 										);
 									?>
+									<div id="intro-wrapper-mobile">
+										<? 
+										echo '<p class="intro-text">'.$intro_text.'</p>'; 
+										?>
+										<div class="intro-text-below">
+											<div class="intro-text-below-text"><p>This project has been made possible with the generous support of Virginia Humanities.</p></div>
+											<div class="intro-text-below-logo-wrapper"><div class="intro-text-below-logo"></div></div>
+										</div>
+
+									</div>
+
+									</div>
 									</div>
 								</section>
 											
@@ -101,7 +118,7 @@ $about_text = get_field('about_text', 'option');
 										echo '<p id="about-text">'.$about_text.'</p>';
 										?>
 										<div id="contact-button-wrapper">
-											<h3>Have a question?</h3>
+											<h3>Have a question or concern?</h3>
 											<a id="contact-button" class="sy-btn" target="_blank">Contact Us</a>
 										</div>
 									</div>

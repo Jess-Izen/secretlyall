@@ -562,9 +562,9 @@ p {
   -ms-word-wrap: break-word;
   word-break: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
   -webkit-hyphenate-before: 2;
   -webkit-hyphenate-after: 3;
   hyphenate-lines: 3;
@@ -1145,38 +1145,95 @@ select {
 Site Name: Secretly Y'all
 Author: Jess Izen
 
-Stylesheet: Story Table  Stylesheet
+Stylesheet: Story Table Page Stylesheet
 
 ******************************************************************/
-/* line 9, ../scss/modules/_story-table.scss */
-.story-page-content {
-  display: flex;
-  justify-content: center;
+/* line 10, ../scss/modules/_story-table.scss */
+#intro-wrapper-desktop {
+  max-width: 1000px;
+  margin: 0 auto 20px auto;
 }
-/* line 12, ../scss/modules/_story-table.scss */
-.story-page-content #story-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1430px;
-}
-/* line 18, ../scss/modules/_story-table.scss */
-.story-page-content #story-content #intro-wrapper {
-  padding-top: 20px;
-  width: 70%;
-}
-/* line 21, ../scss/modules/_story-table.scss */
-.story-page-content #story-content #intro-wrapper #intro-title {
+/* line 13, ../scss/modules/_story-table.scss */
+#intro-wrapper-desktop .intro-title {
   text-align: center;
 }
-/* line 26, ../scss/modules/_story-table.scss */
-.story-page-content #story-content div:nth-of-type(2n) {
-  width: 100%;
+/* line 16, ../scss/modules/_story-table.scss */
+#intro-wrapper-desktop .intro-text {
+  margin: 0;
 }
 
+/* line 21, ../scss/modules/_story-table.scss */
+.intro-text-below {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 24, ../scss/modules/_story-table.scss */
+.intro-text-below .col1_2 {
+  width: 70%;
+}
+/* line 27, ../scss/modules/_story-table.scss */
+.intro-text-below .col2_2 {
+  width: 25%;
+}
+/* line 31, ../scss/modules/_story-table.scss */
+.intro-text-below .intro-text-below-text {
+  display: flex;
+  align-items: flex-end;
+}
+/* line 34, ../scss/modules/_story-table.scss */
+.intro-text-below .intro-text-below-text p {
+  margin: 0;
+}
+/* line 38, ../scss/modules/_story-table.scss */
+.intro-text-below .intro-text-below-logo-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+/* line 42, ../scss/modules/_story-table.scss */
+.intro-text-below .intro-text-below-logo-wrapper .intro-text-below-logo {
+  width: 100%;
+  height: 100%;
+  min-height: 48px;
+  min-width: 250px;
+  background: url(../images/va-humanities-blue.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* line 57, ../scss/modules/_story-table.scss */
+#intro-wrapper-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  /* line 62, ../scss/modules/_story-table.scss */
+  #intro-wrapper-desktop {
+    display: none;
+  }
+
+  /* line 66, ../scss/modules/_story-table.scss */
+  #intro-wrapper-mobile {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* line 71, ../scss/modules/_story-table.scss */
+  #intro-wrapper-mobile .intro-text-below {
+    flex-direction: column;
+  }
+  /* line 74, ../scss/modules/_story-table.scss */
+  #intro-wrapper-mobile .intro-text-below .intro-text-below-text {
+    margin-bottom: 20px;
+  }
+  /* line 78, ../scss/modules/_story-table.scss */
+  #intro-wrapper-mobile .intro-text-below .intro-text-below-logo {
+    background-position: left;
+  }
+}
 /*targets content cells and restricts to terms that we want to remove hyperlinks from 
 (by default PTP is all or nothing on term hyperlinks, we want only tags)*/
-/* line 36, ../scss/modules/_story-table.scss */
+/* line 90, ../scss/modules/_story-table.scss */
 .col-storyteller a,
 .col-story_event a {
   pointer-events: none;
@@ -1185,24 +1242,24 @@ Stylesheet: Story Table  Stylesheet
   text-decoration: none;
 }
 
-/* line 45, ../scss/modules/_story-table.scss */
+/* line 99, ../scss/modules/_story-table.scss */
 .dataTables_wrapper {
   display: flex;
   justify-content: center;
 }
 
-/* line 50, ../scss/modules/_story-table.scss */
+/* line 104, ../scss/modules/_story-table.scss */
 .archive-wrapper {
   min-height: 100vh;
 }
 
-/* line 57, ../scss/modules/_story-table.scss */
+/* line 111, ../scss/modules/_story-table.scss */
 .col-event_fundraisee,
 .col-story_location {
   display: none !important;
 }
 
-/* line 66, ../scss/modules/_story-table.scss */
+/* line 120, ../scss/modules/_story-table.scss */
 .col-listen,
 .col-download,
 .col-tag_button,
@@ -1211,41 +1268,47 @@ Stylesheet: Story Table  Stylesheet
   background-image: none !important;
 }
 
-/* line 71, ../scss/modules/_story-table.scss */
+/* line 125, ../scss/modules/_story-table.scss */
 .col-story_tag, .col-story_description {
   background-image: none !important;
 }
 
-/* line 75, ../scss/modules/_story-table.scss */
+/* line 129, ../scss/modules/_story-table.scss */
 .col-story_tag {
   max-width: 275px;
 }
 
-/* line 79, ../scss/modules/_story-table.scss */
+/* line 134, ../scss/modules/_story-table.scss */
+.posts-data-table th {
+  color: #013237;
+  font-weight: 500 !important;
+}
+
+/* line 140, ../scss/modules/_story-table.scss */
 .listen-btn {
   background: #013237 url(../images/play-small.svg);
   display: inline-block;
 }
 
-/* line 85, ../scss/modules/_story-table.scss */
+/* line 146, ../scss/modules/_story-table.scss */
 .download-btn {
   background: #013237 url(../images/download-small.svg);
   display: inline-block;
 }
 
-/* line 90, ../scss/modules/_story-table.scss */
+/* line 151, ../scss/modules/_story-table.scss */
 .table-tag-btn {
   background: #013237 url(../images/add-small.svg);
   display: inline-block;
 }
 
-/* line 95, ../scss/modules/_story-table.scss */
+/* line 156, ../scss/modules/_story-table.scss */
 .table-theme-btn {
   background: #013237 url(../images/playlist-small.svg);
   display: inline-block;
 }
 
-/* line 100, ../scss/modules/_story-table.scss */
+/* line 161, ../scss/modules/_story-table.scss */
 .posts-table-wrapper {
   box-shadow: 0px 0px 4px #603e60;
   padding: 15px;
@@ -1253,113 +1316,112 @@ Stylesheet: Story Table  Stylesheet
   flex-grow: 1;
   max-width: 1430px;
 }
-/* line 107, ../scss/modules/_story-table.scss */
+/* line 168, ../scss/modules/_story-table.scss */
 .posts-table-wrapper td, .posts-table-wrapper th {
   font-size: 95%;
   border-right: none !important;
   vertical-align: middle;
 }
-/* line 113, ../scss/modules/_story-table.scss */
+/* line 174, ../scss/modules/_story-table.scss */
 .posts-table-wrapper table {
   width: 98% !important;
 }
-/* line 119, ../scss/modules/_story-table.scss */
+/* line 180, ../scss/modules/_story-table.scss */
 .posts-table-wrapper thead tr,
 .posts-table-wrapper thead th {
   border-bottom: 1px solid #603e60 !important;
 }
-/* line 123, ../scss/modules/_story-table.scss */
+/* line 184, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .dataTables_length label#text {
   display: none;
 }
-/* line 127, ../scss/modules/_story-table.scss */
+/* line 188, ../scss/modules/_story-table.scss */
 .posts-table-wrapper tr.odd {
   background-color: #e2dbe6;
 }
-/* line 131, ../scss/modules/_story-table.scss */
+/* line 192, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .col-story_tag a {
   color: #015660;
 }
-/* line 135, ../scss/modules/_story-table.scss */
+/* line 196, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .posts-table-controls select {
   background-position: 95% center;
 }
-/* line 138, ../scss/modules/_story-table.scss */
+/* line 199, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .dataTables_length select {
   background-position: 87% center;
 }
-/* line 142, ../scss/modules/_story-table.scss */
+/* line 203, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .posts-table-reset a {
   color: #603e60 !important;
 }
 @media only screen and (max-width: 1100px) {
-  /* line 153, ../scss/modules/_story-table.scss */
+  /* line 213, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     margin-right: 0px !important;
     justify-content: space-between;
   }
-  /* line 161, ../scss/modules/_story-table.scss */
+  /* line 220, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters .filter-label {
     display: none !important;
   }
-  /* line 165, ../scss/modules/_story-table.scss */
+  /* line 224, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters select {
     width: 60% !important;
   }
-  /* line 168, ../scss/modules/_story-table.scss */
+  /* line 227, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters .posts-table-reset {
     width: 30%;
     margin: 0;
     display: flex;
     align-items: center;
   }
-  /* line 179, ../scss/modules/_story-table.scss */
+  /* line 238, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-storyteller {
     background-image: none !important;
     margin-right: 5px;
   }
-  /* line 184, ../scss/modules/_story-table.scss */
+  /* line 243, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-listen {
     padding-right: 18px;
   }
-  /* line 188, ../scss/modules/_story-table.scss */
+  /* line 247, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-story_event {
     min-width: 80px;
   }
-  /* line 194, ../scss/modules/_story-table.scss */
+  /* line 253, ../scss/modules/_story-table.scss */
   .posts-table-wrapper th {
     font-size: 85% !important;
     padding-left: 9px !important;
   }
-  /* line 200, ../scss/modules/_story-table.scss */
+  /* line 259, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.control::before {
     color: #015660 !important;
     top: 28px !important;
   }
-  /* line 206, ../scss/modules/_story-table.scss */
+  /* line 265, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col_tag_button_2,
   .posts-table-wrapper .col-date {
     display: none;
   }
-  /* line 210, ../scss/modules/_story-table.scss */
+  /* line 269, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child {
     border-bottom: 1px solid #603e60;
   }
-  /* line 213, ../scss/modules/_story-table.scss */
+  /* line 272, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child a {
     color: #015660;
   }
-  /* line 218, ../scss/modules/_story-table.scss */
+  /* line 277, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details {
     text-align: center;
     padding-bottom: 10px !important;
     display: flex;
   }
-  /* line 223, ../scss/modules/_story-table.scss */
+  /* line 282, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li {
     text-align: center;
     font-size: 95%;
@@ -1372,83 +1434,84 @@ Stylesheet: Story Table  Stylesheet
     margin-bottom: 5px;
     min-height: 85px;
   }
-  /* line 235, ../scss/modules/_story-table.scss */
+  /* line 294, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li .dtr-title {
     margin: 0 0 3px 0;
   }
-  /* line 241, ../scss/modules/_story-table.scss */
+  /* line 300, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(1),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(3) {
     width: 30%;
   }
-  /* line 245, ../scss/modules/_story-table.scss */
+  /* line 304, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(2) {
     width: 40%;
   }
-  /* line 250, ../scss/modules/_story-table.scss */
+  /* line 309, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(4),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(5) {
     display: flex;
     flex-direction: column;
   }
-  /* line 257, ../scss/modules/_story-table.scss */
+  /* line 316, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(6),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(7) {
     display: none;
   }
-  /* line 264, ../scss/modules/_story-table.scss */
+  /* line 323, ../scss/modules/_story-table.scss */
   .posts-table-wrapper tr.post-row.odd {
     background-color: #e2dbe6 !important;
   }
-  /* line 269, ../scss/modules/_story-table.scss */
+  /* line 328, ../scss/modules/_story-table.scss */
   .posts-table-wrapper tr.child {
     border-bottom: 1px solid #603e60;
   }
 }
 @media only screen and (min-width: 436px) and (max-width: 505px) {
-  /* line 282, ../scss/modules/_story-table.scss */
+  /* line 342, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child li:nth-child(5) {
     display: none !important;
   }
 }
 @media only screen and (min-width: 506px) and (max-width: 575px) {
-  /* line 292, ../scss/modules/_story-table.scss */
+  /* line 352, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child li:nth-child(4),
   .posts-table-wrapper td.child li:nth-child(5) {
     display: none !important;
   }
 }
 @media only screen and (min-width: 575px) and (max-width: 1100px) {
-  /* line 300, ../scss/modules/_story-table.scss */
+  /* line 360, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-tag_button {
     display: none;
   }
-  /* line 304, ../scss/modules/_story-table.scss */
+  /* line 364, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .control {
     display: none;
   }
-  /* line 308, ../scss/modules/_story-table.scss */
+  /* line 368, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters {
     width: initial;
   }
-  /* line 312, ../scss/modules/_story-table.scss */
+  /* line 372, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-reset {
     margin-right: 10px !important;
   }
 }
+
 @media only screen and (min-width: 1100px) {
-  /* line 323, ../scss/modules/_story-table.scss */
-  .posts-table-wrapper .col-tag_button,
-  .posts-table-wrapper .col-theme_button {
+  /* line 383, ../scss/modules/_story-table.scss */
+  .col-tag_button,
+  .col-theme_button {
     display: none;
   }
-  /* line 328, ../scss/modules/_story-table.scss */
-  .posts-table-wrapper th.control,
-  .posts-table-wrapper td.control {
+
+  /* line 388, ../scss/modules/_story-table.scss */
+  th.control,
+  td.control {
     display: none;
   }
 }
-
 /******************************************************************
 Site Name:
 Author:
@@ -2403,46 +2466,53 @@ Stylesheet: Download Modal Stylesheet
 /* line 17, ../scss/modules/_about-modal.scss */
 #about-modal #about-title {
   margin-top: 0;
+  text-align: center;
 }
-/* line 21, ../scss/modules/_about-modal.scss */
+/* line 22, ../scss/modules/_about-modal.scss */
 #about-modal #about-text {
   padding-bottom: 30px;
   border-bottom: 2px solid white;
   margin-bottom: 30px;
 }
-/* line 27, ../scss/modules/_about-modal.scss */
+/* line 28, ../scss/modules/_about-modal.scss */
 #about-modal #contact-button-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
-/* line 32, ../scss/modules/_about-modal.scss */
+/* line 34, ../scss/modules/_about-modal.scss */
 #about-modal #contact-button-wrapper h3 {
   margin: 0;
   color: white;
 }
-/* line 36, ../scss/modules/_about-modal.scss */
+/* line 38, ../scss/modules/_about-modal.scss */
 #about-modal #contact-button-wrapper #contact-button {
   max-height: 33px;
   margin: 10px 0 0 0;
 }
-/* line 43, ../scss/modules/_about-modal.scss */
+/* line 45, ../scss/modules/_about-modal.scss */
 #about-modal .fancybox-close-small svg {
   filter: invert(100%) sepia(5%) saturate(7470%) hue-rotate(207deg) brightness(109%) contrast(100%);
 }
 
 @media only screen and (min-width: 1250px) {
-  /* line 50, ../scss/modules/_about-modal.scss */
+  /* line 52, ../scss/modules/_about-modal.scss */
   #about-modal {
-    max-width: 30%;
+    max-width: 700px;
   }
-  /* line 54, ../scss/modules/_about-modal.scss */
+  /* line 55, ../scss/modules/_about-modal.scss */
+  #about-modal #about-title {
+    text-align: initial;
+  }
+  /* line 59, ../scss/modules/_about-modal.scss */
   #about-modal #contact-button-wrapper {
     display: inline-flex;
     flex-direction: row;
+    text-align: initial;
   }
-  /* line 57, ../scss/modules/_about-modal.scss */
+  /* line 64, ../scss/modules/_about-modal.scss */
   #about-modal #contact-button-wrapper #contact-button {
     margin: 0 0 0 20px;
   }
@@ -2517,7 +2587,7 @@ header {
 #subheader-text {
   color: white;
   font-family: "EB Garamond", Cambria, Times New Roman, Times, serif;
-  margin: .5em 0 0 0;
+  margin: 0;
   text-align: center;
 }
 
@@ -3493,16 +3563,6 @@ view.
 /*********************
 POSTS TABLE PRO STYLES
 *********************/
-/* line 896, ../scss/breakpoints/_base.scss */
-.posts-data-table th {
-  color: #013237;
-}
-
-/* line 901, ../scss/breakpoints/_base.scss */
-​​.posts-data-table tbody tr {
-  color: blue;
-}
-
 /*********************
 PRINT STYLESHEET
 s

@@ -23,7 +23,7 @@ body {
 	color: $text-color;
 	background-color: $background-grey;
   	-webkit-font-smoothing: antialiased;
-  	-moz-osx-font-smoothing: grayscale;
+	  -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -892,12 +892,3 @@ FOOTER STYLES
 POSTS TABLE PRO STYLES
 *********************/
 
-//table headings
-.posts-data-table th {
-	color: $heading-color;
-}
-
-//cells
-​​.posts-data-table tbody tr {
-	color:blue;
-}

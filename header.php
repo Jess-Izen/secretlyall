@@ -73,10 +73,10 @@
 							<a class="col1_3 header-button" data-fancybox data-src="#about-modal" href="#0">
 								<h3>What is Secretly Y'all?</h3>
 							</a>
-							<a class="col1_3 header-button" href="#0">
+							<a class="col1_3 header-button" data-fancybox data-src="#support-modal" href="#0">
 								<h3>Support the Archive</h3>
 							</a>
-							<a class="col1_3 header-button" href="#0">
+							<a class="col1_3 header-button" href="https://www.secretlyall.org/so-you-want-to-tell/" target="_blank">
 								<h3>Want to Tell a Story?</h3>
 							</a>	
 						</div>
@@ -87,10 +87,10 @@
 						<a class="col1_3 hamburger-menu-item" data-fancybox data-src="#about-modal" href="#0">
 							<h2>What is Secretly Y'all?</h2>
 						</a>						
-						<a class="col1_3 hamburger-menu-item" href="#0">
+						<a class="col1_3 hamburger-menu-item" data-fancybox data-src="#support-modal" href="#0">
 							<h2>Support the Archive</h2>
 						</a>						
-						<a class="col1_3 hamburger-menu-item" href="#0">
+						<a class="col1_3 hamburger-menu-item" href="https://www.secretlyall.org/so-you-want-to-tell/" target="_blank">
 							<h2 >Want to Tell a Story?</h2>
 						</a>
 					</div>

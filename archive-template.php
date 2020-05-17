@@ -16,6 +16,9 @@ $intro_title = get_field('intro_title','option');
 $intro_text = get_field('intro_text','option');
 $about_title = get_field('about_title','option');
 $about_text = get_field('about_text', 'option');
+$support_title = get_field('donation_title','option');
+$support_text = get_field('donation_text', 'option');
+
 ?>
 	<div id="archive-wrapper">
 			<?php get_header(); ?>
@@ -120,6 +123,19 @@ $about_text = get_field('about_text', 'option');
 										<div id="contact-button-wrapper">
 											<h3>Have a question or concern?</h3>
 											<a id="contact-button" class="sy-btn" target="_blank">Contact Us</a>
+										</div>
+									</div>
+								</div>
+
+								<div style="display: none;" id="support-modal">
+									<div id="support-wrapper-main">	
+										<? 
+										echo '<h2 id="support-title">'.$support_title.'</h2>';
+										echo '<p id="support-text">'.$support_text.'</p>';
+										?>
+										<div class="support-logo-wrapper"><div class="support-logo"></div></div>
+										<div id="support-button-wrapper">
+											<a id="support-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true"  target="_blank">Donate Now</a>
 										</div>
 									</div>
 								</div>

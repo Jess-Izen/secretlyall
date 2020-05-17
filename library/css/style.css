@@ -2518,6 +2518,88 @@ Stylesheet: Download Modal Stylesheet
   }
 }
 /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Download Modal Stylesheet
+
+******************************************************************/
+/* line 9, ../scss/modules/_support-modal.scss */
+#support-modal {
+  background-color: #013237;
+  border: 5px #a7d9cd solid;
+  max-width: 90%;
+}
+/* line 13, ../scss/modules/_support-modal.scss */
+#support-modal h2, #support-modal p {
+  color: white;
+}
+/* line 17, ../scss/modules/_support-modal.scss */
+#support-modal #support-title {
+  margin-top: 0;
+  text-align: center;
+}
+/* line 23, ../scss/modules/_support-modal.scss */
+#support-modal .support-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  border-bottom: 2px solid white;
+  margin-bottom: 30px;
+}
+/* line 30, ../scss/modules/_support-modal.scss */
+#support-modal .support-logo-wrapper .support-logo {
+  width: 80%;
+  height: 100%;
+  min-height: 48px;
+  background: url(../images/va-humanities-white.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* line 43, ../scss/modules/_support-modal.scss */
+#support-modal #support-button-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+/* line 48, ../scss/modules/_support-modal.scss */
+#support-modal #support-button-wrapper h3 {
+  margin: 0;
+  color: white;
+}
+/* line 52, ../scss/modules/_support-modal.scss */
+#support-modal #support-button-wrapper #support-button {
+  max-height: 33px;
+  margin: 10px 0 0 0;
+}
+/* line 59, ../scss/modules/_support-modal.scss */
+#support-modal .fancybox-close-small svg {
+  filter: invert(100%) sepia(5%) saturate(7470%) hue-rotate(207deg) brightness(109%) contrast(100%);
+}
+
+@media only screen and (min-width: 1250px) {
+  /* line 66, ../scss/modules/_support-modal.scss */
+  #support-modal {
+    max-width: 500px;
+  }
+  /* line 69, ../scss/modules/_support-modal.scss */
+  #support-modal #support-title {
+    text-align: initial;
+  }
+  /* line 73, ../scss/modules/_support-modal.scss */
+  #support-modal #support-button-wrapper {
+    display: inline-flex;
+    flex-direction: row;
+    text-align: initial;
+  }
+  /* line 78, ../scss/modules/_support-modal.scss */
+  #support-modal #support-button-wrapper #support-button {
+    margin: 0 0 0 20px;
+  }
+}
+/******************************************************************
 Site Name: Secretly Y'all
 Author: Jess Izen
 

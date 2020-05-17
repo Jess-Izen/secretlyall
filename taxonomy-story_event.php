@@ -18,6 +18,11 @@ $partner_org_link = '<a href="'.get_field('fundraisee_url',$post_id).'" target="
 $main_photo = get_field('event_photo',$post_id);
 $photo_gallery = get_field('event_gallery',$post_id);
 $event_audio = get_field('event_audio',$post_id);
+
+$about_title = get_field('about_title','option');
+$about_text = get_field('about_text', 'option');
+$support_title = get_field('donation_title','option');
+$support_text = get_field('donation_text', 'option');
 ?>
 
 
@@ -125,14 +130,26 @@ $event_audio = get_field('event_audio',$post_id);
 
 	<div style="display: none;" id="about-modal">
 		<div id="about-wrapper-main">	
-			<h2 id="about-title">What is Secretly Y'all?</h2>
-			<p id="about-text"> 
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at sem auctor, tempus tortor at, sodales risus. Vestibulum a dolor lacus. Ut sit amet mollis orci. Nam purus nibh, dictum nec consequat at, pretium sed nunc. 
-			<br><br>Phasellus consequat lacus bibendum urna consectetur, vitae volutpat lorem faucibus. Vivamus et pellentesque tellus. 
-			</p>
+			<? 
+			echo '<h2 id="about-title">'.$about_title.'</h2>';
+			echo '<p id="about-text">'.$about_text.'</p>';
+			?>
 			<div id="contact-button-wrapper">
-				<h3>Have a question?</h3>
+				<h3>Have a question or concern?</h3>
 				<a id="contact-button" class="sy-btn" target="_blank">Contact Us</a>
+			</div>
+		</div>
+	</div>
+
+	<div style="display: none;" id="support-modal">
+		<div id="support-wrapper-main">	
+			<? 
+			echo '<h2 id="support-title">'.$support_title.'</h2>';
+			echo '<p id="support-text">'.$support_text.'</p>';
+			?>
+			<div class="support-logo-wrapper"><div class="support-logo"></div></div>
+			<div id="support-button-wrapper">
+				<a id="support-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true" target="_blank">Donate Now</a>
 			</div>
 		</div>
 	</div>

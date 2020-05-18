@@ -749,7 +749,7 @@ BUTTON DEFAULTS
 /* line 44, ../scss/modules/_buttons.scss */
 .blue-btn, .comment-reply-link, #submit, .sy-btn, .player-btn {
   background-color: #a7d9cd;
-  color: #002517;
+  color: #002517 !important;
 }
 /* line 49, ../scss/modules/_buttons.scss */
 .blue-btn:visited, .comment-reply-link:visited, #submit:visited, .sy-btn:visited, .player-btn:visited {
@@ -1163,34 +1163,42 @@ Stylesheet: Story Table Page Stylesheet
 }
 
 /* line 21, ../scss/modules/_story-table.scss */
-.intro-text-below {
+#intro-wrapper-below {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
 }
-/* line 24, ../scss/modules/_story-table.scss */
-.intro-text-below .col1_2 {
+/* line 26, ../scss/modules/_story-table.scss */
+#intro-wrapper-below .intro-text-below {
+  display: flex;
+  justify-content: center;
+}
+/* line 29, ../scss/modules/_story-table.scss */
+#intro-wrapper-below .intro-text-below .col1_2 {
   width: 70%;
 }
-/* line 27, ../scss/modules/_story-table.scss */
-.intro-text-below .col2_2 {
+/* line 32, ../scss/modules/_story-table.scss */
+#intro-wrapper-below .intro-text-below .col2_2 {
   width: 25%;
 }
-/* line 31, ../scss/modules/_story-table.scss */
-.intro-text-below .intro-text-below-text {
+/* line 36, ../scss/modules/_story-table.scss */
+#intro-wrapper-below .intro-text-below .intro-text-below-text {
   display: flex;
   align-items: flex-end;
 }
-/* line 34, ../scss/modules/_story-table.scss */
-.intro-text-below .intro-text-below-text p {
+/* line 39, ../scss/modules/_story-table.scss */
+#intro-wrapper-below .intro-text-below .intro-text-below-text p {
   margin: 0;
 }
-/* line 38, ../scss/modules/_story-table.scss */
-.intro-text-below .intro-text-below-logo-wrapper {
+/* line 43, ../scss/modules/_story-table.scss */
+#intro-wrapper-below .intro-text-below .intro-text-below-logo-wrapper {
   display: flex;
   align-items: flex-end;
+  text-decoration: none;
 }
-/* line 42, ../scss/modules/_story-table.scss */
-.intro-text-below .intro-text-below-logo-wrapper .intro-text-below-logo {
+/* line 47, ../scss/modules/_story-table.scss */
+#intro-wrapper-below .intro-text-below .intro-text-below-logo-wrapper .intro-text-below-logo {
   width: 100%;
   height: 100%;
   min-height: 48px;
@@ -1201,33 +1209,23 @@ Stylesheet: Story Table Page Stylesheet
   background-size: contain;
 }
 
-/* line 57, ../scss/modules/_story-table.scss */
-#intro-wrapper-mobile {
-  display: none;
-}
-
 @media only screen and (max-width: 1100px) {
-  /* line 62, ../scss/modules/_story-table.scss */
-  #intro-wrapper-desktop {
-    display: none;
-  }
-
   /* line 66, ../scss/modules/_story-table.scss */
-  #intro-wrapper-mobile {
+  #intro-wrapper-below {
     display: block;
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
   }
   /* line 71, ../scss/modules/_story-table.scss */
-  #intro-wrapper-mobile .intro-text-below {
+  #intro-wrapper-below .intro-text-below {
     flex-direction: column;
   }
   /* line 74, ../scss/modules/_story-table.scss */
-  #intro-wrapper-mobile .intro-text-below .intro-text-below-text {
+  #intro-wrapper-below .intro-text-below .intro-text-below-text {
     margin-bottom: 20px;
   }
   /* line 78, ../scss/modules/_story-table.scss */
-  #intro-wrapper-mobile .intro-text-below .intro-text-below-logo {
+  #intro-wrapper-below .intro-text-below .intro-text-below-logo {
     background-position: left;
   }
 }
@@ -1259,56 +1257,57 @@ Stylesheet: Story Table Page Stylesheet
   display: none !important;
 }
 
-/* line 120, ../scss/modules/_story-table.scss */
+/* line 121, ../scss/modules/_story-table.scss */
 .col-listen,
 .col-download,
 .col-tag_button,
-.col-tag_button_2 {
+.col-tag_button_2,
+.col-theme_button {
   text-align: center !important;
   background-image: none !important;
 }
 
-/* line 125, ../scss/modules/_story-table.scss */
+/* line 126, ../scss/modules/_story-table.scss */
 .col-story_tag, .col-story_description {
   background-image: none !important;
 }
 
-/* line 129, ../scss/modules/_story-table.scss */
+/* line 130, ../scss/modules/_story-table.scss */
 .col-story_tag {
   max-width: 275px;
 }
 
-/* line 134, ../scss/modules/_story-table.scss */
+/* line 135, ../scss/modules/_story-table.scss */
 .posts-data-table th {
   color: #013237;
   font-weight: 500 !important;
 }
 
-/* line 140, ../scss/modules/_story-table.scss */
+/* line 141, ../scss/modules/_story-table.scss */
 .listen-btn {
   background: #013237 url(../images/play-small.svg);
   display: inline-block;
 }
 
-/* line 146, ../scss/modules/_story-table.scss */
+/* line 147, ../scss/modules/_story-table.scss */
 .download-btn {
   background: #013237 url(../images/download-small.svg);
   display: inline-block;
 }
 
-/* line 151, ../scss/modules/_story-table.scss */
+/* line 152, ../scss/modules/_story-table.scss */
 .table-tag-btn {
   background: #013237 url(../images/add-small.svg);
   display: inline-block;
 }
 
-/* line 156, ../scss/modules/_story-table.scss */
+/* line 157, ../scss/modules/_story-table.scss */
 .table-theme-btn {
   background: #013237 url(../images/playlist-small.svg);
   display: inline-block;
 }
 
-/* line 161, ../scss/modules/_story-table.scss */
+/* line 162, ../scss/modules/_story-table.scss */
 .posts-table-wrapper {
   box-shadow: 0px 0px 4px #603e60;
   padding: 15px;
@@ -1316,47 +1315,47 @@ Stylesheet: Story Table Page Stylesheet
   flex-grow: 1;
   max-width: 1430px;
 }
-/* line 168, ../scss/modules/_story-table.scss */
+/* line 169, ../scss/modules/_story-table.scss */
 .posts-table-wrapper td, .posts-table-wrapper th {
   font-size: 95%;
   border-right: none !important;
   vertical-align: middle;
 }
-/* line 174, ../scss/modules/_story-table.scss */
+/* line 175, ../scss/modules/_story-table.scss */
 .posts-table-wrapper table {
   width: 98% !important;
 }
-/* line 180, ../scss/modules/_story-table.scss */
+/* line 181, ../scss/modules/_story-table.scss */
 .posts-table-wrapper thead tr,
 .posts-table-wrapper thead th {
   border-bottom: 1px solid #603e60 !important;
 }
-/* line 184, ../scss/modules/_story-table.scss */
+/* line 185, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .dataTables_length label#text {
   display: none;
 }
-/* line 188, ../scss/modules/_story-table.scss */
+/* line 189, ../scss/modules/_story-table.scss */
 .posts-table-wrapper tr.odd {
   background-color: #e2dbe6;
 }
-/* line 192, ../scss/modules/_story-table.scss */
+/* line 193, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .col-story_tag a {
   color: #015660;
 }
-/* line 196, ../scss/modules/_story-table.scss */
+/* line 197, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .posts-table-controls select {
   background-position: 95% center;
 }
-/* line 199, ../scss/modules/_story-table.scss */
+/* line 200, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .dataTables_length select {
   background-position: 87% center;
 }
-/* line 203, ../scss/modules/_story-table.scss */
+/* line 204, ../scss/modules/_story-table.scss */
 .posts-table-wrapper .posts-table-reset a {
   color: #603e60 !important;
 }
 @media only screen and (max-width: 1100px) {
-  /* line 213, ../scss/modules/_story-table.scss */
+  /* line 214, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters {
     display: flex;
     flex-wrap: wrap;
@@ -1364,64 +1363,64 @@ Stylesheet: Story Table Page Stylesheet
     margin-right: 0px !important;
     justify-content: space-between;
   }
-  /* line 220, ../scss/modules/_story-table.scss */
+  /* line 221, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters .filter-label {
     display: none !important;
   }
-  /* line 224, ../scss/modules/_story-table.scss */
+  /* line 225, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters select {
     width: 60% !important;
   }
-  /* line 227, ../scss/modules/_story-table.scss */
+  /* line 228, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters .posts-table-reset {
     width: 30%;
     margin: 0;
     display: flex;
     align-items: center;
   }
-  /* line 238, ../scss/modules/_story-table.scss */
+  /* line 239, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-storyteller {
     background-image: none !important;
     margin-right: 5px;
   }
-  /* line 243, ../scss/modules/_story-table.scss */
+  /* line 244, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-listen {
     padding-right: 18px;
   }
-  /* line 247, ../scss/modules/_story-table.scss */
+  /* line 248, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-story_event {
     min-width: 80px;
   }
-  /* line 253, ../scss/modules/_story-table.scss */
+  /* line 254, ../scss/modules/_story-table.scss */
   .posts-table-wrapper th {
     font-size: 85% !important;
     padding-left: 9px !important;
   }
-  /* line 259, ../scss/modules/_story-table.scss */
+  /* line 260, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.control::before {
     color: #015660 !important;
     top: 28px !important;
   }
-  /* line 265, ../scss/modules/_story-table.scss */
+  /* line 266, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col_tag_button_2,
   .posts-table-wrapper .col-date {
     display: none;
   }
-  /* line 269, ../scss/modules/_story-table.scss */
+  /* line 270, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child {
     border-bottom: 1px solid #603e60;
   }
-  /* line 272, ../scss/modules/_story-table.scss */
+  /* line 273, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child a {
     color: #015660;
   }
-  /* line 277, ../scss/modules/_story-table.scss */
+  /* line 278, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details {
     text-align: center;
     padding-bottom: 10px !important;
     display: flex;
   }
-  /* line 282, ../scss/modules/_story-table.scss */
+  /* line 283, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li {
     text-align: center;
     font-size: 95%;
@@ -1434,82 +1433,82 @@ Stylesheet: Story Table Page Stylesheet
     margin-bottom: 5px;
     min-height: 85px;
   }
-  /* line 294, ../scss/modules/_story-table.scss */
+  /* line 295, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li .dtr-title {
     margin: 0 0 3px 0;
   }
-  /* line 300, ../scss/modules/_story-table.scss */
+  /* line 301, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(1),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(3) {
     width: 30%;
   }
-  /* line 304, ../scss/modules/_story-table.scss */
+  /* line 305, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(2) {
     width: 40%;
   }
-  /* line 309, ../scss/modules/_story-table.scss */
+  /* line 310, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(4),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(5) {
     display: flex;
     flex-direction: column;
   }
-  /* line 316, ../scss/modules/_story-table.scss */
+  /* line 317, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(6),
   .posts-table-wrapper td.child ul.dtr-details li:nth-child(7) {
     display: none;
   }
-  /* line 323, ../scss/modules/_story-table.scss */
+  /* line 324, ../scss/modules/_story-table.scss */
   .posts-table-wrapper tr.post-row.odd {
     background-color: #e2dbe6 !important;
   }
-  /* line 328, ../scss/modules/_story-table.scss */
+  /* line 329, ../scss/modules/_story-table.scss */
   .posts-table-wrapper tr.child {
     border-bottom: 1px solid #603e60;
   }
 }
 @media only screen and (min-width: 436px) and (max-width: 505px) {
-  /* line 342, ../scss/modules/_story-table.scss */
+  /* line 343, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child li:nth-child(5) {
     display: none !important;
   }
 }
 @media only screen and (min-width: 506px) and (max-width: 575px) {
-  /* line 352, ../scss/modules/_story-table.scss */
+  /* line 353, ../scss/modules/_story-table.scss */
   .posts-table-wrapper td.child li:nth-child(4),
   .posts-table-wrapper td.child li:nth-child(5) {
     display: none !important;
   }
 }
 @media only screen and (min-width: 575px) and (max-width: 1100px) {
-  /* line 360, ../scss/modules/_story-table.scss */
+  /* line 361, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .col-tag_button {
     display: none;
   }
-  /* line 364, ../scss/modules/_story-table.scss */
+  /* line 365, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .control {
     display: none;
   }
-  /* line 368, ../scss/modules/_story-table.scss */
+  /* line 369, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-select-filters {
     width: initial;
   }
-  /* line 372, ../scss/modules/_story-table.scss */
+  /* line 373, ../scss/modules/_story-table.scss */
   .posts-table-wrapper .posts-table-reset {
     margin-right: 10px !important;
   }
 }
 
 @media only screen and (min-width: 1100px) {
-  /* line 383, ../scss/modules/_story-table.scss */
+  /* line 384, ../scss/modules/_story-table.scss */
   .col-tag_button,
   .col-theme_button {
-    display: none;
+    display: none !important;
   }
 
-  /* line 388, ../scss/modules/_story-table.scss */
+  /* line 389, ../scss/modules/_story-table.scss */
   th.control,
   td.control {
-    display: none;
+    display: none !important;
   }
 }
 /******************************************************************
@@ -2546,8 +2545,9 @@ Stylesheet: Download Modal Stylesheet
   padding-bottom: 30px;
   border-bottom: 2px solid white;
   margin-bottom: 30px;
+  text-decoration: none;
 }
-/* line 30, ../scss/modules/_support-modal.scss */
+/* line 31, ../scss/modules/_support-modal.scss */
 #support-modal .support-logo-wrapper .support-logo {
   width: 80%;
   height: 100%;
@@ -2557,44 +2557,44 @@ Stylesheet: Download Modal Stylesheet
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 43, ../scss/modules/_support-modal.scss */
+/* line 44, ../scss/modules/_support-modal.scss */
 #support-modal #support-button-wrapper {
   display: flex;
   justify-content: center;
   text-align: center;
   width: 100%;
 }
-/* line 48, ../scss/modules/_support-modal.scss */
+/* line 49, ../scss/modules/_support-modal.scss */
 #support-modal #support-button-wrapper h3 {
   margin: 0;
   color: white;
 }
-/* line 52, ../scss/modules/_support-modal.scss */
+/* line 53, ../scss/modules/_support-modal.scss */
 #support-modal #support-button-wrapper #support-button {
   max-height: 33px;
   margin: 10px 0 0 0;
 }
-/* line 59, ../scss/modules/_support-modal.scss */
+/* line 60, ../scss/modules/_support-modal.scss */
 #support-modal .fancybox-close-small svg {
   filter: invert(100%) sepia(5%) saturate(7470%) hue-rotate(207deg) brightness(109%) contrast(100%);
 }
 
 @media only screen and (min-width: 1250px) {
-  /* line 66, ../scss/modules/_support-modal.scss */
+  /* line 67, ../scss/modules/_support-modal.scss */
   #support-modal {
     max-width: 500px;
   }
-  /* line 69, ../scss/modules/_support-modal.scss */
+  /* line 70, ../scss/modules/_support-modal.scss */
   #support-modal #support-title {
     text-align: initial;
   }
-  /* line 73, ../scss/modules/_support-modal.scss */
+  /* line 74, ../scss/modules/_support-modal.scss */
   #support-modal #support-button-wrapper {
     display: inline-flex;
     flex-direction: row;
     text-align: initial;
   }
-  /* line 78, ../scss/modules/_support-modal.scss */
+  /* line 79, ../scss/modules/_support-modal.scss */
   #support-modal #support-button-wrapper #support-button {
     margin: 0 0 0 20px;
   }
@@ -3039,6 +3039,7 @@ LINK STYLES
 *********************/
 /* line 85, ../scss/breakpoints/_base.scss */
 a, a:visited {
+  color: #603e60;
   /* on hover */
   /* on click */
   /* mobile tap color */

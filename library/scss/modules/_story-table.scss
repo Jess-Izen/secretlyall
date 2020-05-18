@@ -18,55 +18,55 @@ Stylesheet: Story Table Page Stylesheet
     }
 }
 
-.intro-text-below {
-    display: flex; 
-    justify-content: space-between;
-    .col1_2 {
-        width: 70%;
-    }
-    .col2_2{
-        width: 25%;
-    }
-
-    .intro-text-below-text {
-        display: flex;
-        align-items: flex-end;
-        p{
-           margin: 0;
+#intro-wrapper-below{
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    .intro-text-below {
+        display: flex; 
+        justify-content: center;
+        .col1_2 {
+            width: 70%;
         }
-    }
-    .intro-text-below-logo-wrapper{
-        display: flex;
-        align-items: flex-end;
+        .col2_2{
+            width: 25%;
+        }
 
-        .intro-text-below-logo {
-            width: 100%;
-            height: 100%;
-            min-height: 48px;
-            min-width: 250px;
-            background: url(../images/va-humanities-blue.png);
-            background-position: bottom;
-            background-repeat: no-repeat;
-            background-size: contain;
+        .intro-text-below-text {
+            display: flex;
+            align-items: flex-end;
+            p{
+            margin: 0;
+            }
+        }
+        .intro-text-below-logo-wrapper{
+            display: flex;
+            align-items: flex-end;
+            text-decoration: none;
+            .intro-text-below-logo {
+                width: 100%;
+                height: 100%;
+                min-height: 48px;
+                min-width: 250px;
+                background: url(../images/va-humanities-blue.png);
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: contain;
 
+            }
         }
     }
 }
 
-
-#intro-wrapper-mobile {
-    display: none;
-}
 
 @media only screen and (max-width: 1100px){
-    #intro-wrapper-desktop{
-        display: none;
-    }
 
-    #intro-wrapper-mobile {
+
+    #intro-wrapper-below {
         display: block;
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto 20px auto;
 
     .intro-text-below {
         flex-direction: column;
@@ -117,7 +117,8 @@ Stylesheet: Story Table Page Stylesheet
 .col-listen,
 .col-download,
 .col-tag_button,
-.col-tag_button_2 {
+.col-tag_button_2,
+.col-theme_button  {
     text-align: center !important;
     background-image: none !important; 
 }
@@ -381,12 +382,12 @@ Stylesheet: Story Table Page Stylesheet
          
             .col-tag_button,
             .col-theme_button{
-                display: none;
+                display: none !important;
             }
 
             th.control,
             td.control {
-                display: none;
+                display: none !important;
             }
     }
 

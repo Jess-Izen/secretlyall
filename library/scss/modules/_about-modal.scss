@@ -6,10 +6,21 @@ Stylesheet: Download Modal Stylesheet
 
 ******************************************************************/
 
+
+.page-template-contact-modal {
+    max-width: 700px;
+    overflow-y: hidden;
+
+    #container{   
+        display: none;
+    }
+}
 #about-modal{
     background-color: $black;
     border: 5px $accent-color solid;
-    max-width: 90%;
+    max-width: 100%;
+    padding: 30px;
+    overflow-y: hidden;
     h2, p{
     color: white;
     }
@@ -22,10 +33,10 @@ Stylesheet: Download Modal Stylesheet
     #about-text{
         padding-bottom: 30px;
         border-bottom: 2px solid white;
-        margin-bottom: 30px;
+        margin: 30px 0;
     }
 
-    #contact-button-wrapper {
+    #contact-btn-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -35,7 +46,7 @@ Stylesheet: Download Modal Stylesheet
             margin: 0;
             color: white;
         }
-        #contact-button { 
+        #contact-btn { 
             max-height: 33px;
             margin: 10px 0 0 0;
         }
@@ -56,16 +67,55 @@ Stylesheet: Download Modal Stylesheet
             text-align: initial;
         }
 
-        #contact-button-wrapper {
+        #contact-btn-wrapper {
             display: inline-flex;
             flex-direction: row;
             text-align: initial;
 
-            #contact-button { 
+            #contact-btn { 
                 margin: 0 0 0 20px;
             }
     
         }
 
     }
+}
+
+//Contact Form Styles
+#contact-wrapper{
+    #contact-title {
+        margin-top: 0;
+    }
+    
+    .af-field{
+        color: white;
+        border: none;
+    }
+
+    .af-field-contact-rules {
+        .af-label {
+            display: none;
+        }
+    }
+
+    .af-spinner,
+    .acf-spinner {
+        height: 20px;
+        width: 20px;
+        margin-left: 10px;
+        vertical-align: text-top;
+        background: transparent url(../images/spinner.gif) no-repeat 50% 50%;
+        display:none;
+    }
+
+    .acf-error-message {
+        display: none;
+    }
+
+    .acf-error-message ~ ul {
+        background-color: red;
+        padding-left: 10px;
+    }
+    
+
 }

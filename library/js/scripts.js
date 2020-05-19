@@ -20,12 +20,12 @@ function loadGravatars() {
 
 function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL, storyTags, downloadButtonLink){
   //embed audio - swaps out the existing src URL in the mediaelements audio widget
-  var clickedListen = event.target;
-  var audioEmbed = document.getElementsByTagName("mediaelementwrapper")[0];
-  var audioSRC = audioEmbed.firstChild;
-  var playerWrapper = document.getElementById('story-player');
-  var openBackground = "#013237"; //i ought to load these from the sass variables
-  var closedBackground = "#525252";
+  let clickedListen = event.target;
+  let audioEmbed = document.getElementsByTagName("mediaelementwrapper")[0];
+  let audioSRC = audioEmbed.firstChild;
+  let playerWrapper = document.getElementById('story-player');
+  let openBackground = "#013237"; //i ought to load these from the sass letiables
+  let closedBackground = "#525252";
   staticListen = document.querySelector('[storyid="'+ id + '"]'); //pull static DOM list for validation
   clickState = staticListen.getAttribute("state");
 
@@ -64,16 +64,16 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
 
 
     //set focus on play/pause button
-    var playPause = playerWrapper.querySelector("div.mejs-playpause-button button");
+    let playPause = playerWrapper.querySelector("div.mejs-playpause-button button");
     playPause.focus();
       
     //Description
-    var playerDescription = document.getElementById('player-description');
+    let playerDescription = document.getElementById('player-description');
     playerDescription.innerHTML =' <div id="player-name">' + storyName +'</div> <a id="player-theme">' + eventName + '</a';
 
     //theme page link + button
-    var playerTitleTheme = document.getElementById('player-theme');
-    var themeButton = document.getElementById('player-theme-wrapper');
+    let playerTitleTheme = document.getElementById('player-theme');
+    let themeButton = document.getElementById('player-theme-wrapper');
     playerTitleTheme.setAttribute("href",themeURL);
     if(typeof(themeButton) != 'undefined' && themeButton != null){
       themeButton.setAttribute("href",themeURL);
@@ -81,23 +81,23 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
 
 
     //download button
-    var playerDownload = document.getElementById('player-download-wrapper');
+    let playerDownload = document.getElementById('player-download-wrapper');
     playerDownload.setAttribute("data",audioURL);
     playerDownload.setAttribute("href",downloadButtonLink); //this is used for adding to tracking icon click in browser history
 
     //pass post ID & URL over to tag form modal button as custom attributes (click listener set in jquery)
-    var tagButton = document.getElementById("player-tag-button-wrapper");
+    let tagButton = document.getElementById("player-tag-button-wrapper");
     tagButton.setAttribute('post_url',postURL);
 
     //display tags
-    var playerTags = document.getElementById('player-tags');
+    let playerTags = document.getElementById('player-tags');
     playerTags.innerHTML = '<p>' + storyTags + '</p>';
     } 
 
     //continue to next story in table when audio complete 
-    var clickedRow = clickedListen.closest(".post-row"); 
-    var nextRow = clickedRow.nextSibling;
-    var nextListen = nextRow.getElementsByClassName("listen-btn")[0];  
+    let clickedRow = clickedListen.closest(".post-row"); 
+    let nextRow = clickedRow.nextSibling;
+    let nextListen = nextRow.getElementsByClassName("listen-btn")[0];  
     audioSRC.onended = function() {
       clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
       clickedListen.setAttribute("state","inactive");
@@ -107,10 +107,10 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
       };
 
       //previous button  
-      var prevButton = document.getElementById('player-previous');
+      let prevButton = document.getElementById('player-previous');
       prevButton.onclick = function skipStory() {
-        var previousRow = clickedRow.previousSibling;
-        var prevListen = previousRow.getElementsByClassName("listen-btn")[0];    
+        let previousRow = clickedRow.previousSibling;
+        let prevListen = previousRow.getElementsByClassName("listen-btn")[0];    
         clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
         clickedListen.setAttribute("state","inactive");
         clickedListen.style.backgroundColor = closedBackground;
@@ -120,7 +120,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
 
 
     //next button
-    var skipButton = document.getElementById('player-next');
+    let skipButton = document.getElementById('player-next');
     skipButton.onclick = function skipStory() {
       nextListen.click();
       clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
@@ -131,7 +131,7 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
 
 
     //close button
-    var playerClose = document.getElementById('player-close');
+    let playerClose = document.getElementById('player-close');
     playerClose.onclick = function closePlayer (){
       audioSRC.setAttribute("src","");
       playerWrapper.style.display = "none";
@@ -159,12 +159,12 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
 
 //opens hamburger menu
 function openHamburger(){
-  var menu = document.getElementById('hamburger-menu');
-  if (menu.style.display === 'flex') {
-    menu.style.display = "none";
+  let menu = document.getElementById('hamburger-menu');
+  if (menu.style.display !== 'flex') {
+    menu.style.display = "flex";
   }
   else {
-    menu.style.display = "flex";
+    menu.style.display = "none";
   }
 }
 
@@ -174,28 +174,60 @@ function openHamburger(){
  * Put all your regular jQuery in here.
 */
 jQuery(document).ready(function($) {
-  
-  //add click listener to player & table tag button, open fancybox using post's URL as src (which has proper form embedded)
-    $(document).on("click", ".tag-btn", function () {
-    var postURL = $(this).attr("post_url");
-    $.fancybox.open({
-      src  : postURL,
-      type : 'iframe',
-      opts : {
-        smallBtn: true, 
+
+//add click listener to player & table tag button, open fancybox using post's URL as src (which has proper form embedded)
+  $(document).on("click", ".tag-btn", function () {
+  let postURL = $(this).attr("post_url");
+  $.fancybox.open({
+    src  : postURL,
+    type : 'iframe',
+    opts : {
+      smallBtn: true, 
+      iframe : {
+        css : {
+            width : '350px',
+            height: '300px'
+        }
+      }
+    },
+
+    });
+});
+
+//add click listener to contact button inside about modal, closes about modal + opens contact page iframe on click
+$(document).on("click", "#contact-btn", function () {
+  $.fancybox.close();
+  $.fancybox.open({
+    src  : '/contact/',
+    type : 'iframe',
+    opts : {
+      smallBtn: true, 
+      iframe : {
+        css : {
+            width : '700px',
+        },
+        attr :{
+          scrolling : 'no' ,
+        },
       },
-      });
-  });
+    },
+
+    });
+});
+
+
+
+
 
   //add click listener to download button (in table and player), to open up fancybox w/ donation prompt
 $(document).on("click", ".download-btn", function () {
   //passes proper mp3 link based on download button's data attribute
-  var audioURL = $(this).attr("data");
-  var downloadButton = $("#modal-download-btn");
+  let audioURL = $(this).attr("data");
+  let downloadButton = $("#modal-download-btn");
   downloadButton.attr("href",audioURL);
 
   //add history entry for the download button, so we can show a :visited style
-  var buttonURL = $(this).attr("href"); 
+  let buttonURL = $(this).attr("href"); 
   history.pushState(1, "SY-Download", buttonURL);
 
     });
@@ -205,7 +237,7 @@ $("#galleryThumbs .imageThumb").click(function () {
   if ($(this).hasClass('active')) {
           //do nothing
   } else {
-          var newImage = $(this).attr('picURL');
+          let newImage = $(this).attr('picURL');
           $('#galleryImageLarge').attr('src', newImage);
           $("#galleryThumbs .imageThumb").removeClass('active');
           $(this).addClass('active');

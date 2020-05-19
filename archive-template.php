@@ -12,8 +12,6 @@
  * For more info: http://codex.wordpress.org/Page_Templates
 */
 
-$intro_title = get_field('intro_title','option');
-$intro_text = get_field('intro_text','option');
 $about_title = get_field('about_title','option');
 $about_text = get_field('about_text', 'option');
 $support_title = get_field('donation_title','option');
@@ -39,12 +37,6 @@ $support_text = get_field('donation_text', 'option');
 										echo '<h3 class="intro-title">'.$intro_title.'</h3>';
 										echo '<p class="intro-text">'.$intro_text.'</p>';
 										?>
-										<div class="intro-text-below">
-											<div class="intro-text-below-text col1_2"><p>This project has been made possible with the generous support of Virginia Humanities.</p></div>
-											<div class="intro-text-below-logo-wrapper col2_2"><div class="intro-text-below-logo"></div></div>
-										</div>
-										
-
 									</div>
 									<?php
 										the_content();
@@ -88,13 +80,13 @@ $support_text = get_field('donation_text', 'option');
 											)
 										);
 									?>
-									<div id="intro-wrapper-mobile">
+									<div id="intro-wrapper-below">
 										<? 
 										echo '<p class="intro-text">'.$intro_text.'</p>'; 
 										?>
 										<div class="intro-text-below">
 											<div class="intro-text-below-text"><p>This project has been made possible with the generous support of Virginia Humanities.</p></div>
-											<div class="intro-text-below-logo-wrapper"><div class="intro-text-below-logo"></div></div>
+											<a class="intro-text-below-logo-wrapper" href="https://virginiahumanities.org/" target="_blank"><div class="intro-text-below-logo"></div></a>
 										</div>
 
 									</div>
@@ -112,20 +104,22 @@ $support_text = get_field('donation_text', 'option');
 										<a id="modal-download-btn" class="sy-btn" download>Download</a>
 									</div>
 								</div>
-
-															
-								<div style="display: none;" id="about-modal">
+								
+								<div id="about-modal" style="display:none">
 									<div id="about-wrapper-main">	
-										<? 
-										echo '<h2 id="about-title">'.$about_title.'</h2>';
-										echo '<p id="about-text">'.$about_text.'</p>';
-										?>
-										<div id="contact-button-wrapper">
-											<h3>Have a question or concern?</h3>
-											<a id="contact-button" class="sy-btn" target="_blank">Contact Us</a>
-										</div>
+									<? 
+									echo '<h2 id="about-title">'.$about_title.'</h2>';
+									echo '<p id="about-text">'.$about_text.'</p>';
+									?>
+									<div id="contact-btn-wrapper">
+										<h3>Have a question or concern?</h3>
+										<a id="contact-btn" class="sy-btn" target="_blank" >Contact Us</a>
 									</div>
 								</div>
+
+								</div>
+															
+
 
 								<div style="display: none;" id="support-modal">
 									<div id="support-wrapper-main">	
@@ -133,7 +127,7 @@ $support_text = get_field('donation_text', 'option');
 										echo '<h2 id="support-title">'.$support_title.'</h2>';
 										echo '<p id="support-text">'.$support_text.'</p>';
 										?>
-										<div class="support-logo-wrapper"><div class="support-logo"></div></div>
+										<a class="support-logo-wrapper" href="https://virginiahumanities.org/" target="_blank 	"><div class="support-logo"></div></a>
 										<div id="support-button-wrapper">
 											<a id="support-button" class="sy-btn" href="https://donorbox.org/y-all-like-secretly-y-all?hide_donation_meter=true"  target="_blank">Donate Now</a>
 										</div>

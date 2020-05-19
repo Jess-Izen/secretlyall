@@ -44,7 +44,7 @@ BUTTON DEFAULTS
 %sy-btn {
  @extend %btn; // here we load the btn defaults
   background-color: $accent-color;
-  color: #002517;
+  color: #002517 !important;
 
   &:visited {
     background-color: darken($accent-color, 10%);

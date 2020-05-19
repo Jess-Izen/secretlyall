@@ -889,6 +889,29 @@ FOOTER STYLES
 
 	
 /*********************
-POSTS TABLE PRO STYLES
+FANCYBOX STYLES
 *********************/
 
+
+.fancybox-slide--iframe .fancybox-content {
+    @media only screen and (max-width: 800px){
+    width: 90% !important;
+    }        
+    html {
+        overflow: hidden;
+    }
+    button{
+        top: 0px;
+        right: 0px;
+    }
+    nav {
+        width: 0;
+    }
+}
+
+
+.fancybox-slide--iframe {
+    @media only screen and (max-width: 800px){
+    padding: 0;
+    }
+}

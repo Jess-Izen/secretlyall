@@ -14,18 +14,13 @@ Stylesheet: Download Modal Stylesheet
     color: white;
     }
 
-    #support-title {
-        margin-top: 0;
-        text-align: center;
-    }
-
-
     .support-logo-wrapper {
         display: flex;
         justify-content: center;
         padding-bottom: 30px;
         border-bottom: 2px solid white;
         margin-bottom: 30px;
+        text-decoration: none;
 
         .support-logo {
             width: 80%;

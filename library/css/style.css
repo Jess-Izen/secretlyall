@@ -2308,112 +2308,84 @@ Author:
 Stylesheet: Tag Form Modal Stylesheet
 
 ******************************************************************/
-/* line 11, ../scss/modules/_tag-form.scss */
-.fancybox-slide--iframe .fancybox-content {
-  max-width: 350px;
-  border: 5px #a7d9cd solid;
-  height: 300px !important;
-}
-@media only screen and (max-width: 800px) {
-  /* line 11, ../scss/modules/_tag-form.scss */
-  .fancybox-slide--iframe .fancybox-content {
-    width: 90% !important;
-  }
-}
-/* line 18, ../scss/modules/_tag-form.scss */
-.fancybox-slide--iframe .fancybox-content html {
-  overflow-y: hidden;
-}
-/* line 21, ../scss/modules/_tag-form.scss */
-.fancybox-slide--iframe .fancybox-content button {
-  top: -6px;
-  right: -6px;
-}
-
-/* line 27, ../scss/modules/_tag-form.scss */
+/* line 9, ../scss/modules/_tag-form.scss */
 body.single-story {
   overflow-y: hidden;
 }
 
-@media only screen and (max-width: 800px) {
-  /* line 31, ../scss/modules/_tag-form.scss */
-  .fancybox-slide--iframe {
-    padding: 0;
-  }
-}
-
-/* line 37, ../scss/modules/_tag-form.scss */
+/* line 15, ../scss/modules/_tag-form.scss */
 #tag-form-wrapper {
   padding: 25px 25px 10px 25px;
 }
 
-/* line 42, ../scss/modules/_tag-form.scss */
+/* line 21, ../scss/modules/_tag-form.scss */
 #tag-form-title {
   margin: 0 auto 25px auto;
   color: white;
   font-size: 1.4em;
 }
 
-/* line 49, ../scss/modules/_tag-form.scss */
+/* line 28, ../scss/modules/_tag-form.scss */
 #tag-form {
   display: block;
   margin: 0 auto 0 auto;
   color: white;
   font-weight: normal;
 }
-/* line 54, ../scss/modules/_tag-form.scss */
+/* line 33, ../scss/modules/_tag-form.scss */
 #tag-form input, #tag-form textarea {
   background: #f3f0f4;
 }
-/* line 58, ../scss/modules/_tag-form.scss */
+/* line 37, ../scss/modules/_tag-form.scss */
 #tag-form input, #tag-form textarea {
   max-width: 250px;
 }
-/* line 62, ../scss/modules/_tag-form.scss */
+/* line 41, ../scss/modules/_tag-form.scss */
 #tag-form label {
   font-weight: normal;
 }
-/* line 67, ../scss/modules/_tag-form.scss */
+/* line 46, ../scss/modules/_tag-form.scss */
 #tag-form .af-spinner,
 #tag-form .acf-spinner {
   height: 20px;
   width: 20px;
-  margin-left: 5px;
+  margin-left: 10px;
   vertical-align: text-top;
   background: transparent url(../images/spinner.gif) no-repeat 50% 50%;
   display: none;
 }
 
-/* line 81, ../scss/modules/_tag-form.scss */
+/* line 60, ../scss/modules/_tag-form.scss */
 .single-story .header {
   display: none;
 }
-/* line 85, ../scss/modules/_tag-form.scss */
+/* line 64, ../scss/modules/_tag-form.scss */
 .single-story .article-header {
   display: none;
 }
-/* line 88, ../scss/modules/_tag-form.scss */
+/* line 67, ../scss/modules/_tag-form.scss */
 .single-story .sidebar {
   display: none;
 }
-/* line 92, ../scss/modules/_tag-form.scss */
+/* line 71, ../scss/modules/_tag-form.scss */
 .single-story .footer {
   display: none;
 }
-/* line 96, ../scss/modules/_tag-form.scss */
+/* line 75, ../scss/modules/_tag-form.scss */
 .single-story #wpadminbar {
   display: none;
 }
-/* line 99, ../scss/modules/_tag-form.scss */
+/* line 78, ../scss/modules/_tag-form.scss */
 .single-story #content {
   margin-top: 0px;
   background-color: #013237;
   height: 300px;
   display: flex;
   align-items: center;
+  border: 5px #a7d9cd solid;
 }
 
-/* line 110, ../scss/modules/_tag-form.scss */
+/* line 91, ../scss/modules/_tag-form.scss */
 .fancybox-iframe {
   background-color: #a7d9cd;
 }
@@ -2452,70 +2424,115 @@ Author:
 Stylesheet: Download Modal Stylesheet
 
 ******************************************************************/
-/* line 9, ../scss/modules/_about-modal.scss */
+/* line 10, ../scss/modules/_about-modal.scss */
+.page-template-contact-modal {
+  max-width: 700px;
+  overflow-y: hidden;
+}
+/* line 14, ../scss/modules/_about-modal.scss */
+.page-template-contact-modal #container {
+  display: none;
+}
+
+/* line 18, ../scss/modules/_about-modal.scss */
 #about-modal {
   background-color: #013237;
   border: 5px #a7d9cd solid;
-  max-width: 90%;
+  max-width: 100%;
+  padding: 30px;
+  overflow-y: hidden;
 }
-/* line 13, ../scss/modules/_about-modal.scss */
+/* line 24, ../scss/modules/_about-modal.scss */
 #about-modal h2, #about-modal p {
   color: white;
 }
-/* line 17, ../scss/modules/_about-modal.scss */
+/* line 28, ../scss/modules/_about-modal.scss */
 #about-modal #about-title {
   margin-top: 0;
   text-align: center;
 }
-/* line 22, ../scss/modules/_about-modal.scss */
+/* line 33, ../scss/modules/_about-modal.scss */
 #about-modal #about-text {
   padding-bottom: 30px;
   border-bottom: 2px solid white;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
-/* line 28, ../scss/modules/_about-modal.scss */
-#about-modal #contact-button-wrapper {
+/* line 39, ../scss/modules/_about-modal.scss */
+#about-modal #contact-btn-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-/* line 34, ../scss/modules/_about-modal.scss */
-#about-modal #contact-button-wrapper h3 {
+/* line 45, ../scss/modules/_about-modal.scss */
+#about-modal #contact-btn-wrapper h3 {
   margin: 0;
   color: white;
 }
-/* line 38, ../scss/modules/_about-modal.scss */
-#about-modal #contact-button-wrapper #contact-button {
+/* line 49, ../scss/modules/_about-modal.scss */
+#about-modal #contact-btn-wrapper #contact-btn {
   max-height: 33px;
   margin: 10px 0 0 0;
 }
-/* line 45, ../scss/modules/_about-modal.scss */
+/* line 56, ../scss/modules/_about-modal.scss */
 #about-modal .fancybox-close-small svg {
   filter: invert(100%) sepia(5%) saturate(7470%) hue-rotate(207deg) brightness(109%) contrast(100%);
 }
 
 @media only screen and (min-width: 1250px) {
-  /* line 52, ../scss/modules/_about-modal.scss */
+  /* line 63, ../scss/modules/_about-modal.scss */
   #about-modal {
     max-width: 700px;
   }
-  /* line 55, ../scss/modules/_about-modal.scss */
+  /* line 66, ../scss/modules/_about-modal.scss */
   #about-modal #about-title {
     text-align: initial;
   }
-  /* line 59, ../scss/modules/_about-modal.scss */
-  #about-modal #contact-button-wrapper {
+  /* line 70, ../scss/modules/_about-modal.scss */
+  #about-modal #contact-btn-wrapper {
     display: inline-flex;
     flex-direction: row;
     text-align: initial;
   }
-  /* line 64, ../scss/modules/_about-modal.scss */
-  #about-modal #contact-button-wrapper #contact-button {
+  /* line 75, ../scss/modules/_about-modal.scss */
+  #about-modal #contact-btn-wrapper #contact-btn {
     margin: 0 0 0 20px;
   }
 }
+/* line 86, ../scss/modules/_about-modal.scss */
+#contact-wrapper #contact-title {
+  margin-top: 0;
+}
+/* line 90, ../scss/modules/_about-modal.scss */
+#contact-wrapper .af-field {
+  color: white;
+  border: none;
+}
+/* line 96, ../scss/modules/_about-modal.scss */
+#contact-wrapper .af-field-contact-rules .af-label {
+  display: none;
+}
+/* line 102, ../scss/modules/_about-modal.scss */
+#contact-wrapper .af-spinner,
+#contact-wrapper .acf-spinner {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  vertical-align: text-top;
+  background: transparent url(../images/spinner.gif) no-repeat 50% 50%;
+  display: none;
+}
+/* line 111, ../scss/modules/_about-modal.scss */
+#contact-wrapper .acf-error-message {
+  display: none;
+}
+/* line 115, ../scss/modules/_about-modal.scss */
+#contact-wrapper .acf-error-message ~ ul {
+  background-color: red;
+  padding-left: 10px;
+}
+
 /******************************************************************
 Site Name:
 Author:
@@ -2534,11 +2551,6 @@ Stylesheet: Download Modal Stylesheet
   color: white;
 }
 /* line 17, ../scss/modules/_support-modal.scss */
-#support-modal #support-title {
-  margin-top: 0;
-  text-align: center;
-}
-/* line 23, ../scss/modules/_support-modal.scss */
 #support-modal .support-logo-wrapper {
   display: flex;
   justify-content: center;
@@ -2547,7 +2559,7 @@ Stylesheet: Download Modal Stylesheet
   margin-bottom: 30px;
   text-decoration: none;
 }
-/* line 31, ../scss/modules/_support-modal.scss */
+/* line 25, ../scss/modules/_support-modal.scss */
 #support-modal .support-logo-wrapper .support-logo {
   width: 80%;
   height: 100%;
@@ -2557,44 +2569,44 @@ Stylesheet: Download Modal Stylesheet
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 44, ../scss/modules/_support-modal.scss */
+/* line 38, ../scss/modules/_support-modal.scss */
 #support-modal #support-button-wrapper {
   display: flex;
   justify-content: center;
   text-align: center;
   width: 100%;
 }
-/* line 49, ../scss/modules/_support-modal.scss */
+/* line 43, ../scss/modules/_support-modal.scss */
 #support-modal #support-button-wrapper h3 {
   margin: 0;
   color: white;
 }
-/* line 53, ../scss/modules/_support-modal.scss */
+/* line 47, ../scss/modules/_support-modal.scss */
 #support-modal #support-button-wrapper #support-button {
   max-height: 33px;
   margin: 10px 0 0 0;
 }
-/* line 60, ../scss/modules/_support-modal.scss */
+/* line 54, ../scss/modules/_support-modal.scss */
 #support-modal .fancybox-close-small svg {
   filter: invert(100%) sepia(5%) saturate(7470%) hue-rotate(207deg) brightness(109%) contrast(100%);
 }
 
 @media only screen and (min-width: 1250px) {
-  /* line 67, ../scss/modules/_support-modal.scss */
+  /* line 61, ../scss/modules/_support-modal.scss */
   #support-modal {
     max-width: 500px;
   }
-  /* line 70, ../scss/modules/_support-modal.scss */
+  /* line 64, ../scss/modules/_support-modal.scss */
   #support-modal #support-title {
     text-align: initial;
   }
-  /* line 74, ../scss/modules/_support-modal.scss */
+  /* line 68, ../scss/modules/_support-modal.scss */
   #support-modal #support-button-wrapper {
     display: inline-flex;
     flex-direction: row;
     text-align: initial;
   }
-  /* line 79, ../scss/modules/_support-modal.scss */
+  /* line 73, ../scss/modules/_support-modal.scss */
   #support-modal #support-button-wrapper #support-button {
     margin: 0 0 0 20px;
   }
@@ -3644,8 +3656,35 @@ view.
 */
 /* end .footer-links */
 /*********************
-POSTS TABLE PRO STYLES
+FANCYBOX STYLES
 *********************/
+@media only screen and (max-width: 800px) {
+  /* line 896, ../scss/breakpoints/_base.scss */
+  .fancybox-slide--iframe .fancybox-content {
+    width: 90% !important;
+  }
+}
+/* line 900, ../scss/breakpoints/_base.scss */
+.fancybox-slide--iframe .fancybox-content html {
+  overflow: hidden;
+}
+/* line 903, ../scss/breakpoints/_base.scss */
+.fancybox-slide--iframe .fancybox-content button {
+  top: 0px;
+  right: 0px;
+}
+/* line 907, ../scss/breakpoints/_base.scss */
+.fancybox-slide--iframe .fancybox-content nav {
+  width: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  /* line 913, ../scss/breakpoints/_base.scss */
+  .fancybox-slide--iframe {
+    padding: 0;
+  }
+}
+
 /*********************
 PRINT STYLESHEET
 s

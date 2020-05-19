@@ -349,14 +349,14 @@ function my_acf_save_post( $post_id ) {
     $audio_link = get_field("audio", $post_id);
     $post_url = get_permalink($post_id);
     $theme_page = get_term_link($story_term);
-    $root_page = get_home_path();
+    $root_page = home_url();
     //need to convert tags into a string from the array in order to pass using the onclick function
     $story_tags_prep = wp_get_post_terms($post_id, 'story_tag', $args=array(
       'fields' => 'names' 
     ));
     $story_tags = implode ('; ',$story_tags_prep);
-    $download_button_link = "http://secretly-yall-archive.local/#download-".$post_id;
-    $play_button_link = "http://secretly-yall-archive.local/#listen-".$post_id;
+    $download_button_link =   $root_page."/#download-".$post_id;
+    $play_button_link =  $root_page."/#listen-".$post_id;
     $theme_play_button_link = $theme_page."#listen-".$post_id;
     $download_button = '<a data="'.$audio_link.'" class="icon-btn-small download-btn" data-fancybox data-src="#download-modal" href="'.$download_button_link.'" onclick="" title="Download"></a>';
     $listen_button = '<a class="icon-btn-small listen-btn" href="'. $play_button_link.'" title="Listen" state="inactive" storyid="'.$post_id.'" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\', \''.$download_button_link.'\');"></a>';
@@ -466,6 +466,27 @@ function prefill_form_story_link( $value, $field, $form, $args ) {
   $post_link = get_edit_post_link();
   return $post_link;
 }
+
+//Add sy-btn class to Advanced Forms submit button
+function filter_submit_button_attributes( $attributes, $form, $args ) {
+  $attributes['class'] .= ' sy-btn';
+  
+  return $attributes;
+}
+add_filter( 'af/form/button_attributes', 'filter_submit_button_attributes', 10, 3 );
+
+//Adds custom validation message for editorial guidelines checkbox on contact form
+function validate_contact_form( $valid, $value, $field, $input_name ) {
+
+  // Bail early if value is already invalid.
+  if( $valid !== true ) {
+      return __( 'Please acknowledge our editorial policies.' );;
+  }
+
+  return $valid;
+}
+add_filter('acf/validate_value/name=contact_rules', 'validate_contact_form', 10, 4);
+
 
 //add options page
 if( function_exists('acf_add_options_page') ) {

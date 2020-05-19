@@ -128,18 +128,18 @@ $support_text = get_field('donation_text', 'option');
 		</div>
 	</div>
 
-	<div style="display: none;" id="about-modal">
+	<div id="about-modal" style="display:none">
 		<div id="about-wrapper-main">	
-			<? 
-			echo '<h2 id="about-title">'.$about_title.'</h2>';
-			echo '<p id="about-text">'.$about_text.'</p>';
-			?>
-			<div id="contact-button-wrapper">
-				<h3>Have a question or concern?</h3>
-				<a id="contact-button" class="sy-btn" target="_blank">Contact Us</a>
-			</div>
+		<? 
+		echo '<h2 id="about-title">'.$about_title.'</h2>';
+		echo '<p id="about-text">'.$about_text.'</p>';
+		?>
+		<div id="contact-btn-wrapper">
+			<h3>Have a question or concern?</h3>
+			<a id="contact-btn" class="sy-btn" target="_blank" >Contact Us</a>
 		</div>
 	</div>
+
 
 	<div style="display: none;" id="support-modal">
 		<div id="support-wrapper-main">	

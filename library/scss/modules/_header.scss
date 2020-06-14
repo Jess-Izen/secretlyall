@@ -18,7 +18,7 @@ Stylesheet: Header Stylesheet
     }
 
     #inner-header {
-        padding: 20px 10px 0 10px;
+        padding: 20px 10px 0 15px;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -81,8 +81,8 @@ Stylesheet: Header Stylesheet
             position: absolute;
             width: 50px;
             height: 50px;
-            right: 2px;
-            top: 2px;
+            right: 7px;
+            top: 7px;
             text-decoration: none;
             background: transparent url(../images/hamburger.png);
             background-position: top;
@@ -127,7 +127,7 @@ Stylesheet: Header Stylesheet
     }
     
     #inner-header {
-        padding: 20px 0 0 10px;
+        padding: 20px 0 0 15px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -136,13 +136,6 @@ Stylesheet: Header Stylesheet
             display: none;
         }	
         
-
-        #header-title-wrapper{
-            display: flex;
-            justify-content: space-between;
-            width: 65%;
-
-        }
 
         #mobile-title-wrapper{
             padding: 0;
@@ -154,7 +147,7 @@ Stylesheet: Header Stylesheet
             align-items: center;
             flex-direction: column;
             min-height: 125px;
-            width: 80%;
+            width: 100%;
             padding-left: 10px;
         }
     
@@ -163,6 +156,9 @@ Stylesheet: Header Stylesheet
             display: block;
             width: 175px;
             height: 150px;
+            position: absolute;
+            top: 15px;
+            left: 30px;
             background: transparent url(../images/logo-white.png);
             background-position: top;
             background-repeat: no-repeat;
@@ -198,8 +194,8 @@ Stylesheet: Header Stylesheet
             position: absolute;
             width: 64px;
             height: 64px;
-            right: 3px;
-            top: 3px;
+            right: 13px;
+            top: 13px;
             background: transparent url(../images/hamburger.png);
             background-position: top;
             background-repeat: no-repeat;
@@ -237,10 +233,10 @@ Stylesheet: Header Stylesheet
     }
     
     #inner-header {
-        max-width: 1400px;
-        margin-top: 15px;
+        max-width: 1430px;
+        margin-top: 20px;
         width: 100%;
-        padding: 0;
+        padding: 0 15px 0 15px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -256,6 +252,7 @@ Stylesheet: Header Stylesheet
             display: block;
             width: 175px;
             height: 150px;
+            position: static;
             background: transparent url(../images/logo-white.png);
             background-position: top;
             background-repeat: no-repeat;

@@ -97,7 +97,8 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     //continue to next story in table when audio complete 
     let clickedRow = clickedListen.closest(".post-row"); 
     let nextRow = clickedRow.nextSibling;
-    let nextListen = nextRow.getElementsByClassName("listen-btn")[0];  
+    if (nextRow)
+    var nextListen = nextRow.getElementsByClassName("listen-btn")[0];
     audioSRC.onended = function() {
       clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
       clickedListen.setAttribute("state","inactive");
@@ -110,11 +111,13 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
       let prevButton = document.getElementById('player-previous');
       prevButton.onclick = function skipStory() {
         let previousRow = clickedRow.previousSibling;
-        let prevListen = previousRow.getElementsByClassName("listen-btn")[0];    
+        if (previousRow) {
+        var prevListen = previousRow.getElementsByClassName("listen-btn")[0];    
         clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
         clickedListen.setAttribute("state","inactive");
         clickedListen.style.backgroundColor = closedBackground;
         prevListen.click();
+        }
         return;
         };
 
@@ -122,10 +125,12 @@ function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL,
     //next button
     let skipButton = document.getElementById('player-next');
     skipButton.onclick = function skipStory() {
+      if (nextListen){
       nextListen.click();
       clickedListen.style.backgroundImage = "url(/wp-content/themes/secretlyyall/library/images/play-small.svg)";
       clickedListen.setAttribute("state","inactive");
       clickedListen.style.backgroundColor = closedBackground;
+      }
       return;
     };
 

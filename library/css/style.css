@@ -2629,7 +2629,7 @@ header {
 
 /* line 20, ../scss/modules/_header.scss */
 #inner-header {
-  padding: 20px 10px 0 10px;
+  padding: 20px 10px 0 15px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -2700,8 +2700,8 @@ header {
   position: absolute;
   width: 50px;
   height: 50px;
-  right: 2px;
-  top: 2px;
+  right: 7px;
+  top: 7px;
   text-decoration: none;
   background: transparent url(../images/hamburger.png);
   background-position: top;
@@ -2750,7 +2750,7 @@ header {
 
   /* line 129, ../scss/modules/_header.scss */
   #inner-header {
-    padding: 20px 0 0 10px;
+    padding: 20px 0 0 15px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -2762,45 +2762,41 @@ header {
   }
 
   /* line 140, ../scss/modules/_header.scss */
-  #header-title-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 65%;
-  }
-
-  /* line 147, ../scss/modules/_header.scss */
   #mobile-title-wrapper {
     padding: 0;
   }
 
-  /* line 151, ../scss/modules/_header.scss */
+  /* line 144, ../scss/modules/_header.scss */
   #desktop-title-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: 125px;
-    width: 80%;
+    width: 100%;
     padding-left: 10px;
   }
 
-  /* line 162, ../scss/modules/_header.scss */
+  /* line 155, ../scss/modules/_header.scss */
   #header-logo {
     display: block;
     width: 175px;
     height: 150px;
+    position: absolute;
+    top: 15px;
+    left: 30px;
     background: transparent url(../images/logo-white.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
   }
 
-  /* line 172, ../scss/modules/_header.scss */
+  /* line 168, ../scss/modules/_header.scss */
   #header-text-mobile {
     display: none;
   }
 
-  /* line 176, ../scss/modules/_header.scss */
+  /* line 172, ../scss/modules/_header.scss */
   #header-text-tablet {
     display: block;
     margin: 0;
@@ -2809,12 +2805,12 @@ header {
     text-align: center;
     width: 100%;
   }
-  /* line 183, ../scss/modules/_header.scss */
+  /* line 179, ../scss/modules/_header.scss */
   #header-text-tablet a {
     color: white;
   }
 
-  /* line 188, ../scss/modules/_header.scss */
+  /* line 184, ../scss/modules/_header.scss */
   #subheader-text {
     color: white;
     font-family: "EB Garamond", Cambria, Times New Roman, Times, serif;
@@ -2822,20 +2818,20 @@ header {
     text-align: center;
   }
 
-  /* line 197, ../scss/modules/_header.scss */
+  /* line 193, ../scss/modules/_header.scss */
   #hamburger-icon {
     position: absolute;
     width: 64px;
     height: 64px;
-    right: 3px;
-    top: 3px;
+    right: 13px;
+    top: 13px;
     background: transparent url(../images/hamburger.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
   }
 
-  /* line 209, ../scss/modules/_header.scss */
+  /* line 205, ../scss/modules/_header.scss */
   #hamburger-buttons-wrapper {
     display: flex;
     flex-direction: row;
@@ -2844,7 +2840,7 @@ header {
     width: 80%;
   }
 
-  /* line 218, ../scss/modules/_header.scss */
+  /* line 214, ../scss/modules/_header.scss */
   .hamburger-menu-item h2 {
     color: white;
     font-size: 1.25em;
@@ -2852,12 +2848,12 @@ header {
   }
 }
 @media only screen and (min-width: 700px) and (min-width: 1250px) {
-  /* line 228, ../scss/modules/_header.scss */
+  /* line 224, ../scss/modules/_header.scss */
   #header-mobile-logo {
     display: none;
   }
 
-  /* line 232, ../scss/modules/_header.scss */
+  /* line 228, ../scss/modules/_header.scss */
   header {
     display: flex;
     justify-content: center;
@@ -2865,42 +2861,43 @@ header {
     min-height: 175px;
   }
 
-  /* line 239, ../scss/modules/_header.scss */
+  /* line 235, ../scss/modules/_header.scss */
   #inner-header {
-    max-width: 1400px;
-    margin-top: 15px;
+    max-width: 1430px;
+    margin-top: 20px;
     width: 100%;
-    padding: 0;
+    padding: 0 15px 0 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
   }
 
-  /* line 250, ../scss/modules/_header.scss */
+  /* line 246, ../scss/modules/_header.scss */
   #header-title-wrapper {
     display: flex;
     justify-content: left;
     width: 50%;
   }
 
-  /* line 255, ../scss/modules/_header.scss */
+  /* line 251, ../scss/modules/_header.scss */
   #header-logo {
     display: block;
     width: 175px;
     height: 150px;
+    position: static;
     background: transparent url(../images/logo-white.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
   }
 
-  /* line 265, ../scss/modules/_header.scss */
+  /* line 262, ../scss/modules/_header.scss */
   #mobile-title-wrapper {
     padding: 0;
   }
 
-  /* line 269, ../scss/modules/_header.scss */
+  /* line 266, ../scss/modules/_header.scss */
   #desktop-title-wrapper {
     display: flex;
     flex-direction: column;
@@ -2909,7 +2906,7 @@ header {
     width: auto;
   }
 
-  /* line 277, ../scss/modules/_header.scss */
+  /* line 274, ../scss/modules/_header.scss */
   #header-text-tablet {
     margin: 0;
     text-align: left;
@@ -2917,12 +2914,12 @@ header {
     width: 100%;
     max-width: none;
   }
-  /* line 283, ../scss/modules/_header.scss */
+  /* line 280, ../scss/modules/_header.scss */
   #header-text-tablet a {
     color: white;
   }
 
-  /* line 288, ../scss/modules/_header.scss */
+  /* line 285, ../scss/modules/_header.scss */
   #subheader-text {
     color: white;
     font-family: "EB Garamond", Cambria, Times New Roman, Times, serif;
@@ -2931,13 +2928,13 @@ header {
     text-align: left;
   }
 
-  /* line 296, ../scss/modules/_header.scss */
+  /* line 293, ../scss/modules/_header.scss */
   #header-button-wrapper {
     width: 50%;
     display: block;
   }
 
-  /* line 301, ../scss/modules/_header.scss */
+  /* line 298, ../scss/modules/_header.scss */
   #header-buttons {
     display: flex;
     justify-content: space-between;
@@ -2946,24 +2943,24 @@ header {
     flex-direction: row;
     text-decoration: none;
   }
-  /* line 308, ../scss/modules/_header.scss */
+  /* line 305, ../scss/modules/_header.scss */
   #header-buttons .header-button h3 {
     color: white;
     font-family: serif;
     margin: 60px 0 0 0;
     border-bottom: 3px solid #a7d9cd;
   }
-  /* line 315, ../scss/modules/_header.scss */
+  /* line 312, ../scss/modules/_header.scss */
   #header-buttons .header-button {
     text-decoration: none;
   }
-  /* line 321, ../scss/modules/_header.scss */
+  /* line 318, ../scss/modules/_header.scss */
   #header-buttons .header-button:hover h3,
   #header-buttons .header-button:active h3 {
     border-bottom-color: #603e60;
   }
 
-  /* line 328, ../scss/modules/_header.scss */
+  /* line 325, ../scss/modules/_header.scss */
   #hamburger-icon {
     display: none;
   }
@@ -3659,27 +3656,27 @@ view.
 FANCYBOX STYLES
 *********************/
 @media only screen and (max-width: 800px) {
-  /* line 896, ../scss/breakpoints/_base.scss */
+  /* line 893, ../scss/breakpoints/_base.scss */
   .fancybox-slide--iframe .fancybox-content {
     width: 90% !important;
   }
 }
-/* line 900, ../scss/breakpoints/_base.scss */
+/* line 897, ../scss/breakpoints/_base.scss */
 .fancybox-slide--iframe .fancybox-content html {
   overflow: hidden;
 }
-/* line 903, ../scss/breakpoints/_base.scss */
+/* line 900, ../scss/breakpoints/_base.scss */
 .fancybox-slide--iframe .fancybox-content button {
   top: 0px;
   right: 0px;
 }
-/* line 907, ../scss/breakpoints/_base.scss */
+/* line 904, ../scss/breakpoints/_base.scss */
 .fancybox-slide--iframe .fancybox-content nav {
   width: 0;
 }
 
 @media only screen and (max-width: 800px) {
-  /* line 913, ../scss/breakpoints/_base.scss */
+  /* line 910, ../scss/breakpoints/_base.scss */
   .fancybox-slide--iframe {
     padding: 0;
   }

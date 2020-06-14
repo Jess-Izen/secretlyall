@@ -473,6 +473,7 @@ function filter_submit_button_attributes( $attributes, $form, $args ) {
   
   return $attributes;
 }
+
 add_filter( 'af/form/button_attributes', 'filter_submit_button_attributes', 10, 3 );
 
 //Adds custom validation message for editorial guidelines checkbox on contact form

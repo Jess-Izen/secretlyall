@@ -58,3 +58,24 @@ temp/
 *.scssc
 
 /vendor/
+
+###Wordpress Files & Directories####
+/post-formats/
+404.php
+.php
+footer.php
+page.php
+index.php
+style.css
+composer.json
+archive.php
+/library/images/
+/library/css/
+/library/bones.php
+/library/admin.php
+/library/translation/
+/library/scss/editor-style.scss
+/library/scss/ie.scss
+/library/scss/login.scss
+/library/scss/config.rb
+/library/js/libs

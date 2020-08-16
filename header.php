@@ -65,7 +65,7 @@
 							<h1 id="header-text-mobile" ><a href="<?php echo home_url(); ?>" rel="nofollow"><div id="header-title-1">Story<br>Archival Project</a></h1>
 							<h1 id="header-text-tablet" ><a href="<?php echo home_url(); ?>" rel="nofollow"><div id="header-title-1">Story Archival Project</a></h1>
 							</div>
-							<h3 id="subheader-text">10 years of live, unscripted storytelling</h3>
+							<h3 id="subheader-text">10 years of live, unscripted stories</h3>
 						</div>
 					</div>
 					<div id="header-button-wrapper">

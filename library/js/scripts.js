@@ -3,6 +3,8 @@
  *
 */
 
+
+
 function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL, storyTags, downloadButtonLink){
   //embed audio - swaps out the existing src URL in the mediaelements audio widget
   let clickedListen = event.target;
@@ -158,12 +160,11 @@ function openHamburger(){
   }
 }
 
-
-
 /*
  * Put all your regular jQuery in here.
 */
 jQuery(document).ready(function($) {
+
 
 //add click listener to player & table tag button, open fancybox using post's URL as src (which has proper form embedded)
   $(document).on("click", ".tag-btn", function () {
@@ -177,11 +178,21 @@ jQuery(document).ready(function($) {
         css : {
             width : '350px',
             height: '300px'
+        },
+
+        attr: {
+          id: "tag-frame"
+        },
+      
+      },
+
+      afterShow : function( instance, current) {
+        $('#tag-frame').focus().contents().find('#acf-field_5e9209ef1556a').focus();
         }
-      }
     },
 
     });
+    return false;
 });
 
 //add click listener to contact button inside about modal, closes about modal + opens contact page iframe on click
@@ -198,8 +209,13 @@ $(document).on("click", "#contact-btn", function () {
         },
         attr :{
           scrolling : 'no' ,
+          id: "contact-frame",
         },
       },
+
+      afterShow : function( instance, current) {
+        $('#contact-frame').focus().contents().find('#acf-field_5ec3161604eac').focus();
+        }
     },
 
     });

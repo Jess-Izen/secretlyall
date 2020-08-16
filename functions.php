@@ -408,6 +408,12 @@ add_filter( 'acf/prepare_field/key=field_5ea61937faf17', 'hide_acf_fields' ); //
 add_filter( 'acf/prepare_field/key=field_5eaef4f9a7d7f', 'hide_acf_fields' ); // story - tag button
 add_filter( 'acf/prepare_field/key=field_5eb48bbb7170b', 'hide_acf_fields' ); // story - theme button
 add_filter( 'acf/prepare_field/key=field_5eb45bc9c3f6f', 'hide_acf_fields' ); // story - tag button 2
+add_filter( 'acf/prepare_field/key=field_5e2619155ad78', 'hide_acf_fields' ); // story - fundraisee name
+add_filter( 'acf/prepare_field/key=field_5e261ca8fcedc', 'hide_acf_fields' ); // story -  fundraisee url
+add_filter( 'acf/prepare_field/key=field_5e209e79e8785', 'hide_acf_fields' ); // story - location
+add_filter( 'acf/prepare_field/key=field_5e209e39e8783', 'hide_acf_fields' ); // story - date
+
+
 add_filter( 'acf/prepare_field/key=field_5e6e6fca8ad9f', 'hide_acf_fields' ); // event - date formatted
 
 
@@ -421,6 +427,27 @@ function tag_form_submit($post, $form, $args){
   $post_id = $post->ID;
   wp_set_post_terms($post_id, $new_tag, 'story_tag', $append=true);
   update_field('story_new_tag', '', $post_id);
+  process_tag_save($post_id);
+}
+
+function process_tag_save($post_id) {
+
+  $audio_link = get_field("audio", $post_id);
+  $root_page = home_url();
+  $play_button_link =  $root_page."/#listen-".$post_id;
+  $story_tags_prep = wp_get_post_terms($post_id, 'story_tag', $args=array(
+    'fields' => 'names' 
+  ));
+  $related_event = implode(get_field('event_story', $post_id));  
+  $event_title = get_the_title($related_event);
+  $story_term = get_term_by('name', $event_title, 'story_event');    
+  $theme_page = get_term_link($story_term);
+  $story_tags = implode ('; ',$story_tags_prep);
+  $story_name = get_the_title($post_id);
+  $post_url = get_permalink($post_id);
+  $download_button_link =   $root_page."/#download-".$post_id;
+  $listen_button = '<a class="icon-btn-small listen-btn" href="'. $play_button_link.'" title="Listen" state="inactive" storyid="'.$post_id.'" onclick="QueueStoryPlayer('.$post_id.', \''.$audio_link.'\',\''.$story_name.'\',\''.$event_title.'\',\''.$post_url.'\', \''.$theme_page.'\',  \''.$story_tags.'\', \''.$download_button_link.'\');"></a>';
+  update_field('listen',$listen_button, $post_id);
 }
 
 //dequeue unnecessary scripts from form
@@ -473,7 +500,6 @@ function filter_submit_button_attributes( $attributes, $form, $args ) {
   
   return $attributes;
 }
-
 add_filter( 'af/form/button_attributes', 'filter_submit_button_attributes', 10, 3 );
 
 //Adds custom validation message for editorial guidelines checkbox on contact form
@@ -591,6 +617,7 @@ if ( function_exists( 'add_image_size' ) ) {
   add_image_size( 'gallery-large', 750, 750, false ); //(scaled)
 
 }
+
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

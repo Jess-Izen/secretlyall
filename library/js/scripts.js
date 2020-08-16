@@ -3,21 +3,6 @@
  *
 */
 
-
-
-
-function loadGravatars() {
-  // set the viewport using the function above  
-  viewport = updateViewportDimensions();
-  // if the viewport is tablet or larger, we load in the gravatars
-  if (viewport.width >= 768) {
-  jQuery('.comment img[data-gravatar]').each(function(){
-    jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
-  });
-	}
-} // end function
-
-
 function QueueStoryPlayer(id, audioURL, storyName, eventName, postURL, themeURL, storyTags, downloadButtonLink){
   //embed audio - swaps out the existing src URL in the mediaelements audio widget
   let clickedListen = event.target;
